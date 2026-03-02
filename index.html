@@ -2,6 +2,7 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>COSMIC AUTO BILL SOFTWARE PRO v5.0</title>
     
@@ -521,7 +522,7 @@
                 </select>
                 <input type="tel" id="loginPhone" placeholder="à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤°" inputmode="numeric" style="flex:1;padding:10px;border-radius:8px;border:none;font-size:14px;background:rgba(255,255,255,0.9);">
             </div>
-            <div id="recaptcha-container"></div>
+            <div id="recaptcha-container" style="margin:10px 0;display:flex;justify-content:center;"></div>
             <button class="btn btn-primary" onclick="FirebaseAuth.sendOTP()" id="sendOTPBtn" style="width:100%;margin-bottom:10px;">ðŸ“¨ OTP à¤­à¥‡à¤œà¥‡à¤‚</button>
             <p style="font-size:11px;opacity:0.7;">OTP à¤†à¤ªà¤•à¥‡ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤ªà¤° SMS à¤¸à¥‡ à¤†à¤à¤—à¤¾</p>
         </div>
@@ -4492,27 +4493,18 @@ const FirebaseAuth = {
 
     setupRecaptcha: function() {
         try {
-            // à¤ªà¥à¤°à¤¾à¤¨à¤¾ recaptcha à¤¹à¤Ÿà¤¾à¤à¤‚
             if(FirebaseAuth.recaptchaVerifier) {
-                try { FirebaseAuth.recaptchaVerifier.clear(); } catch(e) {}
-                FirebaseAuth.recaptchaVerifier = null;
+                FirebaseAuth.recaptchaVerifier.clear();
             }
-            // Container à¤¸à¤¾à¤« à¤•à¤°à¥‡à¤‚
-            var container = document.getElementById('recaptcha-container');
-            if(container) container.innerHTML = '';
-            
-            // Invisible recaptcha - phone à¤ªà¤° à¤¬à¥‡à¤¹à¤¤à¤° à¤•à¤¾à¤® à¤•à¤°à¤¤à¤¾ à¤¹à¥ˆ
             FirebaseAuth.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
-                'size': 'invisible',
+                'size': 'normal',
                 'callback': function(response) {
-                    console.log('Recaptcha verified');
-                },
-                'expired-callback': function() {
-                    FirebaseAuth.setupRecaptcha();
+                    document.getElementById('sendOTPBtn').disabled = false;
                 }
             });
+            FirebaseAuth.recaptchaVerifier.render();
         } catch(e) {
-            console.error('Recaptcha setup error:', e);
+            console.error('Recaptcha error:', e);
         }
     },
 
@@ -4520,30 +4512,13 @@ const FirebaseAuth = {
         var cc = document.getElementById('loginCountryCode').value;
         var phone = document.getElementById('loginPhone').value.trim();
         
-        if(!phone || phone.length < 6) {
+        if(!phone || phone.length < 7) {
             FirebaseAuth.showError('à¤¸à¤¹à¥€ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¡à¤¾à¤²à¥‡à¤‚!');
             return;
         }
 
         var fullPhone = cc + phone;
-        FirebaseAuth.showLoading('OTP à¤­à¥‡à¤œ à¤°à¤¹à¥‡ à¤¹à¥ˆà¤‚... à¤•à¥ƒà¤ªà¤¯à¤¾ wait à¤•à¤°à¥‡à¤‚');
-
-        // Recaptcha fresh setup à¤•à¤°à¥‡à¤‚
-        try {
-            if(FirebaseAuth.recaptchaVerifier) {
-                try { FirebaseAuth.recaptchaVerifier.clear(); } catch(e) {}
-                FirebaseAuth.recaptchaVerifier = null;
-            }
-            var container = document.getElementById('recaptcha-container');
-            if(container) container.innerHTML = '';
-            
-            FirebaseAuth.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
-                'size': 'invisible',
-                'callback': function(response) { console.log('OK'); }
-            });
-        } catch(e) {
-            console.error('Recaptcha error:', e);
-        }
+        FirebaseAuth.showLoading('OTP à¤­à¥‡à¤œ à¤°à¤¹à¥‡ à¤¹à¥ˆà¤‚...');
 
         auth.signInWithPhoneNumber(fullPhone, FirebaseAuth.recaptchaVerifier)
             .then(function(confirmationResult) {
@@ -4553,30 +4528,8 @@ const FirebaseAuth = {
             })
             .catch(function(error) {
                 FirebaseAuth.hideLoading();
-                console.error('OTP Error:', error);
-                
-                // Error à¤•à¥‹ à¤¹à¤¿à¤‚à¤¦à¥€ à¤®à¥‡à¤‚ à¤¦à¤¿à¤–à¤¾à¤à¤‚
-                var msg = error.message;
-                if(error.code === 'auth/invalid-phone-number') {
-                    msg = 'à¤—à¤²à¤¤ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤°! Country code check à¤•à¤°à¥‡à¤‚à¥¤';
-                } else if(error.code === 'auth/too-many-requests') {
-                    msg = 'à¤¬à¤¹à¥à¤¤ à¤œà¥à¤¯à¤¾à¤¦à¤¾ tries! 1 à¤˜à¤‚à¤Ÿà¥‡ à¤¬à¤¾à¤¦ try à¤•à¤°à¥‡à¤‚à¥¤';
-                } else if(error.code === 'auth/quota-exceeded') {
-                    msg = 'à¤†à¤œ à¤•à¤¾ OTP limit à¤–à¤¤à¥à¤®! à¤•à¤² try à¤•à¤°à¥‡à¤‚à¥¤';
-                } else if(error.code === 'auth/captcha-check-failed') {
-                    msg = 'Recaptcha error! Page refresh à¤•à¤°à¥‡à¤‚à¥¤';
-                } else if(error.code === 'auth/network-request-failed') {
-                    msg = 'Internet connection check à¤•à¤°à¥‡à¤‚!';
-                }
-                FirebaseAuth.showError(msg);
-                
-                // Reset recaptcha
-                try {
-                    if(FirebaseAuth.recaptchaVerifier) {
-                        FirebaseAuth.recaptchaVerifier.clear();
-                        FirebaseAuth.recaptchaVerifier = null;
-                    }
-                } catch(e) {}
+                FirebaseAuth.showError('OTP à¤­à¥‡à¤œà¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + error.message);
+                FirebaseAuth.setupRecaptcha();
             });
     },
 
