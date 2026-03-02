@@ -374,7 +374,7 @@
         }
         
         @media print {
-            /* Buttons à¤›à¥à¤ªà¤¾à¤“ */
+            /* Buttons छुपाओ */
             #invPrintCloseBtn, #invPrintPrintBtn, #stmtPrintCloseBtn, #stmtPrintPrintBtn, 
             #_printCloseBtn, #_printPrintBtn, #printZoomBar, #zoomHint, #_zoomHint { 
                 display: none !important; 
@@ -383,7 +383,7 @@
             /* A4 default */
             @page { size: A4 portrait; margin: 8mm; }
             
-            /* à¤¸à¤¿à¤°à¥à¤« active-print à¤¦à¤¿à¤–à¤¾à¤“ */
+            /* सिर्फ active-print दिखाओ */
             body * { visibility: hidden; }
             .print-area.active-print, .print-area.active-print * { visibility: visible; }
             .print-area.active-print { 
@@ -486,61 +486,61 @@
 <!-- Install PWA Prompt -->
 <div class="install-prompt" id="installPrompt">
     <div style="display: flex; align-items: center; gap: 10px;">
-        <span style="font-size: 40px;">ðŸ“²</span>
+        <span style="font-size: 40px;">📲</span>
         <div>
-            <strong>à¤à¤ª à¤‡à¤‚à¤¸à¥à¤Ÿà¥‰à¤² à¤•à¤°à¥‡à¤‚!</strong>
-            <p style="font-size: 12px; color: #666;">à¤¹à¥‹à¤® à¤¸à¥à¤•à¥à¤°à¥€à¤¨ à¤ªà¤° à¤œà¥‹à¤¡à¤¼à¥‡à¤‚ à¤”à¤° à¤‘à¤«à¤²à¤¾à¤‡à¤¨ à¤‡à¤¸à¥à¤¤à¥‡à¤®à¤¾à¤² à¤•à¤°à¥‡à¤‚</p>
+            <strong>ऐप इंस्टॉल करें!</strong>
+            <p style="font-size: 12px; color: #666;">होम स्क्रीन पर जोड़ें और ऑफलाइन इस्तेमाल करें</p>
         </div>
     </div>
-    <button onclick="App.installPWA()">à¤‡à¤‚à¤¸à¥à¤Ÿà¥‰à¤² à¤•à¤°à¥‡à¤‚</button>
-    <button onclick="document.getElementById('installPrompt').style.display='none'" style="background: #ccc; margin-top: 5px;">à¤¬à¤¾à¤¦ à¤®à¥‡à¤‚</button>
+    <button onclick="App.installPWA()">इंस्टॉल करें</button>
+    <button onclick="document.getElementById('installPrompt').style.display='none'" style="background: #ccc; margin-top: 5px;">बाद में</button>
 </div>
 
 <!-- Login Screen -->
 <!-- Firebase Phone Login Screen -->
 <div class="login-screen" id="loginScreen">
     <div class="login-box">
-        <div style="font-size:50px;margin-bottom:10px;">ðŸŒŸ</div>
+        <div style="font-size:50px;margin-bottom:10px;">🌟</div>
         <h1 style="font-size:20px;margin-bottom:5px;">COSMIC AUTO BILL PRO</h1>
         <p style="font-size:12px;opacity:0.8;margin-bottom:20px;">v5.0 - Professional Edition</p>
 
         <!-- Step 1: Phone Number -->
         <div id="phoneStep">
-            <p style="margin-bottom:15px;font-size:14px;">ðŸ“± à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¸à¥‡ Login à¤•à¤°à¥‡à¤‚</p>
+            <p style="margin-bottom:15px;font-size:14px;">📱 मोबाइल नंबर से Login करें</p>
             <div style="display:flex;gap:5px;margin-bottom:10px;">
                 <select id="loginCountryCode" style="width:90px;padding:10px 5px;border-radius:8px;border:none;font-size:13px;background:rgba(255,255,255,0.9);">
-                    <option value="+91">ðŸ‡®ðŸ‡³ +91</option>
-                    <option value="+977">ðŸ‡³ðŸ‡µ +977</option>
-                    <option value="+880">ðŸ‡§ðŸ‡© +880</option>
-                    <option value="+92">ðŸ‡µðŸ‡° +92</option>
-                    <option value="+94">ðŸ‡±ðŸ‡° +94</option>
-                    <option value="+971">ðŸ‡¦ðŸ‡ª +971</option>
-                    <option value="+966">ðŸ‡¸ðŸ‡¦ +966</option>
-                    <option value="+60">ðŸ‡²ðŸ‡¾ +60</option>
-                    <option value="+44">ðŸ‡¬ðŸ‡§ +44</option>
-                    <option value="+1">ðŸ‡ºðŸ‡¸ +1</option>
+                    <option value="+91">🇮🇳 +91</option>
+                    <option value="+977">🇳🇵 +977</option>
+                    <option value="+880">🇧🇩 +880</option>
+                    <option value="+92">🇵🇰 +92</option>
+                    <option value="+94">🇱🇰 +94</option>
+                    <option value="+971">🇦🇪 +971</option>
+                    <option value="+966">🇸🇦 +966</option>
+                    <option value="+60">🇲🇾 +60</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+1">🇺🇸 +1</option>
                 </select>
-                <input type="tel" id="loginPhone" placeholder="à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤°" inputmode="numeric" style="flex:1;padding:10px;border-radius:8px;border:none;font-size:14px;background:rgba(255,255,255,0.9);">
+                <input type="tel" id="loginPhone" placeholder="मोबाइल नंबर" inputmode="numeric" style="flex:1;padding:10px;border-radius:8px;border:none;font-size:14px;background:rgba(255,255,255,0.9);">
             </div>
             <div id="recaptcha-container" style="margin:10px 0;display:flex;justify-content:center;"></div>
-            <button class="btn btn-primary" onclick="FirebaseAuth.sendOTP()" id="sendOTPBtn" style="width:100%;margin-bottom:10px;">ðŸ“¨ OTP à¤­à¥‡à¤œà¥‡à¤‚</button>
-            <p style="font-size:11px;opacity:0.7;">OTP à¤†à¤ªà¤•à¥‡ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤ªà¤° SMS à¤¸à¥‡ à¤†à¤à¤—à¤¾</p>
+            <button class="btn btn-primary" onclick="FirebaseAuth.sendOTP()" id="sendOTPBtn" style="width:100%;margin-bottom:10px;">📨 OTP भेजें</button>
+            <p style="font-size:11px;opacity:0.7;">OTP आपके मोबाइल पर SMS से आएगा</p>
         </div>
 
         <!-- Step 2: OTP Verify -->
         <div id="otpStep" style="display:none;">
-            <p style="margin-bottom:5px;font-size:14px;">âœ… OTP à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚</p>
+            <p style="margin-bottom:5px;font-size:14px;">✅ OTP दर्ज करें</p>
             <p id="otpSentTo" style="font-size:12px;opacity:0.8;margin-bottom:15px;"></p>
-            <input type="number" id="otpInput" placeholder="6 à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ OTP" maxlength="6" inputmode="numeric" style="width:100%;padding:12px;border-radius:8px;border:none;font-size:18px;text-align:center;letter-spacing:5px;background:rgba(255,255,255,0.9);margin-bottom:10px;">
-            <button class="btn btn-primary" onclick="FirebaseAuth.verifyOTP()" style="width:100%;margin-bottom:10px;">âœ… Verify à¤•à¤°à¥‡à¤‚</button>
-            <button class="btn btn-secondary" onclick="FirebaseAuth.backToPhone()" style="width:100%;font-size:13px;">ðŸ”™ à¤¨à¤‚à¤¬à¤° à¤¬à¤¦à¤²à¥‡à¤‚</button>
-            <p style="font-size:12px;margin-top:10px;opacity:0.8;">OTP à¤¨à¤¹à¥€à¤‚ à¤†à¤¯à¤¾? <span onclick="FirebaseAuth.resendOTP()" style="text-decoration:underline;cursor:pointer;">à¤¦à¥‹à¤¬à¤¾à¤°à¤¾ à¤­à¥‡à¤œà¥‡à¤‚</span></p>
+            <input type="number" id="otpInput" placeholder="6 अंकों का OTP" maxlength="6" inputmode="numeric" style="width:100%;padding:12px;border-radius:8px;border:none;font-size:18px;text-align:center;letter-spacing:5px;background:rgba(255,255,255,0.9);margin-bottom:10px;">
+            <button class="btn btn-primary" onclick="FirebaseAuth.verifyOTP()" style="width:100%;margin-bottom:10px;">✅ Verify करें</button>
+            <button class="btn btn-secondary" onclick="FirebaseAuth.backToPhone()" style="width:100%;font-size:13px;">🔙 नंबर बदलें</button>
+            <p style="font-size:12px;margin-top:10px;opacity:0.8;">OTP नहीं आया? <span onclick="FirebaseAuth.resendOTP()" style="text-decoration:underline;cursor:pointer;">दोबारा भेजें</span></p>
         </div>
 
         <!-- Loading -->
         <div id="loginLoading" style="display:none;text-align:center;padding:20px;">
-            <div style="font-size:30px;">â³</div>
-            <p id="loadingText">OTP à¤­à¥‡à¤œ à¤°à¤¹à¥‡ à¤¹à¥ˆà¤‚...</p>
+            <div style="font-size:30px;">⏳</div>
+            <p id="loadingText">OTP भेज रहे हैं...</p>
         </div>
 
         <p class="login-error" id="loginError" style="display:none;margin-top:10px;"></p>
@@ -550,51 +550,51 @@
 <!-- Activation Pending Screen -->
 <div class="login-screen hidden" id="activationScreen">
     <div class="login-box">
-        <div style="font-size:50px;margin-bottom:10px;">â³</div>
+        <div style="font-size:50px;margin-bottom:10px;">⏳</div>
         <h1 style="font-size:18px;margin-bottom:10px;">Activation Pending</h1>
-        <p style="font-size:13px;opacity:0.9;margin-bottom:20px;">à¤†à¤ªà¤•à¤¾ account activate à¤¹à¥‹à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¥à¥‹à¤¡à¤¼à¤¾ à¤¸à¤®à¤¯ à¤²à¤—à¥‡à¤—à¤¾à¥¤</p>
+        <p style="font-size:13px;opacity:0.9;margin-bottom:20px;">आपका account activate होने में थोड़ा समय लगेगा।</p>
         <div style="background:rgba(255,255,255,0.2);border-radius:10px;padding:15px;margin-bottom:20px;text-align:left;font-size:13px;">
-            <p>ðŸ“± <b>à¤†à¤ªà¤•à¤¾ à¤¨à¤‚à¤¬à¤°:</b> <span id="pendingPhone"></span></p>
-            <p style="margin-top:8px;">ðŸ“‹ <b>Status:</b> <span style="color:#FFD700;">Approval Pending</span></p>
+            <p>📱 <b>आपका नंबर:</b> <span id="pendingPhone"></span></p>
+            <p style="margin-top:8px;">📋 <b>Status:</b> <span style="color:#FFD700;">Approval Pending</span></p>
         </div>
-        <p style="font-size:12px;opacity:0.8;margin-bottom:15px;">Software owner à¤¸à¥‡ contact à¤•à¤°à¥‡à¤‚ activation à¤•à¥‡ à¤²à¤¿à¤à¥¤</p>
-        <button class="btn btn-secondary" onclick="FirebaseAuth.logout()" style="width:100%;">ðŸ”™ à¤µà¤¾à¤ªà¤¸ à¤œà¤¾à¤à¤‚</button>
+        <p style="font-size:12px;opacity:0.8;margin-bottom:15px;">Software owner से contact करें activation के लिए।</p>
+        <button class="btn btn-secondary" onclick="FirebaseAuth.logout()" style="width:100%;">🔙 वापस जाएं</button>
     </div>
 </div>
 
 <!-- Set PIN Screen (kept for compatibility) -->
 <div class="login-screen hidden" id="setPinScreen">
     <div class="login-box">
-        <h1>ðŸ” à¤¨à¤¯à¤¾ PIN à¤¸à¥‡à¤Ÿ à¤•à¤°à¥‡à¤‚</h1>
-        <p>4 à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ PIN à¤šà¥à¤¨à¥‡à¤‚</p>
-        <input type="password" id="newPin1" placeholder="à¤¨à¤¯à¤¾ PIN à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚" maxlength="4" inputmode="numeric">
-        <input type="password" id="newPin2" placeholder="PIN à¤¦à¥‹à¤¬à¤¾à¤°à¤¾ à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚" maxlength="4" inputmode="numeric">
-        <button class="btn btn-primary" onclick="App.savePin()">PIN à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</button>
-        <button class="btn btn-secondary" onclick="App.showLogin()">à¤µà¤¾à¤ªà¤¸ à¤œà¤¾à¤à¤‚</button>
+        <h1>🔐 नया PIN सेट करें</h1>
+        <p>4 अंकों का PIN चुनें</p>
+        <input type="password" id="newPin1" placeholder="नया PIN दर्ज करें" maxlength="4" inputmode="numeric">
+        <input type="password" id="newPin2" placeholder="PIN दोबारा दर्ज करें" maxlength="4" inputmode="numeric">
+        <button class="btn btn-primary" onclick="App.savePin()">PIN सेव करें</button>
+        <button class="btn btn-secondary" onclick="App.showLogin()">वापस जाएं</button>
     </div>
 </div>
 
 <div class="header">
     <h1>
-        ðŸŒŸ COSMIC AUTO BILL PRO v5.0
-        <span class="online-badge" id="onlineStatus">à¤‘à¤¨à¤²à¤¾à¤‡à¤¨</span>
+        🌟 COSMIC AUTO BILL PRO v5.0
+        <span class="online-badge" id="onlineStatus">ऑनलाइन</span>
     </h1>
-    <p id="headerShopName">à¤•à¤¿à¤¸à¥à¤¤ à¤®à¥ˆà¤¨à¥‡à¤œà¤° à¤ªà¥à¤°à¥‹</p>
+    <p id="headerShopName">किस्त मैनेजर प्रो</p>
     <div class="shop-info" id="headerShopInfo"></div>
     <div style="display: flex; gap: 10px; position: absolute; right: 15px; top: 15px;">
-        <button onclick="App.toggleDarkMode()" style="background: none; border: none; font-size: 20px; cursor: pointer;" id="darkModeBtn">ðŸŒ™</button>
+        <button onclick="App.toggleDarkMode()" style="background: none; border: none; font-size: 20px; cursor: pointer;" id="darkModeBtn">🌙</button>
         <button onclick="App.checkReminders()" style="background: none; border: none; font-size: 20px; cursor: pointer; position: relative;" id="reminderBtn">
-            ðŸ””
+            🔔
             <span class="notif-badge" id="reminderBadge" style="display: none;">0</span>
         </button>
-        <button onclick="FirebaseAuth.logout()" style="background:rgba(255,255,255,0.2);border:none;color:white;font-size:12px;padding:5px 8px;border-radius:6px;cursor:pointer;" title="Logout">ðŸšª</button>
+        <button onclick="FirebaseAuth.logout()" style="background:rgba(255,255,255,0.2);border:none;color:white;font-size:12px;padding:5px 8px;border-radius:6px;cursor:pointer;" title="Logout">🚪</button>
     </div>
 </div>
 
 <!-- Reminder Bar (Auto Show) -->
 <div class="reminder-bar" id="reminderBar" style="display: none;">
-    <span id="reminderText">ðŸ“¢ à¤†à¤œ 5 à¤—à¥à¤°à¤¾à¤¹à¤•à¥‹à¤‚ à¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ à¤•à¥€ à¤¤à¤¾à¤°à¥€à¤– à¤¹à¥ˆ!</span>
-    <button onclick="App.showDuePayments()">à¤¦à¥‡à¤–à¥‡à¤‚ â†’</button>
+    <span id="reminderText">📢 आज 5 ग्राहकों की किस्त की तारीख है!</span>
+    <button onclick="App.showDuePayments()">देखें →</button>
 </div>
 
 <div class="container">
@@ -602,45 +602,45 @@
     <div id="dashboard" class="section active">
         <div class="stats-grid">
             <div class="stat-card">
-                <p>à¤•à¥à¤² à¤—à¥à¤°à¤¾à¤¹à¤•</p>
+                <p>कुल ग्राहक</p>
                 <h3 id="totalCustomers">0</h3>
             </div>
             <div class="stat-card">
-                <p>à¤•à¥à¤² à¤¬à¤¿à¤•à¥à¤°à¥€</p>
-                <h3 id="totalSales">â‚¹0</h3>
+                <p>कुल बिक्री</p>
+                <h3 id="totalSales">₹0</h3>
             </div>
             <div class="stat-card">
-                <p>à¤•à¥à¤² à¤•à¤²à¥‡à¤•à¥à¤¶à¤¨</p>
-                <h3 id="totalCollection">â‚¹0</h3>
+                <p>कुल कलेक्शन</p>
+                <h3 id="totalCollection">₹0</h3>
             </div>
             <div class="stat-card">
-                <p>à¤¬à¤¾à¤•à¥€ à¤°à¤¾à¤¶à¤¿</p>
-                <h3 id="totalPending">â‚¹0</h3>
+                <p>बाकी राशि</p>
+                <h3 id="totalPending">₹0</h3>
             </div>
         </div>
         
         <!-- Profit/Loss Summary -->
         <div class="stats-grid">
             <div class="stat-card" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
-                <p>à¤‡à¤¸ à¤®à¤¹à¥€à¤¨à¥‡ à¤•à¤¾ à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ</p>
-                <h3 id="monthlyProfit">â‚¹0</h3>
+                <p>इस महीने का प्रॉफिट</p>
+                <h3 id="monthlyProfit">₹0</h3>
             </div>
             <div class="stat-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                <p>à¤¸à¤¾à¤²à¤¾à¤¨à¤¾ à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ</p>
-                <h3 id="yearlyProfit">â‚¹0</h3>
+                <p>सालाना प्रॉफिट</p>
+                <h3 id="yearlyProfit">₹0</h3>
             </div>
         </div>
         
         <!-- Charts Grid -->
         <div class="chart-grid">
             <div class="chart-card">
-                <h3>ðŸ“Š à¤¬à¤¿à¤•à¥à¤°à¥€ à¤•à¤¾ à¤—à¥à¤°à¤¾à¤« (7 à¤¦à¤¿à¤¨)</h3>
+                <h3>📊 बिक्री का ग्राफ (7 दिन)</h3>
                 <div class="chart-container">
                     <canvas id="salesChart"></canvas>
                 </div>
             </div>
             <div class="chart-card">
-                <h3>ðŸ¥§ à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ à¤¡à¤¿à¤¸à¥à¤Ÿà¥à¤°à¥€à¤¬à¥à¤¯à¥‚à¤¶à¤¨</h3>
+                <h3>🥧 प्रॉफिट डिस्ट्रीब्यूशन</h3>
                 <div class="chart-container">
                     <canvas id="profitChart"></canvas>
                 </div>
@@ -648,11 +648,11 @@
         </div>
         
         <div class="card">
-            <h2>âš ï¸ à¤†à¤œ à¤•à¥‡ à¤…à¤²à¤°à¥à¤Ÿ</h2>
+            <h2>⚠️ आज के अलर्ट</h2>
             <div id="alertsContainer"></div>
             <div class="action-btns" style="margin-top: 10px;">
-                <button class="btn btn-whatsapp" onclick="App.bulkWhatsAppReminder()">ðŸ“± à¤¸à¤­à¥€ à¤•à¥‹ à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤­à¥‡à¤œà¥‡à¤‚</button>
-                <button class="btn btn-info" onclick="App.exportDashboardPDF()">ðŸ“¥ PDF à¤°à¤¿à¤ªà¥‹à¤°à¥à¤Ÿ</button>
+                <button class="btn btn-whatsapp" onclick="App.bulkWhatsAppReminder()">📱 सभी को रिमाइंडर भेजें</button>
+                <button class="btn btn-info" onclick="App.exportDashboardPDF()">📥 PDF रिपोर्ट</button>
             </div>
         </div>
     </div>
@@ -660,50 +660,50 @@
     <!-- Customers -->
     <div id="customers" class="section">
         <div class="card">
-            <h2>ðŸ‘¤ à¤¨à¤¯à¤¾ à¤—à¥à¤°à¤¾à¤¹à¤• à¤œà¥‹à¤¡à¤¼à¥‡à¤‚</h2>
+            <h2>👤 नया ग्राहक जोड़ें</h2>
             <div id="custAlert" class="alert alert-success"></div>
             <div class="form-group">
-                <label>à¤¨à¤¾à¤® *</label>
-                <input type="text" id="custName" placeholder="à¤ªà¥‚à¤°à¤¾ à¤¨à¤¾à¤®" autocomplete="off">
+                <label>नाम *</label>
+                <input type="text" id="custName" placeholder="पूरा नाम" autocomplete="off">
             </div>
             <div class="form-group">
-                <label>ðŸ¢ à¤•à¤‚à¤ªà¤¨à¥€ / à¤¸à¥à¤•à¥‚à¤² / à¤¸à¤‚à¤¸à¥à¤¥à¤¾ (Optional)</label>
-                <input type="text" id="custCompany" placeholder="à¤•à¤‚à¤ªà¤¨à¥€/à¤¸à¥à¤•à¥‚à¤²/à¤…à¤¸à¥à¤ªà¤¤à¤¾à¤² à¤•à¤¾ à¤¨à¤¾à¤®" autocomplete="off">
+                <label>🏢 कंपनी / स्कूल / संस्था (Optional)</label>
+                <input type="text" id="custCompany" placeholder="कंपनी/स्कूल/अस्पताल का नाम" autocomplete="off">
             </div>
             <div class="form-group">
-                <label>à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° *</label>
+                <label>मोबाइल नंबर *</label>
                 <div style="display:flex;gap:5px;">
                     <select id="custCountryCode" style="width:100px;padding:8px 5px;border-radius:8px;border:1px solid #ddd;font-size:13px;">
-                        <option value="+91">ðŸ‡®ðŸ‡³ +91</option>
-                        <option value="+977">ðŸ‡³ðŸ‡µ +977</option>
-                        <option value="+880">ðŸ‡§ðŸ‡© +880</option>
-                        <option value="+92">ðŸ‡µðŸ‡° +92</option>
-                        <option value="+94">ðŸ‡±ðŸ‡° +94</option>
-                        <option value="+971">ðŸ‡¦ðŸ‡ª +971</option>
-                        <option value="+966">ðŸ‡¸ðŸ‡¦ +966</option>
-                        <option value="+60">ðŸ‡²ðŸ‡¾ +60</option>
-                        <option value="+44">ðŸ‡¬ðŸ‡§ +44</option>
-                        <option value="+1">ðŸ‡ºðŸ‡¸ +1</option>
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+977">🇳🇵 +977</option>
+                        <option value="+880">🇧🇩 +880</option>
+                        <option value="+92">🇵🇰 +92</option>
+                        <option value="+94">🇱🇰 +94</option>
+                        <option value="+971">🇦🇪 +971</option>
+                        <option value="+966">🇸🇦 +966</option>
+                        <option value="+60">🇲🇾 +60</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+1">🇺🇸 +1</option>
                     </select>
-                    <input type="tel" id="custPhone" placeholder="à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤°" inputmode="numeric" oninput="App.validatePhone(this)" style="flex:1;">
+                    <input type="tel" id="custPhone" placeholder="मोबाइल नंबर" inputmode="numeric" oninput="App.validatePhone(this)" style="flex:1;">
                 </div>
-                <small style="color: #666; font-size: 11px;">à¤¦à¥‡à¤¶ à¤•à¥‹à¤¡ + à¤¨à¤‚à¤¬à¤° à¤šà¥à¤¨à¥‡à¤‚</small>
+                <small style="color: #666; font-size: 11px;">देश कोड + नंबर चुनें</small>
             </div>
             <div class="form-group">
-                <label>à¤ªà¤¤à¤¾</label>
-                <textarea id="custAddress" rows="2" placeholder="à¤ªà¥‚à¤°à¤¾ à¤ªà¤¤à¤¾"></textarea>
+                <label>पता</label>
+                <textarea id="custAddress" rows="2" placeholder="पूरा पता"></textarea>
             </div>
-            <button class="btn" id="btnSaveCustomer" onclick="App.saveCustomer()">âœ… à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</button>
+            <button class="btn" id="btnSaveCustomer" onclick="App.saveCustomer()">✅ सेव करें</button>
         </div>
 
         <div class="card">
-            <h2>ðŸ“‹ à¤—à¥à¤°à¤¾à¤¹à¤• à¤²à¤¿à¤¸à¥à¤Ÿ</h2>
+            <h2>📋 ग्राहक लिस्ट</h2>
             <div class="search-box">
-                <input type="text" id="searchCust" onkeyup="App.displayCustomers()" placeholder="ðŸ” à¤–à¥‹à¤œà¥‡à¤‚..." autocomplete="off">
+                <input type="text" id="searchCust" onkeyup="App.displayCustomers()" placeholder="🔍 खोजें..." autocomplete="off">
             </div>
             <div style="overflow-x: auto;">
                 <table id="custTable">
-                    <thead><tr><th>à¤¨à¤¾à¤® / à¤¸à¤‚à¤¸à¥à¤¥à¤¾</th><th>à¤®à¥‹à¤¬à¤¾à¤‡à¤²</th><th>à¤¬à¤¾à¤•à¥€</th><th>à¤à¤•à¥à¤¶à¤¨</th></tr></thead>
+                    <thead><tr><th>नाम / संस्था</th><th>मोबाइल</th><th>बाकी</th><th>एक्शन</th></tr></thead>
                     <tbody></tbody>
                 </table>
             </div>
@@ -713,35 +713,35 @@
     <!-- Products -->
     <div id="products" class="section">
         <div class="card">
-            <h2>ðŸ“¦ à¤¨à¤¯à¤¾ à¤¸à¤¾à¤®à¤¾à¤¨ à¤œà¥‹à¤¡à¤¼à¥‡à¤‚</h2>
+            <h2>📦 नया सामान जोड़ें</h2>
             <div id="prodAlert" class="alert alert-success"></div>
             <div class="form-group">
-                <label>à¤¸à¤¾à¤®à¤¾à¤¨ à¤•à¤¾ à¤¨à¤¾à¤® *</label>
-                <input type="text" id="prodName" placeholder="à¤¨à¤¾à¤®" autocomplete="off">
+                <label>सामान का नाम *</label>
+                <input type="text" id="prodName" placeholder="नाम" autocomplete="off">
             </div>
             <div class="form-group">
-                <label>à¤²à¤¾à¤—à¤¤ à¤•à¥€à¤®à¤¤ (â‚¹) *</label>
+                <label>लागत कीमत (₹) *</label>
                 <input type="number" id="prodCost" placeholder="0" min="0" step="0.01">
             </div>
             <div class="form-group">
-                <label>à¤¬à¤¿à¤•à¥à¤°à¥€ à¤•à¥€à¤®à¤¤ (â‚¹) *</label>
+                <label>बिक्री कीमत (₹) *</label>
                 <input type="number" id="prodPrice" placeholder="0" min="0" step="0.01" onchange="App.calculateProductProfit()">
             </div>
             <div class="form-group">
-                <label>à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ à¤®à¤¾à¤°à¥à¤œà¤¿à¤¨ (%)</label>
+                <label>प्रॉफिट मार्जिन (%)</label>
                 <input type="number" id="prodProfit" placeholder="0" value="0" min="0" step="0.01" readonly>
             </div>
-            <button class="btn" id="btnSaveProduct" onclick="App.saveProduct()">âœ… à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</button>
+            <button class="btn" id="btnSaveProduct" onclick="App.saveProduct()">✅ सेव करें</button>
         </div>
 
         <div class="card">
-            <h2>ðŸ“‹ à¤¸à¤¾à¤®à¤¾à¤¨ à¤²à¤¿à¤¸à¥à¤Ÿ</h2>
+            <h2>📋 सामान लिस्ट</h2>
             <div class="search-box">
-                <input type="text" id="searchProd" onkeyup="App.displayProducts()" placeholder="ðŸ” à¤–à¥‹à¤œà¥‡à¤‚..." autocomplete="off">
+                <input type="text" id="searchProd" onkeyup="App.displayProducts()" placeholder="🔍 खोजें..." autocomplete="off">
             </div>
             <div style="overflow-x: auto;">
                 <table id="prodTable">
-                    <thead><tr><th>à¤¸à¤¾à¤®à¤¾à¤¨</th><th>à¤²à¤¾à¤—à¤¤</th><th>à¤¬à¤¿à¤•à¥à¤°à¥€</th><th>à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ</th><th>à¤à¤•à¥à¤¶à¤¨</th></tr></thead>
+                    <thead><tr><th>सामान</th><th>लागत</th><th>बिक्री</th><th>प्रॉफिट</th><th>एक्शन</th></tr></thead>
                     <tbody></tbody>
                 </table>
             </div>
@@ -751,13 +751,13 @@
     <!-- Invoice -->
     <div id="invoice" class="section">
         <div class="card">
-            <h2>ðŸ“ à¤¨à¤¯à¤¾ à¤¬à¤¿à¤² à¤¬à¤¨à¤¾à¤à¤‚</h2>
+            <h2>📝 नया बिल बनाएं</h2>
             <div id="invAlert" class="alert alert-success"></div>
             
             <div class="form-group">
-                <label>à¤—à¥à¤°à¤¾à¤¹à¤• à¤šà¥à¤¨à¥‡à¤‚ *</label>
+                <label>ग्राहक चुनें *</label>
                 <div class="relative">
-                    <input type="text" id="invCustSearch" onkeyup="App.searchCustomer()" placeholder="à¤¨à¤¾à¤® à¤Ÿà¤¾à¤‡à¤ª à¤•à¤°à¥‡à¤‚..." autocomplete="off">
+                    <input type="text" id="invCustSearch" onkeyup="App.searchCustomer()" placeholder="नाम टाइप करें..." autocomplete="off">
                     <div id="custResults" class="search-results"></div>
                 </div>
                 <input type="hidden" id="invCustId">
@@ -765,120 +765,120 @@
 
             <!-- Interest Calculator -->
             <div class="interest-calc">
-                <h4>ðŸ’° à¤¬à¥à¤¯à¤¾à¤œ à¤•à¥ˆà¤²à¤•à¥à¤²à¥‡à¤Ÿà¤°</h4>
+                <h4>💰 ब्याज कैलकुलेटर</h4>
                 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
-                    <input type="number" id="calcPrincipal" placeholder="à¤®à¥‚à¤²à¤§à¤¨ (â‚¹)" oninput="App.calculateInterest()">
-                    <input type="number" id="calcRate" placeholder="à¤¬à¥à¤¯à¤¾à¤œ %" oninput="App.calculateInterest()">
-                    <input type="number" id="calcMonths" placeholder="à¤®à¤¹à¥€à¤¨à¥‡" oninput="App.calculateInterest()">
+                    <input type="number" id="calcPrincipal" placeholder="मूलधन (₹)" oninput="App.calculateInterest()">
+                    <input type="number" id="calcRate" placeholder="ब्याज %" oninput="App.calculateInterest()">
+                    <input type="number" id="calcMonths" placeholder="महीने" oninput="App.calculateInterest()">
                 </div>
                 <div class="calc-result">
-                    <strong>à¤•à¥à¤² à¤°à¤¾à¤¶à¤¿: â‚¹<span id="calcTotal">0</span></strong><br>
-                    <small>à¤¬à¥à¤¯à¤¾à¤œ: â‚¹<span id="calcInterest">0</span></small>
+                    <strong>कुल राशि: ₹<span id="calcTotal">0</span></strong><br>
+                    <small>ब्याज: ₹<span id="calcInterest">0</span></small>
                 </div>
             </div>
 
             <!-- Multiple Products -->
             <div class="form-group">
-                <label>à¤¸à¤¾à¤®à¤¾à¤¨ à¤šà¥à¤¨à¥‡à¤‚ (à¤à¤• à¤¯à¤¾ à¤•à¤ˆ)</label>
+                <label>सामान चुनें (एक या कई)</label>
                 <div id="productRows">
                     <div class="product-row">
                         <div class="relative">
-                            <input type="text" class="invProdSearch" onkeyup="App.searchProductMulti(this)" placeholder="à¤¸à¤¾à¤®à¤¾à¤¨ à¤•à¤¾ à¤¨à¤¾à¤®" autocomplete="off">
+                            <input type="text" class="invProdSearch" onkeyup="App.searchProductMulti(this)" placeholder="सामान का नाम" autocomplete="off">
                             <div class="search-results prodResults"></div>
                         </div>
                         <input type="number" class="invProdQty" placeholder="Qty" value="1" min="1" onchange="App.calculateTotal()">
-                        <input type="number" class="invProdPrice" placeholder="â‚¹" readonly>
-                        <button class="remove-btn" onclick="App.removeProductRow(this)" style="display:none;">âŒ</button>
+                        <input type="number" class="invProdPrice" placeholder="₹" readonly>
+                        <button class="remove-btn" onclick="App.removeProductRow(this)" style="display:none;">❌</button>
                     </div>
                 </div>
-                <button class="btn btn-secondary" onclick="App.addProductRow()" style="margin-top: 10px;">+ à¤”à¤° à¤¸à¤¾à¤®à¤¾à¤¨ à¤œà¥‹à¤¡à¤¼à¥‡à¤‚</button>
+                <button class="btn btn-secondary" onclick="App.addProductRow()" style="margin-top: 10px;">+ और सामान जोड़ें</button>
             </div>
 
             <div class="form-group">
-                <label>à¤•à¥à¤² à¤•à¥€à¤®à¤¤ (â‚¹) *</label>
+                <label>कुल कीमत (₹) *</label>
                 <input type="number" id="invTotalPrice" placeholder="0" min="0" readonly>
             </div>
 
             <div class="form-group">
-                <label>à¤•à¥à¤² à¤²à¤¾à¤—à¤¤ (â‚¹)</label>
+                <label>कुल लागत (₹)</label>
                 <input type="number" id="invTotalCost" placeholder="0" min="0" readonly>
             </div>
 
             <div class="form-group">
-                <label>à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ (â‚¹)</label>
+                <label>प्रॉफिट (₹)</label>
                 <input type="number" id="invProfit" placeholder="0" min="0" readonly style="color: green; font-weight: bold;">
             </div>
 
             <div class="form-group">
-                <label>à¤…à¤—à¥à¤°à¤¿à¤®/à¤ªà¤¹à¤²à¥€ à¤•à¤¿à¤¸à¥à¤¤ (â‚¹) *</label>
+                <label>अग्रिम/पहली किस्त (₹) *</label>
                 <input type="number" id="invAdvance" placeholder="0" min="0" onchange="App.calculatePending()">
             </div>
 
             <div class="form-group">
-                <label>à¤¬à¤¾à¤•à¥€ à¤°à¤¾à¤¶à¤¿ (â‚¹)</label>
+                <label>बाकी राशि (₹)</label>
                 <input type="number" id="invPending" readonly>
             </div>
 
             <div class="form-group">
-                <label>à¤…à¤—à¤²à¥€ à¤•à¤¿à¤¸à¥à¤¤ à¤¤à¤¾à¤°à¥€à¤– *</label>
+                <label>अगली किस्त तारीख *</label>
                 <input type="date" id="invDueDate">
             </div>
 
             <div class="form-group">
-                <label>ðŸ“… à¤•à¤¿à¤¸à¥à¤¤ à¤•à¤¿à¤¤à¤¨à¥‡ à¤®à¤¹à¥€à¤¨à¥‡ à¤®à¥‡à¤‚? *</label>
+                <label>📅 किस्त कितने महीने में? *</label>
                 <select id="invInstallMonths" onchange="App.calculateInstallmentPlan()">
-                    <option value="1">1 à¤®à¤¹à¥€à¤¨à¤¾</option>
-                    <option value="2">2 à¤®à¤¹à¥€à¤¨à¥‡</option>
-                    <option value="3">3 à¤®à¤¹à¥€à¤¨à¥‡</option>
-                    <option value="4">4 à¤®à¤¹à¥€à¤¨à¥‡</option>
-                    <option value="5">5 à¤®à¤¹à¥€à¤¨à¥‡</option>
-                    <option value="6">6 à¤®à¤¹à¥€à¤¨à¥‡</option>
-                    <option value="9">9 à¤®à¤¹à¥€à¤¨à¥‡</option>
-                    <option value="10" selected>10 à¤®à¤¹à¥€à¤¨à¥‡</option>
-                    <option value="12">12 à¤®à¤¹à¥€à¤¨à¥‡</option>
-                    <option value="18">18 à¤®à¤¹à¥€à¤¨à¥‡</option>
-                    <option value="24">24 à¤®à¤¹à¥€à¤¨à¥‡</option>
-                    <option value="36">36 à¤®à¤¹à¥€à¤¨à¥‡</option>
+                    <option value="1">1 महीना</option>
+                    <option value="2">2 महीने</option>
+                    <option value="3">3 महीने</option>
+                    <option value="4">4 महीने</option>
+                    <option value="5">5 महीने</option>
+                    <option value="6">6 महीने</option>
+                    <option value="9">9 महीने</option>
+                    <option value="10" selected>10 महीने</option>
+                    <option value="12">12 महीने</option>
+                    <option value="18">18 महीने</option>
+                    <option value="24">24 महीने</option>
+                    <option value="36">36 महीने</option>
                 </select>
             </div>
 
             <div id="installPlanBox" style="display:none; background:#e8f5e9; border-left:3px solid #11998e; padding:10px; border-radius:8px; margin-bottom:10px; font-size:13px;">
-                <div style="font-weight:bold; color:#11998e; margin-bottom:5px;">ðŸ“‹ à¤•à¤¿à¤¸à¥à¤¤ à¤¯à¥‹à¤œà¤¨à¤¾:</div>
+                <div style="font-weight:bold; color:#11998e; margin-bottom:5px;">📋 किस्त योजना:</div>
                 <div id="installPlanText"></div>
             </div>
 
             <div class="form-group">
-                <label>à¤ªà¥‡à¤®à¥‡à¤‚à¤Ÿ à¤®à¥‹à¤¡</label>
+                <label>पेमेंट मोड</label>
                 <select id="invPaymentMode">
-                    <option value="Cash">à¤•à¥ˆà¤¶</option>
+                    <option value="Cash">कैश</option>
                     <option value="UPI">UPI</option>
-                    <option value="Bank">à¤¬à¥ˆà¤‚à¤•</option>
-                    <option value="Card">à¤•à¤¾à¤°à¥à¤¡</option>
+                    <option value="Bank">बैंक</option>
+                    <option value="Card">कार्ड</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label>
                     <input type="checkbox" id="invAutoReminder" checked>
-                    à¤‘à¤Ÿà¥‹à¤®à¥ˆà¤Ÿà¤¿à¤• à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤­à¥‡à¤œà¥‡à¤‚ (à¤¤à¤¾à¤°à¥€à¤– à¤¸à¥‡ 1 à¤¦à¤¿à¤¨ à¤ªà¤¹à¤²à¥‡)
+                    ऑटोमैटिक रिमाइंडर भेजें (तारीख से 1 दिन पहले)
                 </label>
             </div>
 
-            <button class="btn" id="btnSaveInvoice" onclick="App.saveInvoice()">ðŸ’¾ à¤¬à¤¿à¤² à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</button>
-            <button class="btn btn-info" id="btnPrintLastInvoice" onclick="App.printLastInvoice()" style="display:none;">ðŸ–¨ï¸ Invoice PDF Print à¤•à¤°à¥‡à¤‚</button>
+            <button class="btn" id="btnSaveInvoice" onclick="App.saveInvoice()">💾 बिल सेव करें</button>
+            <button class="btn btn-info" id="btnPrintLastInvoice" onclick="App.printLastInvoice()" style="display:none;">🖨️ Invoice PDF Print करें</button>
         </div>
     </div>
 
     <!-- Payments -->
     <div id="payments" class="section">
         <div class="card">
-            <h2>ðŸ’µ à¤•à¤¿à¤¸à¥à¤¤ à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚</h2>
+            <h2>💵 किस्त जमा करें</h2>
             <div id="payAlert" class="alert alert-success"></div>
             
             <div class="form-group">
-                <label>à¤—à¥à¤°à¤¾à¤¹à¤• à¤šà¥à¤¨à¥‡à¤‚ *</label>
+                <label>ग्राहक चुनें *</label>
                 <div class="relative">
-                    <input type="text" id="payCustSearch" onkeyup="App.searchCustomerForPayment()" placeholder="à¤¨à¤¾à¤® à¤Ÿà¤¾à¤‡à¤ª à¤•à¤°à¥‡à¤‚..." autocomplete="off">
+                    <input type="text" id="payCustSearch" onkeyup="App.searchCustomerForPayment()" placeholder="नाम टाइप करें..." autocomplete="off">
                     <div id="payCustResults" class="search-results"></div>
                 </div>
                 <input type="hidden" id="payCustId">
@@ -886,69 +886,69 @@
             </div>
 
             <div class="form-group">
-                <label>à¤œà¤®à¤¾ à¤°à¤¾à¤¶à¤¿ (â‚¹) *</label>
+                <label>जमा राशि (₹) *</label>
                 <input type="number" id="payAmount" placeholder="0" min="0" step="0.01">
             </div>
 
             <div class="form-group">
-                <label>à¤ªà¥‡à¤®à¥‡à¤‚à¤Ÿ à¤®à¥‹à¤¡</label>
+                <label>पेमेंट मोड</label>
                 <select id="payPaymentMode">
-                    <option value="Cash">à¤•à¥ˆà¤¶</option>
+                    <option value="Cash">कैश</option>
                     <option value="UPI">UPI</option>
-                    <option value="Bank">à¤¬à¥ˆà¤‚à¤•</option>
-                    <option value="Card">à¤•à¤¾à¤°à¥à¤¡</option>
+                    <option value="Bank">बैंक</option>
+                    <option value="Card">कार्ड</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label>à¤…à¤—à¤²à¥€ à¤•à¤¿à¤¸à¥à¤¤ à¤¤à¤¾à¤°à¥€à¤–</label>
+                <label>अगली किस्त तारीख</label>
                 <input type="date" id="payNextDueDate">
             </div>
 
-            <button class="btn btn-success" id="btnSavePayment" onclick="App.savePayment()">âœ… à¤•à¤¿à¤¸à¥à¤¤ à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚</button>
-            <button class="btn btn-whatsapp" onclick="App.sendPaymentReminder()" style="margin-top: 10px;">ðŸ“± à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤­à¥‡à¤œà¥‡à¤‚</button>
+            <button class="btn btn-success" id="btnSavePayment" onclick="App.savePayment()">✅ किस्त जमा करें</button>
+            <button class="btn btn-whatsapp" onclick="App.sendPaymentReminder()" style="margin-top: 10px;">📱 रिमाइंडर भेजें</button>
         </div>
     </div>
 
     <!-- Reports -->
     <div id="reports" class="section">
         <div class="card">
-            <h2>ðŸ“Š à¤°à¤¿à¤ªà¥‹à¤°à¥à¤Ÿà¥à¤¸</h2>
+            <h2>📊 रिपोर्ट्स</h2>
             
             <!-- Date Filter -->
             <div class="date-filter">
                 <input type="date" id="reportFromDate" onchange="App.displayReports()">
                 <input type="date" id="reportToDate" onchange="App.displayReports()">
-                <button class="btn btn-info" onclick="App.resetDateFilter()" style="padding: 10px;">à¤¸à¤­à¥€</button>
+                <button class="btn btn-info" onclick="App.resetDateFilter()" style="padding: 10px;">सभी</button>
             </div>
             <div style="display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap;">
-                <button class="btn btn-secondary" onclick="App.filterToday()" style="flex:1; min-width:80px; padding:8px; font-size:12px;">ðŸ“… à¤†à¤œ</button>
-                <button class="btn btn-secondary" onclick="App.filterThisWeek()" style="flex:1; min-width:80px; padding:8px; font-size:12px;">ðŸ“… à¤‡à¤¸ à¤¹à¤«à¥à¤¤à¥‡</button>
-                <button class="btn btn-secondary" onclick="App.filterThisMonth()" style="flex:1; min-width:80px; padding:8px; font-size:12px;">ðŸ“… à¤‡à¤¸ à¤®à¤¹à¥€à¤¨à¥‡</button>
-                <button class="btn btn-secondary" onclick="App.filterThisYear()" style="flex:1; min-width:80px; padding:8px; font-size:12px;">ðŸ“… à¤‡à¤¸ à¤¸à¤¾à¤²</button>
+                <button class="btn btn-secondary" onclick="App.filterToday()" style="flex:1; min-width:80px; padding:8px; font-size:12px;">📅 आज</button>
+                <button class="btn btn-secondary" onclick="App.filterThisWeek()" style="flex:1; min-width:80px; padding:8px; font-size:12px;">📅 इस हफ्ते</button>
+                <button class="btn btn-secondary" onclick="App.filterThisMonth()" style="flex:1; min-width:80px; padding:8px; font-size:12px;">📅 इस महीने</button>
+                <button class="btn btn-secondary" onclick="App.filterThisYear()" style="flex:1; min-width:80px; padding:8px; font-size:12px;">📅 इस साल</button>
             </div>
             
             <div class="search-box">
-                <input type="text" id="searchReport" onkeyup="App.displayReports()" placeholder="ðŸ” à¤–à¥‹à¤œà¥‡à¤‚..." autocomplete="off">
+                <input type="text" id="searchReport" onkeyup="App.displayReports()" placeholder="🔍 खोजें..." autocomplete="off">
             </div>
             
             <div class="action-btns">
-                <button class="btn btn-info" onclick="App.exportToExcel()">ðŸ“¥ Excel</button>
-                <button class="btn btn-success" onclick="App.exportToPDF()">ðŸ“„ PDF</button>
-                <button class="btn btn-warning" onclick="App.backupData()">ðŸ’¾ Backup</button>
-                <button class="btn btn-success" onclick="document.getElementById('restoreFile').click()">ðŸ“¤ Restore</button>
+                <button class="btn btn-info" onclick="App.exportToExcel()">📥 Excel</button>
+                <button class="btn btn-success" onclick="App.exportToPDF()">📄 PDF</button>
+                <button class="btn btn-warning" onclick="App.backupData()">💾 Backup</button>
+                <button class="btn btn-success" onclick="document.getElementById('restoreFile').click()">📤 Restore</button>
             </div>
             <div style="display:flex; gap:8px; margin:10px 0; flex-wrap:wrap;">
-                <button class="btn" onclick="App.setReportFilter('all')" id="rfAll" style="flex:1;min-width:70px;padding:8px;font-size:12px;background:#764ba2;">à¤¸à¤­à¥€</button>
-                <button class="btn btn-secondary" onclick="App.setReportFilter('invoice')" id="rfInvoice" style="flex:1;min-width:70px;padding:8px;font-size:12px;">ðŸ“ à¤¬à¤¿à¤²</button>
-                <button class="btn btn-secondary" onclick="App.setReportFilter('payment')" id="rfPayment" style="flex:1;min-width:70px;padding:8px;font-size:12px;">ðŸ’µ à¤•à¤¿à¤¸à¥à¤¤</button>
+                <button class="btn" onclick="App.setReportFilter('all')" id="rfAll" style="flex:1;min-width:70px;padding:8px;font-size:12px;background:#764ba2;">सभी</button>
+                <button class="btn btn-secondary" onclick="App.setReportFilter('invoice')" id="rfInvoice" style="flex:1;min-width:70px;padding:8px;font-size:12px;">📝 बिल</button>
+                <button class="btn btn-secondary" onclick="App.setReportFilter('payment')" id="rfPayment" style="flex:1;min-width:70px;padding:8px;font-size:12px;">💵 किस्त</button>
             </div>
             <input type="file" id="restoreFile" style="display:none" onchange="App.restoreData(this)" accept=".json">
 
             <div style="overflow-x: auto; max-height: 400px; overflow-y: auto;">
                 <table id="reportTable">
                     <thead>
-                        <tr><th>à¤¤à¤¾à¤°à¥€à¤–</th><th>à¤—à¥à¤°à¤¾à¤¹à¤•</th><th>à¤¸à¤¾à¤®à¤¾à¤¨</th><th>à¤°à¤¾à¤¶à¤¿</th><th>à¤²à¤¾à¤—à¤¤</th><th>à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ</th><th>à¤®à¥‹à¤¡</th><th>à¤à¤•à¥à¤¶à¤¨</th></tr>
+                        <tr><th>तारीख</th><th>ग्राहक</th><th>सामान</th><th>राशि</th><th>लागत</th><th>प्रॉफिट</th><th>मोड</th><th>एक्शन</th></tr>
                     </thead>
                     <tbody></tbody>
                 </table>
@@ -962,18 +962,18 @@
     <!-- Customer Detail -->
     <div id="customerDetail" class="section">
         <div class="card">
-            <h2>ðŸ‘¤ à¤—à¥à¤°à¤¾à¤¹à¤• à¤µà¤¿à¤µà¤°à¤£</h2>
-            <button class="btn btn-secondary" onclick="App.showSection('customers')" style="margin-bottom: 15px;">â† à¤µà¤¾à¤ªà¤¸ à¤œà¤¾à¤à¤‚</button>
+            <h2>👤 ग्राहक विवरण</h2>
+            <button class="btn btn-secondary" onclick="App.showSection('customers')" style="margin-bottom: 15px;">← वापस जाएं</button>
             
             <div id="customerDetailContent"></div>
             
             <div class="action-btns" style="margin-top: 15px;">
-                <button class="btn btn-info" onclick="App.printCustomerPDF()">ðŸ“„ Full Statement</button>
-                <button class="btn btn-warning" onclick="App.openEditModal(App.currentCustomerId)">âœï¸ Edit à¤•à¤°à¥‡à¤‚</button>
-                <button class="btn btn-whatsapp" onclick="App.sendWhatsAppReminder()">ðŸ“± WhatsApp</button>
-                <button class="btn btn-sms" onclick="App.sendSMSReminder()">ðŸ’¬ SMS</button>
-                <button class="btn btn-success" onclick="App.showSection('payments')">ðŸ’µ à¤•à¤¿à¤¸à¥à¤¤ à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚</button>
-                <button class="btn btn-bulk" onclick="App.setAutoReminder(App.currentCustomerId)">ðŸ”” à¤‘à¤Ÿà¥‹ à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤¸à¥‡à¤Ÿ à¤•à¤°à¥‡à¤‚</button>
+                <button class="btn btn-info" onclick="App.printCustomerPDF()">📄 Full Statement</button>
+                <button class="btn btn-warning" onclick="App.openEditModal(App.currentCustomerId)">✏️ Edit करें</button>
+                <button class="btn btn-whatsapp" onclick="App.sendWhatsAppReminder()">📱 WhatsApp</button>
+                <button class="btn btn-sms" onclick="App.sendSMSReminder()">💬 SMS</button>
+                <button class="btn btn-success" onclick="App.showSection('payments')">💵 किस्त जमा करें</button>
+                <button class="btn btn-bulk" onclick="App.setAutoReminder(App.currentCustomerId)">🔔 ऑटो रिमाइंडर सेट करें</button>
             </div>
             
             <!-- Payment Progress -->
@@ -987,123 +987,123 @@
     <!-- Settings -->
     <div id="settings" class="section">
         <div class="card">
-            <h2>âš™ï¸ à¤¸à¥‡à¤Ÿà¤¿à¤‚à¤—à¥à¤¸</h2>
+            <h2>⚙️ सेटिंग्स</h2>
             
             <div class="settings-grid">
                 <div class="setting-card">
-                    <h4>ðŸª à¤¦à¥à¤•à¤¾à¤¨ à¤•à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€</h4>
+                    <h4>🏪 दुकान की जानकारी</h4>
                     <div class="form-group">
-                        <label>à¤¦à¥à¤•à¤¾à¤¨ à¤•à¤¾ à¤¨à¤¾à¤®</label>
-                        <input type="text" id="shopName" placeholder="à¤¦à¥à¤•à¤¾à¤¨ à¤•à¤¾ à¤¨à¤¾à¤®">
+                        <label>दुकान का नाम</label>
+                        <input type="text" id="shopName" placeholder="दुकान का नाम">
                     </div>
                     <div class="form-group">
-                        <label>à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤°</label>
-                        <input type="tel" id="shopPhone" placeholder="à¤¦à¥à¤•à¤¾à¤¨ à¤•à¤¾ à¤¨à¤‚à¤¬à¤°" maxlength="10" inputmode="numeric">
+                        <label>मोबाइल नंबर</label>
+                        <input type="tel" id="shopPhone" placeholder="दुकान का नंबर" maxlength="10" inputmode="numeric">
                     </div>
                     <div class="form-group">
-                        <label>à¤ªà¤¤à¤¾</label>
-                        <textarea id="shopAddress" rows="2" placeholder="à¤¦à¥à¤•à¤¾à¤¨ à¤•à¤¾ à¤ªà¤¤à¤¾"></textarea>
+                        <label>पता</label>
+                        <textarea id="shopAddress" rows="2" placeholder="दुकान का पता"></textarea>
                     </div>
                     <div class="form-group">
-                        <label>GST à¤¨à¤‚à¤¬à¤° (à¤µà¥ˆà¤•à¤²à¥à¤ªà¤¿à¤•)</label>
-                        <input type="text" id="shopGst" placeholder="GST à¤¨à¤‚à¤¬à¤°">
+                        <label>GST नंबर (वैकल्पिक)</label>
+                        <input type="text" id="shopGst" placeholder="GST नंबर">
                     </div>
-                    <button class="btn" onclick="App.saveShopProfile()">ðŸ’¾ à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</button>
+                    <button class="btn" onclick="App.saveShopProfile()">💾 सेव करें</button>
                 </div>
 
                 <div class="setting-card">
-                    <h4>ðŸ” à¤¸à¥à¤°à¤•à¥à¤·à¤¾ à¤¸à¥‡à¤Ÿà¤¿à¤‚à¤—à¥à¤¸</h4>
+                    <h4>🔐 सुरक्षा सेटिंग्स</h4>
                     <div class="form-group">
-                        <label>à¤¨à¤¯à¤¾ PIN à¤¸à¥‡à¤Ÿ à¤•à¤°à¥‡à¤‚</label>
-                        <input type="password" id="newSecurityPin" placeholder="4 à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ PIN" maxlength="4" inputmode="numeric">
+                        <label>नया PIN सेट करें</label>
+                        <input type="password" id="newSecurityPin" placeholder="4 अंकों का PIN" maxlength="4" inputmode="numeric">
                     </div>
-                    <button class="btn btn-warning" onclick="App.changePin()">ðŸ”‘ PIN à¤¬à¤¦à¤²à¥‡à¤‚</button>
-                    <button class="btn btn-danger" onclick="App.disablePin()" style="margin-top: 10px;">ðŸ”“ PIN à¤¹à¤Ÿà¤¾à¤à¤‚</button>
+                    <button class="btn btn-warning" onclick="App.changePin()">🔑 PIN बदलें</button>
+                    <button class="btn btn-danger" onclick="App.disablePin()" style="margin-top: 10px;">🔓 PIN हटाएं</button>
                     <div style="margin-top: 10px;">
                         <label>
                             <input type="checkbox" id="enableBiometric" onchange="App.toggleBiometric()">
-                            à¤«à¤¿à¤‚à¤—à¤°à¤ªà¥à¤°à¤¿à¤‚à¤Ÿ/à¤«à¥‡à¤¸ à¤²à¥‰à¤—à¤¿à¤¨ à¤‡à¤¨à¥‡à¤¬à¤² à¤•à¤°à¥‡à¤‚
+                            फिंगरप्रिंट/फेस लॉगिन इनेबल करें
                         </label>
                     </div>
                 </div>
 
                 <div class="setting-card">
-                    <h4>â° à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤¸à¥‡à¤Ÿà¤¿à¤‚à¤—à¥à¤¸</h4>
+                    <h4>⏰ रिमाइंडर सेटिंग्स</h4>
                     <div class="form-group">
-                        <label>à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤­à¥‡à¤œà¤¨à¥‡ à¤•à¤¾ à¤¸à¤®à¤¯</label>
+                        <label>रिमाइंडर भेजने का समय</label>
                         <select id="reminderTime">
-                            <option value="9">à¤¸à¥à¤¬à¤¹ 9:00 à¤¬à¤œà¥‡</option>
-                            <option value="10">à¤¸à¥à¤¬à¤¹ 10:00 à¤¬à¤œà¥‡</option>
-                            <option value="11">à¤¸à¥à¤¬à¤¹ 11:00 à¤¬à¤œà¥‡</option>
-                            <option value="17">à¤¶à¤¾à¤® 5:00 à¤¬à¤œà¥‡</option>
-                            <option value="18">à¤¶à¤¾à¤® 6:00 à¤¬à¤œà¥‡</option>
-                            <option value="19">à¤¶à¤¾à¤® 7:00 à¤¬à¤œà¥‡</option>
+                            <option value="9">सुबह 9:00 बजे</option>
+                            <option value="10">सुबह 10:00 बजे</option>
+                            <option value="11">सुबह 11:00 बजे</option>
+                            <option value="17">शाम 5:00 बजे</option>
+                            <option value="18">शाम 6:00 बजे</option>
+                            <option value="19">शाम 7:00 बजे</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>à¤•à¤¿à¤¤à¤¨à¥‡ à¤¦à¤¿à¤¨ à¤ªà¤¹à¤²à¥‡ à¤­à¥‡à¤œà¤¨à¤¾ à¤¹à¥ˆ?</label>
+                        <label>कितने दिन पहले भेजना है?</label>
                         <select id="reminderDays">
-                            <option value="1">1 à¤¦à¤¿à¤¨ à¤ªà¤¹à¤²à¥‡</option>
-                            <option value="2">2 à¤¦à¤¿à¤¨ à¤ªà¤¹à¤²à¥‡</option>
-                            <option value="3">3 à¤¦à¤¿à¤¨ à¤ªà¤¹à¤²à¥‡</option>
-                            <option value="7">1 à¤¹à¤«à¥à¤¤à¤¾ à¤ªà¤¹à¤²à¥‡</option>
+                            <option value="1">1 दिन पहले</option>
+                            <option value="2">2 दिन पहले</option>
+                            <option value="3">3 दिन पहले</option>
+                            <option value="7">1 हफ्ता पहले</option>
                         </select>
                     </div>
-                    <button class="btn btn-success" onclick="App.saveReminderSettings()">ðŸ’¾ à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</button>
+                    <button class="btn btn-success" onclick="App.saveReminderSettings()">💾 सेव करें</button>
                 </div>
 
                 <div class="setting-card">
-                    <h4>â˜ï¸ Google Drive Backup</h4>
-                    <p style="font-size: 12px; color: #666; margin-bottom: 10px;">à¤¡à¤¾à¤Ÿà¤¾ à¤•à¥‹ Google Drive à¤®à¥‡à¤‚ à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</p>
-                    <button class="btn btn-success" onclick="App.exportToGoogleDrive()">ðŸ“¤ Drive à¤®à¥‡à¤‚ Backup</button>
-                    <button class="btn btn-info" onclick="App.importFromGoogleDrive()" style="margin-top: 10px;">ðŸ“¥ Drive à¤¸à¥‡ Restore</button>
-                    <button class="btn btn-secondary" onclick="App.scheduleAutoBackup()" style="margin-top: 10px;">â° à¤‘à¤Ÿà¥‹ à¤¬à¥ˆà¤•à¤…à¤ª à¤¸à¥‡à¤Ÿ à¤•à¤°à¥‡à¤‚</button>
+                    <h4>☁️ Google Drive Backup</h4>
+                    <p style="font-size: 12px; color: #666; margin-bottom: 10px;">डाटा को Google Drive में सेव करें</p>
+                    <button class="btn btn-success" onclick="App.exportToGoogleDrive()">📤 Drive में Backup</button>
+                    <button class="btn btn-info" onclick="App.importFromGoogleDrive()" style="margin-top: 10px;">📥 Drive से Restore</button>
+                    <button class="btn btn-secondary" onclick="App.scheduleAutoBackup()" style="margin-top: 10px;">⏰ ऑटो बैकअप सेट करें</button>
                 </div>
 
                 <div class="setting-card">
-                    <h4>ðŸ“± WhatsApp Settings</h4>
+                    <h4>📱 WhatsApp Settings</h4>
                     <div class="form-group">
-                        <label>ðŸŒ à¤¦à¥‡à¤¶ à¤šà¥à¤¨à¥‡à¤‚ (Country Code)</label>
+                        <label>🌍 देश चुनें (Country Code)</label>
                         <select id="countryCode" onchange="App.saveCountryCode()">
-                            <option value="91">ðŸ‡®ðŸ‡³ India (+91)</option>
-                            <option value="977">ðŸ‡³ðŸ‡µ Nepal (+977)</option>
-                            <option value="971">ðŸ‡¦ðŸ‡ª UAE (+971)</option>
-                            <option value="966">ðŸ‡¸ðŸ‡¦ Saudi Arabia (+966)</option>
-                            <option value="974">ðŸ‡¶ðŸ‡¦ Qatar (+974)</option>
-                            <option value="965">ðŸ‡°ðŸ‡¼ Kuwait (+965)</option>
-                            <option value="968">ðŸ‡´ðŸ‡² Oman (+968)</option>
-                            <option value="973">ðŸ‡§ðŸ‡­ Bahrain (+973)</option>
-                            <option value="880">ðŸ‡§ðŸ‡© Bangladesh (+880)</option>
-                            <option value="92">ðŸ‡µðŸ‡° Pakistan (+92)</option>
-                            <option value="94">ðŸ‡±ðŸ‡° Sri Lanka (+94)</option>
-                            <option value="60">ðŸ‡²ðŸ‡¾ Malaysia (+60)</option>
-                            <option value="65">ðŸ‡¸ðŸ‡¬ Singapore (+65)</option>
-                            <option value="44">ðŸ‡¬ðŸ‡§ UK (+44)</option>
-                            <option value="1">ðŸ‡ºðŸ‡¸ USA (+1)</option>
-                            <option value="61">ðŸ‡¦ðŸ‡º Australia (+61)</option>
+                            <option value="91">🇮🇳 India (+91)</option>
+                            <option value="977">🇳🇵 Nepal (+977)</option>
+                            <option value="971">🇦🇪 UAE (+971)</option>
+                            <option value="966">🇸🇦 Saudi Arabia (+966)</option>
+                            <option value="974">🇶🇦 Qatar (+974)</option>
+                            <option value="965">🇰🇼 Kuwait (+965)</option>
+                            <option value="968">🇴🇲 Oman (+968)</option>
+                            <option value="973">🇧🇭 Bahrain (+973)</option>
+                            <option value="880">🇧🇩 Bangladesh (+880)</option>
+                            <option value="92">🇵🇰 Pakistan (+92)</option>
+                            <option value="94">🇱🇰 Sri Lanka (+94)</option>
+                            <option value="60">🇲🇾 Malaysia (+60)</option>
+                            <option value="65">🇸🇬 Singapore (+65)</option>
+                            <option value="44">🇬🇧 UK (+44)</option>
+                            <option value="1">🇺🇸 USA (+1)</option>
+                            <option value="61">🇦🇺 Australia (+61)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Default Message</label>
-                        <textarea id="whatsappMessage" rows="3" placeholder="à¤¨à¤®à¤¸à¥à¤¤à¥‡ {name} à¤œà¥€, à¤†à¤ªà¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ â‚¹{amount} à¤¬à¤•à¤¾à¤¯à¤¾ à¤¹à¥ˆà¥¤"></textarea>
-                        <small style="font-size: 11px; color: #666;">{name} = à¤—à¥à¤°à¤¾à¤¹à¤• à¤•à¤¾ à¤¨à¤¾à¤®, {amount} = à¤¬à¤¾à¤•à¥€ à¤°à¤¾à¤¶à¤¿, {date} = à¤¤à¤¾à¤°à¥€à¤–</small>
+                        <textarea id="whatsappMessage" rows="3" placeholder="नमस्ते {name} जी, आपकी किस्त ₹{amount} बकाया है।"></textarea>
+                        <small style="font-size: 11px; color: #666;">{name} = ग्राहक का नाम, {amount} = बाकी राशि, {date} = तारीख</small>
                     </div>
-                    <button class="btn btn-whatsapp" onclick="App.saveWhatsAppSettings()">ðŸ’¾ à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</button>
+                    <button class="btn btn-whatsapp" onclick="App.saveWhatsAppSettings()">💾 सेव करें</button>
                 </div>
 
                 <div class="setting-card">
-                    <h4>ðŸ’¬ SMS Settings</h4>
+                    <h4>💬 SMS Settings</h4>
                     <div class="form-group">
                         <label>Default SMS Message</label>
-                        <textarea id="smsMessage" rows="3" placeholder="à¤¨à¤®à¤¸à¥à¤¤à¥‡ {name} à¤œà¥€, à¤†à¤ªà¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ â‚¹{amount} à¤¬à¤•à¤¾à¤¯à¤¾ à¤¹à¥ˆà¥¤ à¤•à¥ƒà¤ªà¤¯à¤¾ à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚à¥¤"></textarea>
+                        <textarea id="smsMessage" rows="3" placeholder="नमस्ते {name} जी, आपकी किस्त ₹{amount} बकाया है। कृपया जमा करें।"></textarea>
                     </div>
-                    <button class="btn btn-sms" onclick="App.saveSMSSettings()">ðŸ’¾ à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</button>
+                    <button class="btn btn-sms" onclick="App.saveSMSSettings()">💾 सेव करें</button>
                 </div>
 
                 <div class="setting-card">
-                    <h4>ðŸŒ™ à¤¡à¤¿à¤¸à¥à¤ªà¥à¤²à¥‡ à¤¸à¥‡à¤Ÿà¤¿à¤‚à¤—à¥à¤¸</h4>
+                    <h4>🌙 डिस्प्ले सेटिंग्स</h4>
                     <div style="display: flex; align-items: center; justify-content: space-between;">
-                        <span>à¤¡à¤¾à¤°à¥à¤• à¤®à¥‹à¤¡</span>
+                        <span>डार्क मोड</span>
                         <label class="toggle-switch">
                             <input type="checkbox" id="darkModeToggle" onchange="App.toggleDarkMode()">
                             <span class="slider"></span>
@@ -1112,36 +1112,36 @@
                     <div style="margin-top: 15px;">
                         <label>
                             <input type="checkbox" id="autoDarkMode" onchange="App.toggleAutoDarkMode()">
-                            à¤¸à¤¿à¤¸à¥à¤Ÿà¤® à¤¥à¥€à¤® à¤•à¥‡ à¤¸à¤¾à¤¥ à¤‘à¤Ÿà¥‹-à¤¸à¤¿à¤‚à¤• à¤•à¤°à¥‡à¤‚
+                            सिस्टम थीम के साथ ऑटो-सिंक करें
                         </label>
                     </div>
                 </div>
                 
                 <div class="setting-card">
-                    <h4>ðŸ“² PWA Settings</h4>
-                    <p style="font-size: 12px; color: #666;">à¤à¤ª à¤•à¥‹ à¤¹à¥‹à¤® à¤¸à¥à¤•à¥à¤°à¥€à¤¨ à¤ªà¤° à¤‡à¤‚à¤¸à¥à¤Ÿà¥‰à¤² à¤•à¤°à¥‡à¤‚</p>
-                    <button class="btn btn-info" onclick="App.installPWA()" id="installButton">ðŸ“² à¤‡à¤‚à¤¸à¥à¤Ÿà¥‰à¤² à¤•à¤°à¥‡à¤‚</button>
+                    <h4>📲 PWA Settings</h4>
+                    <p style="font-size: 12px; color: #666;">ऐप को होम स्क्रीन पर इंस्टॉल करें</p>
+                    <button class="btn btn-info" onclick="App.installPWA()" id="installButton">📲 इंस्टॉल करें</button>
                     <p style="font-size: 11px; margin-top: 10px;" id="installStatus"></p>
                 </div>
 
                 <div class="setting-card" style="border:2px solid #764ba2;">
-                    <h4 style="color:#764ba2;">ðŸ‘‘ Owner Admin Panel</h4>
-                    <p style="font-size:12px;color:#666;margin-bottom:12px;">à¤¸à¤­à¥€ users à¤¦à¥‡à¤–à¥‡à¤‚, activate/block à¤•à¤°à¥‡à¤‚</p>
+                    <h4 style="color:#764ba2;">👑 Owner Admin Panel</h4>
+                    <p style="font-size:12px;color:#666;margin-bottom:12px;">सभी users देखें, activate/block करें</p>
                     <button class="btn" style="background:#764ba2;color:white;width:100%;" onclick="AdminPanel.show()">
-                        ðŸ” Admin Panel à¤–à¥‹à¤²à¥‡à¤‚
+                        🔐 Admin Panel खोलें
                     </button>
-                    <p style="font-size:11px;color:#999;margin-top:8px;">âš ï¸ à¤¸à¤¿à¤°à¥à¤« Owner à¤•à¥‡ à¤²à¤¿à¤</p>
+                    <p style="font-size:11px;color:#999;margin-top:8px;">⚠️ सिर्फ Owner के लिए</p>
                 </div>
 
                 <div class="setting-card" style="border:2px solid #f45c43;">
-                    <h4 style="color:#f45c43;">ðŸ—‘ï¸ Data Management</h4>
-                    <p style="font-size:12px;color:#666;margin-bottom:12px;">à¤¸à¤¾à¤µà¤§à¤¾à¤¨à¥€ à¤¸à¥‡ à¤‰à¤ªà¤¯à¥‹à¤— à¤•à¤°à¥‡à¤‚ - à¤¯à¤¹ data à¤µà¤¾à¤ªà¤¸ à¤¨à¤¹à¥€à¤‚ à¤†à¤à¤—à¤¾!</p>
+                    <h4 style="color:#f45c43;">🗑️ Data Management</h4>
+                    <p style="font-size:12px;color:#666;margin-bottom:12px;">सावधानी से उपयोग करें - यह data वापस नहीं आएगा!</p>
                     <div style="display:flex;flex-direction:column;gap:8px;">
                         <button class="btn" style="background:#e67e22;color:white;" onclick="App.clearAllInvoices()">
-                            ðŸ§¾ à¤¸à¤­à¥€ à¤¬à¤¿à¤² à¤”à¤° à¤•à¤¿à¤¸à¥à¤¤à¥‡à¤‚ à¤¸à¤¾à¤« à¤•à¤°à¥‡à¤‚
+                            🧾 सभी बिल और किस्तें साफ करें
                         </button>
                         <button class="btn" style="background:#e74c3c;color:white;" onclick="App.clearAllData()">
-                            âš ï¸ à¤¸à¤¬ à¤•à¥à¤› à¤¸à¤¾à¤« à¤•à¤°à¥‡à¤‚ (à¤—à¥à¤°à¤¾à¤¹à¤• + à¤¸à¤¾à¤®à¤¾à¤¨ + à¤¬à¤¿à¤²)
+                            ⚠️ सब कुछ साफ करें (ग्राहक + सामान + बिल)
                         </button>
                     </div>
                 </div>
@@ -1152,18 +1152,18 @@
     <!-- Pending List -->
     <div id="pending" class="section">
         <div class="card">
-            <h2>â³ à¤¬à¤¾à¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤à¥‡à¤‚</h2>
+            <h2>⏳ बाकी किस्तें</h2>
             <div class="reminder-bar" style="margin-bottom: 15px; animation: none;">
-                <span>ðŸ“¢ à¤†à¤œ à¤•à¥€ à¤¤à¤¾à¤°à¥€à¤–: <span id="todayDate"></span></span>
-                <button class="btn btn-whatsapp" onclick="App.bulkWhatsApp()">ðŸ“± à¤¸à¤­à¥€ à¤•à¥‹ à¤­à¥‡à¤œà¥‡à¤‚</button>
+                <span>📢 आज की तारीख: <span id="todayDate"></span></span>
+                <button class="btn btn-whatsapp" onclick="App.bulkWhatsApp()">📱 सभी को भेजें</button>
             </div>
             
             <!-- Filter Tabs -->
             <div style="display: flex; gap: 5px; margin-bottom: 10px;">
-                <button class="btn btn-secondary" onclick="App.filterPending('all')" style="flex:1; padding: 8px;" id="filterAll">à¤¸à¤­à¥€</button>
-                <button class="btn btn-secondary" onclick="App.filterPending('today')" style="flex:1; padding: 8px;" id="filterToday">à¤†à¤œ à¤•à¥€</button>
-                <button class="btn btn-secondary" onclick="App.filterPending('overdue')" style="flex:1; padding: 8px;" id="filterOverdue">à¤“à¤µà¤°à¤¡à¥à¤¯à¥‚</button>
-                <button class="btn btn-secondary" onclick="App.filterPending('upcoming')" style="flex:1; padding: 8px;" id="filterUpcoming">à¤†à¤¨à¥‡ à¤µà¤¾à¤²à¥€</button>
+                <button class="btn btn-secondary" onclick="App.filterPending('all')" style="flex:1; padding: 8px;" id="filterAll">सभी</button>
+                <button class="btn btn-secondary" onclick="App.filterPending('today')" style="flex:1; padding: 8px;" id="filterToday">आज की</button>
+                <button class="btn btn-secondary" onclick="App.filterPending('overdue')" style="flex:1; padding: 8px;" id="filterOverdue">ओवरड्यू</button>
+                <button class="btn btn-secondary" onclick="App.filterPending('upcoming')" style="flex:1; padding: 8px;" id="filterUpcoming">आने वाली</button>
             </div>
             
             <div id="pendingList"></div>
@@ -1191,16 +1191,16 @@
   <!-- CUSTOMER + BILL INFO -->
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
     <div style="background:#FFF3E0;padding:8px 12px;border-radius:8px;border-left:3px solid #FF6B35;font-size:12px;">
-      <div style="color:#FF6B35;font-weight:bold;font-size:11px;margin-bottom:4px;">ðŸ‘¤ à¤—à¥à¤°à¤¾à¤¹à¤•</div>
-      <div><b>à¤¨à¤¾à¤®:</b> <span id="invPrintCustName"></span></div>
-      <div id="invPrintCompanyDiv"><b>ðŸ¢</b> <span id="invPrintCompany"></span></div>
-      <div><b>à¤®à¥‹à¤¬à¤¾à¤‡à¤²:</b> <span id="invPrintCustPhone"></span></div>
-      <div><b>à¤ªà¤¤à¤¾:</b> <span id="invPrintCustAddr"></span></div>
+      <div style="color:#FF6B35;font-weight:bold;font-size:11px;margin-bottom:4px;">👤 ग्राहक</div>
+      <div><b>नाम:</b> <span id="invPrintCustName"></span></div>
+      <div id="invPrintCompanyDiv"><b>🏢</b> <span id="invPrintCompany"></span></div>
+      <div><b>मोबाइल:</b> <span id="invPrintCustPhone"></span></div>
+      <div><b>पता:</b> <span id="invPrintCustAddr"></span></div>
     </div>
     <div style="background:#FFF3E0;padding:8px 12px;border-radius:8px;border-left:3px solid #FF6B35;font-size:12px;">
-      <div style="color:#FF6B35;font-weight:bold;font-size:11px;margin-bottom:4px;">ðŸ“‹ à¤¬à¤¿à¤² à¤µà¤¿à¤µà¤°à¤£</div>
-      <div><b>à¤®à¥‹à¤¡:</b> <span id="invPrintMode"></span></div>
-      <div><b>à¤…à¤—à¤²à¥€ à¤•à¤¿à¤¸à¥à¤¤:</b> <span id="invPrintDueDate"></span></div>
+      <div style="color:#FF6B35;font-weight:bold;font-size:11px;margin-bottom:4px;">📋 बिल विवरण</div>
+      <div><b>मोड:</b> <span id="invPrintMode"></span></div>
+      <div><b>अगली किस्त:</b> <span id="invPrintDueDate"></span></div>
       <div><b>GST:</b> <span id="invPrintGst">-</span></div>
     </div>
   </div>
@@ -1210,17 +1210,17 @@
     <thead>
       <tr style="background:#FF6B35;color:white;">
         <th style="padding:7px 8px;border:1px solid #e0e0e0;text-align:center;width:5%;">#</th>
-        <th style="padding:7px 8px;border:1px solid #e0e0e0;text-align:left;width:45%;">à¤¸à¤¾à¤®à¤¾à¤¨</th>
+        <th style="padding:7px 8px;border:1px solid #e0e0e0;text-align:left;width:45%;">सामान</th>
         <th style="padding:7px 8px;border:1px solid #e0e0e0;text-align:center;width:10%;">Qty</th>
-        <th style="padding:7px 8px;border:1px solid #e0e0e0;text-align:right;width:20%;">à¤•à¥€à¤®à¤¤</th>
-        <th style="padding:7px 8px;border:1px solid #e0e0e0;text-align:right;width:20%;">à¤•à¥à¤²</th>
+        <th style="padding:7px 8px;border:1px solid #e0e0e0;text-align:right;width:20%;">कीमत</th>
+        <th style="padding:7px 8px;border:1px solid #e0e0e0;text-align:right;width:20%;">कुल</th>
       </tr>
     </thead>
     <tbody id="invPrintItems"></tbody>
     <tfoot>
       <tr style="background:#fff3e0;">
-        <td colspan="4" style="padding:7px 8px;border:1px solid #e0e0e0;text-align:right;font-weight:bold;font-size:12px;">à¤•à¥à¤² à¤¯à¥‹à¤—:</td>
-        <td style="padding:7px 8px;border:1px solid #e0e0e0;text-align:right;font-weight:bold;font-size:13px;color:#FF6B35;">â‚¹<span id="invPrintTotal"></span></td>
+        <td colspan="4" style="padding:7px 8px;border:1px solid #e0e0e0;text-align:right;font-weight:bold;font-size:12px;">कुल योग:</td>
+        <td style="padding:7px 8px;border:1px solid #e0e0e0;text-align:right;font-weight:bold;font-size:13px;color:#FF6B35;">₹<span id="invPrintTotal"></span></td>
       </tr>
     </tfoot>
   </table>
@@ -1228,39 +1228,39 @@
   <!-- PAYMENT SUMMARY - COMPACT 3 BOXES -->
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:10px;">
     <div style="background:#FF6B35;color:white;border-radius:8px;padding:8px;text-align:center;">
-      <div style="font-size:9px;opacity:0.9;">à¤•à¥à¤² à¤°à¤¾à¤¶à¤¿</div>
-      <div style="font-size:16px;font-weight:bold;">â‚¹<span id="invPrintTotal2"></span></div>
+      <div style="font-size:9px;opacity:0.9;">कुल राशि</div>
+      <div style="font-size:16px;font-weight:bold;">₹<span id="invPrintTotal2"></span></div>
     </div>
     <div style="background:#11998e;color:white;border-radius:8px;padding:8px;text-align:center;">
-      <div style="font-size:9px;opacity:0.9;">à¤…à¤—à¥à¤°à¤¿à¤®</div>
-      <div style="font-size:16px;font-weight:bold;">â‚¹<span id="invPrintAdvance"></span></div>
+      <div style="font-size:9px;opacity:0.9;">अग्रिम</div>
+      <div style="font-size:16px;font-weight:bold;">₹<span id="invPrintAdvance"></span></div>
     </div>
     <div style="background:#f45c43;color:white;border-radius:8px;padding:8px;text-align:center;">
-      <div style="font-size:9px;opacity:0.9;">à¤¬à¤¾à¤•à¥€ à¤°à¤¾à¤¶à¤¿</div>
-      <div style="font-size:16px;font-weight:bold;">â‚¹<span id="invPrintPending"></span></div>
+      <div style="font-size:9px;opacity:0.9;">बाकी राशि</div>
+      <div style="font-size:16px;font-weight:bold;">₹<span id="invPrintPending"></span></div>
     </div>
   </div>
 
   <!-- PROFIT INFO -->
   <div style="background:#e8f5e9;border-left:3px solid #11998e;padding:7px 10px;border-radius:6px;margin-bottom:8px;font-size:11px;">
-    <strong>ðŸ’° à¤‡à¤¸ à¤¬à¤¿à¤² à¤®à¥‡à¤‚ à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ:</strong> â‚¹<span id="invPrintProfit"></span>
+    <strong>💰 इस बिल में प्रॉफिट:</strong> ₹<span id="invPrintProfit"></span>
   </div>
 
   <!-- NOTE -->
   <div style="background:#fff8e1;border-left:3px solid #FF6B35;padding:7px 10px;border-radius:6px;margin-bottom:8px;font-size:11px;">
-    âš ï¸ à¤•à¥ƒà¤ªà¤¯à¤¾ à¤…à¤—à¤²à¥€ à¤•à¤¿à¤¸à¥à¤¤ <strong><span id="invPrintDueDate2"></span></strong> à¤¤à¤• à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚à¥¤
+    ⚠️ कृपया अगली किस्त <strong><span id="invPrintDueDate2"></span></strong> तक जमा करें।
   </div>
 
   <!-- INSTALLMENT SCHEDULE -->
   <div id="invPrintScheduleBox" style="margin-bottom:10px;">
-    <div style="font-size:11px;font-weight:bold;color:#11998e;margin-bottom:4px;">ðŸ“… à¤•à¤¿à¤¸à¥à¤¤ à¤¯à¥‹à¤œà¤¨à¤¾</div>
+    <div style="font-size:11px;font-weight:bold;color:#11998e;margin-bottom:4px;">📅 किस्त योजना</div>
     <table style="width:100%;border-collapse:collapse;font-size:11px;">
       <thead>
         <tr style="background:#11998e;color:white;">
-          <th style="padding:5px 7px;border:1px solid #ddd;text-align:center;">à¤•à¤¿à¤¸à¥à¤¤</th>
-          <th style="padding:5px 7px;border:1px solid #ddd;text-align:left;">à¤¤à¤¾à¤°à¥€à¤–</th>
-          <th style="padding:5px 7px;border:1px solid #ddd;text-align:right;">à¤°à¤¾à¤¶à¤¿ (â‚¹)</th>
-          <th style="padding:5px 7px;border:1px solid #ddd;text-align:center;">âœ“</th>
+          <th style="padding:5px 7px;border:1px solid #ddd;text-align:center;">किस्त</th>
+          <th style="padding:5px 7px;border:1px solid #ddd;text-align:left;">तारीख</th>
+          <th style="padding:5px 7px;border:1px solid #ddd;text-align:right;">राशि (₹)</th>
+          <th style="padding:5px 7px;border:1px solid #ddd;text-align:center;">✓</th>
         </tr>
       </thead>
       <tbody id="invPrintSchedule"></tbody>
@@ -1270,10 +1270,10 @@
   <!-- SIGNATURES -->
   <div style="display:flex;justify-content:space-between;margin:12px 10px 8px;font-size:11px;">
     <div style="text-align:center;min-width:120px;">
-      <div style="border-top:1.5px solid #333;padding-top:4px;margin-top:30px;">à¤—à¥à¤°à¤¾à¤¹à¤• à¤¹à¤¸à¥à¤¤à¤¾à¤•à¥à¤·à¤°</div>
+      <div style="border-top:1.5px solid #333;padding-top:4px;margin-top:30px;">ग्राहक हस्ताक्षर</div>
     </div>
     <div style="text-align:center;min-width:120px;">
-      <div style="border-top:1.5px solid #333;padding-top:4px;margin-top:30px;">à¤¦à¥à¤•à¤¾à¤¨à¤¦à¤¾à¤° à¤¹à¤¸à¥à¤¤à¤¾à¤•à¥à¤·à¤°</div>
+      <div style="border-top:1.5px solid #333;padding-top:4px;margin-top:30px;">दुकानदार हस्ताक्षर</div>
     </div>
   </div>
 
@@ -1296,7 +1296,7 @@
       <div style="font-size:11px;opacity:0.9;margin-top:2px;" id="printShopDetails"></div>
     </div>
     <div style="text-align:right;background:rgba(255,255,255,0.2);padding:5px 10px;border-radius:8px;font-size:11px;">
-      <div style="font-weight:bold;font-size:13px;">à¤—à¥à¤°à¤¾à¤¹à¤• à¤µà¤¿à¤µà¤°à¤£ à¤ªà¤¤à¥à¤°</div>
+      <div style="font-weight:bold;font-size:13px;">ग्राहक विवरण पत्र</div>
       <div><span id="stmtPrintDate"></span></div>
     </div>
   </div>
@@ -1304,25 +1304,25 @@
   <!-- CUSTOMER INFO -->
   <div style="background:#FFF3E0;padding:7px 10px;border-radius:8px;border-left:3px solid #FF6B35;margin-bottom:8px;font-size:12px;display:grid;grid-template-columns:1fr 1fr;gap:4px;">
     <div>
-      <div><b>à¤¨à¤¾à¤®:</b> <span id="stmtCustomerName"></span></div>
-      <div id="stmtCompanyDiv"><b>ðŸ¢</b> <span id="stmtCompany"></span></div>
-      <div><b>à¤®à¥‹à¤¬à¤¾à¤‡à¤²:</b> <span id="stmtCustomerPhone"></span></div>
+      <div><b>नाम:</b> <span id="stmtCustomerName"></span></div>
+      <div id="stmtCompanyDiv"><b>🏢</b> <span id="stmtCompany"></span></div>
+      <div><b>मोबाइल:</b> <span id="stmtCustomerPhone"></span></div>
     </div>
     <div>
-      <div><b>à¤ªà¤¤à¤¾:</b> <span id="stmtCustomerAddress"></span></div>
-      <div><b>à¤…à¤—à¤²à¥€ à¤•à¤¿à¤¸à¥à¤¤:</b> <span id="stmtNextDue"></span></div>
+      <div><b>पता:</b> <span id="stmtCustomerAddress"></span></div>
+      <div><b>अगली किस्त:</b> <span id="stmtNextDue"></span></div>
     </div>
   </div>
 
   <!-- TRANSACTIONS TABLE -->
-  <div style="font-size:11px;font-weight:bold;color:#FF6B35;margin-bottom:3px;">ðŸ“‹ à¤²à¥‡à¤¨-à¤¦à¥‡à¤¨ à¤•à¤¾ à¤µà¤¿à¤µà¤°à¤£</div>
+  <div style="font-size:11px;font-weight:bold;color:#FF6B35;margin-bottom:3px;">📋 लेन-देन का विवरण</div>
   <table style="width:100%;border-collapse:collapse;margin-bottom:8px;font-size:12px;">
     <thead>
       <tr style="background:#FF6B35;color:white;">
-        <th style="padding:5px 6px;border:1px solid #ddd;">à¤¤à¤¾à¤°à¥€à¤–</th>
-        <th style="padding:5px 6px;border:1px solid #ddd;">à¤µà¤¿à¤µà¤°à¤£</th>
-        <th style="padding:5px 6px;border:1px solid #ddd;text-align:right;">à¤°à¤¾à¤¶à¤¿</th>
-        <th style="padding:5px 6px;border:1px solid #ddd;">à¤®à¥‹à¤¡</th>
+        <th style="padding:5px 6px;border:1px solid #ddd;">तारीख</th>
+        <th style="padding:5px 6px;border:1px solid #ddd;">विवरण</th>
+        <th style="padding:5px 6px;border:1px solid #ddd;text-align:right;">राशि</th>
+        <th style="padding:5px 6px;border:1px solid #ddd;">मोड</th>
       </tr>
     </thead>
     <tbody id="stmtPayments"></tbody>
@@ -1331,31 +1331,31 @@
   <!-- SUMMARY BOXES -->
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;margin-bottom:8px;">
     <div style="background:#FF6B35;color:white;border-radius:8px;padding:7px;text-align:center;">
-      <div style="font-size:10px;opacity:0.9;">à¤•à¥à¤² à¤¬à¤¿à¤•à¥à¤°à¥€</div>
-      <div style="font-size:15px;font-weight:bold;">â‚¹<span id="stmtTotalBilled"></span></div>
+      <div style="font-size:10px;opacity:0.9;">कुल बिक्री</div>
+      <div style="font-size:15px;font-weight:bold;">₹<span id="stmtTotalBilled"></span></div>
     </div>
     <div style="background:#11998e;color:white;border-radius:8px;padding:7px;text-align:center;">
-      <div style="font-size:10px;opacity:0.9;">à¤•à¥à¤² à¤œà¤®à¤¾</div>
-      <div style="font-size:15px;font-weight:bold;">â‚¹<span id="stmtTotalPaid"></span></div>
+      <div style="font-size:10px;opacity:0.9;">कुल जमा</div>
+      <div style="font-size:15px;font-weight:bold;">₹<span id="stmtTotalPaid"></span></div>
     </div>
     <div style="background:#f45c43;color:white;border-radius:8px;padding:7px;text-align:center;">
-      <div style="font-size:10px;opacity:0.9;">à¤¬à¤¾à¤•à¥€ à¤°à¤¾à¤¶à¤¿</div>
-      <div style="font-size:15px;font-weight:bold;">â‚¹<span id="stmtPending"></span></div>
+      <div style="font-size:10px;opacity:0.9;">बाकी राशि</div>
+      <div style="font-size:15px;font-weight:bold;">₹<span id="stmtPending"></span></div>
     </div>
   </div>
 
   <!-- NOTE -->
   <div style="background:#fff8e1;border-left:3px solid #FF6B35;padding:5px 8px;border-radius:6px;margin-bottom:7px;font-size:11px;">
-    âš ï¸ à¤•à¥ƒà¤ªà¤¯à¤¾ à¤…à¤—à¤²à¥€ à¤•à¤¿à¤¸à¥à¤¤ à¤¸à¤®à¤¯ à¤ªà¤° à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚à¥¤
+    ⚠️ कृपया अगली किस्त समय पर जमा करें।
   </div>
 
   <!-- SIGNATURES -->
   <div style="display:flex;justify-content:space-between;margin:8px 10px 5px;font-size:11px;">
     <div style="text-align:center;min-width:110px;">
-      <div style="border-top:1.5px solid #333;padding-top:3px;margin-top:22px;">à¤—à¥à¤°à¤¾à¤¹à¤• à¤¹à¤¸à¥à¤¤à¤¾à¤•à¥à¤·à¤°</div>
+      <div style="border-top:1.5px solid #333;padding-top:3px;margin-top:22px;">ग्राहक हस्ताक्षर</div>
     </div>
     <div style="text-align:center;min-width:110px;">
-      <div style="border-top:1.5px solid #333;padding-top:3px;margin-top:22px;">à¤¦à¥à¤•à¤¾à¤¨à¤¦à¤¾à¤° à¤¹à¤¸à¥à¤¤à¤¾à¤•à¥à¤·à¤°</div>
+      <div style="border-top:1.5px solid #333;padding-top:3px;margin-top:22px;">दुकानदार हस्ताक्षर</div>
     </div>
   </div>
 
@@ -1377,17 +1377,17 @@
         </div>
         
         <div style="margin-bottom: 8px;">
-            <p style="margin: 2px 0;"><strong>à¤—à¥à¤°à¤¾à¤¹à¤•:</strong> <span id="thermCustomer"></span></p>
-            <p style="margin: 2px 0;"><strong>à¤®à¥‹à¤¬à¤¾à¤‡à¤²:</strong> <span id="thermMobile"></span></p>
+            <p style="margin: 2px 0;"><strong>ग्राहक:</strong> <span id="thermCustomer"></span></p>
+            <p style="margin: 2px 0;"><strong>मोबाइल:</strong> <span id="thermMobile"></span></p>
         </div>
         
         <div style="border-top: 1px dashed #000; border-bottom: 1px dashed #000; padding: 8px 0;">
             <table style="width: 100%; font-size: 10px;">
                 <thead>
                     <tr style="border-bottom: 1px solid #000;">
-                        <th style="text-align: left;">à¤¸à¤¾à¤®à¤¾à¤¨</th>
+                        <th style="text-align: left;">सामान</th>
                         <th style="text-align: center;">Qty</th>
-                        <th style="text-align: right;">â‚¹</th>
+                        <th style="text-align: right;">₹</th>
                     </tr>
                 </thead>
                 <tbody id="thermItems"></tbody>
@@ -1395,14 +1395,14 @@
         </div>
         
         <div style="margin-top: 8px; text-align: right;">
-            <p style="margin: 2px 0;"><strong>à¤•à¥à¤²: â‚¹<span id="thermTotal"></span></strong></p>
-            <p style="margin: 2px 0;">à¤…à¤—à¥à¤°à¤¿à¤®: â‚¹<span id="thermAdvance"></span></p>
-            <p style="margin: 2px 0; font-size: 12px; font-weight: bold;">à¤¬à¤¾à¤•à¥€: â‚¹<span id="thermPending"></span></p>
-            <p style="margin: 2px 0; color: #11998e;">à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ: â‚¹<span id="thermProfit"></span></p>
+            <p style="margin: 2px 0;"><strong>कुल: ₹<span id="thermTotal"></span></strong></p>
+            <p style="margin: 2px 0;">अग्रिम: ₹<span id="thermAdvance"></span></p>
+            <p style="margin: 2px 0; font-size: 12px; font-weight: bold;">बाकी: ₹<span id="thermPending"></span></p>
+            <p style="margin: 2px 0; color: #11998e;">प्रॉफिट: ₹<span id="thermProfit"></span></p>
         </div>
         
         <div style="margin-top: 12px; text-align: center; font-size: 9px; border-top: 2px dashed #000; padding-top: 8px;">
-            <p>à¤§à¤¨à¥à¤¯à¤µà¤¾à¤¦! à¤«à¤¿à¤° à¤†à¤‡à¤ ðŸ™</p>
+            <p>धन्यवाद! फिर आइए 🙏</p>
             <p id="thermFooter"></p>
         </div>
     </div>
@@ -1411,33 +1411,33 @@
 <!-- Edit Payment Modal -->
 <div id="editPaymentModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.6); z-index:9998; align-items:center; justify-content:center;">
     <div style="background:white; padding:20px; border-radius:15px; max-width:400px; width:90%; box-shadow:0 10px 40px rgba(0,0,0,0.3);">
-        <h3 style="color:#11998e; margin-bottom:15px; border-bottom:2px solid #11998e; padding-bottom:10px;">âœï¸ à¤•à¤¿à¤¸à¥à¤¤ à¤•à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤¬à¤¦à¤²à¥‡à¤‚</h3>
+        <h3 style="color:#11998e; margin-bottom:15px; border-bottom:2px solid #11998e; padding-bottom:10px;">✏️ किस्त की जानकारी बदलें</h3>
         <input type="hidden" id="editPayId">
         <div class="form-group">
-            <label>ðŸ’° à¤°à¤¾à¤¶à¤¿ (â‚¹) *</label>
+            <label>💰 राशि (₹) *</label>
             <input type="number" id="editPayAmount" placeholder="0" min="1" step="0.01">
         </div>
         <div class="form-group">
-            <label>ðŸ“… à¤¤à¤¾à¤°à¥€à¤– *</label>
+            <label>📅 तारीख *</label>
             <input type="date" id="editPayDate">
         </div>
         <div class="form-group">
-            <label>ðŸ’³ à¤ªà¥‡à¤®à¥‡à¤‚à¤Ÿ à¤®à¥‹à¤¡</label>
+            <label>💳 पेमेंट मोड</label>
             <select id="editPayMode">
-                <option value="Cash">ðŸ’µ Cash</option>
-                <option value="Online">ðŸ“± Online</option>
-                <option value="Cheque">ðŸ¦ Cheque</option>
-                <option value="UPI">ðŸ“² UPI</option>
+                <option value="Cash">💵 Cash</option>
+                <option value="Online">📱 Online</option>
+                <option value="Cheque">🏦 Cheque</option>
+                <option value="UPI">📲 UPI</option>
             </select>
         </div>
         <div class="form-group">
-            <label>ðŸ“ à¤µà¤¿à¤µà¤°à¤£</label>
-            <input type="text" id="editPayProduct" placeholder="à¤•à¤¿à¤¸à¥à¤¤ à¤µà¤¿à¤µà¤°à¤£">
+            <label>📝 विवरण</label>
+            <input type="text" id="editPayProduct" placeholder="किस्त विवरण">
         </div>
         <div style="display:flex; gap:10px; margin-top:15px;">
-            <button class="btn btn-success" onclick="App.updatePayment()" style="flex:1;">âœ… à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</button>
-            <button class="btn btn-danger" onclick="App.deletePaymentConfirm()" style="flex:1;">ðŸ—‘ï¸ à¤¹à¤Ÿà¤¾à¤à¤‚</button>
-            <button class="btn btn-secondary" onclick="App.closeEditPaymentModal()" style="flex:1;">âŒ à¤°à¤¦à¥à¤¦</button>
+            <button class="btn btn-success" onclick="App.updatePayment()" style="flex:1;">✅ सेव करें</button>
+            <button class="btn btn-danger" onclick="App.deletePaymentConfirm()" style="flex:1;">🗑️ हटाएं</button>
+            <button class="btn btn-secondary" onclick="App.closeEditPaymentModal()" style="flex:1;">❌ रद्द</button>
         </div>
     </div>
 </div>
@@ -1445,27 +1445,27 @@
 <!-- Edit Product Modal -->
 <div id="editProductModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.6); z-index:9998; align-items:center; justify-content:center;">
     <div style="background:white; padding:20px; border-radius:15px; max-width:400px; width:90%; box-shadow:0 10px 40px rgba(0,0,0,0.3);">
-        <h3 style="color:#FF6B35; margin-bottom:15px; border-bottom:2px solid #FF6B35; padding-bottom:10px;">âœï¸ à¤¸à¤¾à¤®à¤¾à¤¨ à¤•à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤¬à¤¦à¤²à¥‡à¤‚</h3>
+        <h3 style="color:#FF6B35; margin-bottom:15px; border-bottom:2px solid #FF6B35; padding-bottom:10px;">✏️ सामान की जानकारी बदलें</h3>
         <input type="hidden" id="editProdId">
         <div class="form-group">
-            <label>à¤¸à¤¾à¤®à¤¾à¤¨ à¤•à¤¾ à¤¨à¤¾à¤® *</label>
-            <input type="text" id="editProdName" placeholder="à¤¨à¤¾à¤®">
+            <label>सामान का नाम *</label>
+            <input type="text" id="editProdName" placeholder="नाम">
         </div>
         <div class="form-group">
-            <label>à¤²à¤¾à¤—à¤¤ à¤•à¥€à¤®à¤¤ (â‚¹) *</label>
+            <label>लागत कीमत (₹) *</label>
             <input type="number" id="editProdCost" placeholder="0" min="0" step="0.01">
         </div>
         <div class="form-group">
-            <label>à¤¬à¤¿à¤•à¥à¤°à¥€ à¤•à¥€à¤®à¤¤ (â‚¹) *</label>
+            <label>बिक्री कीमत (₹) *</label>
             <input type="number" id="editProdPrice" placeholder="0" min="0" step="0.01">
         </div>
         <div class="form-group">
-            <label>à¤¬à¥à¤¯à¤¾à¤œ/à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ (%)</label>
+            <label>ब्याज/प्रॉफिट (%)</label>
             <input type="number" id="editProdProfit" placeholder="0" value="0" min="0" step="0.01" readonly>
         </div>
         <div style="display:flex; gap:10px; margin-top:15px;">
-            <button class="btn btn-success" onclick="App.updateProduct()" style="flex:1;">âœ… à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</button>
-            <button class="btn btn-secondary" onclick="App.closeEditProductModal()" style="flex:1;">âŒ à¤°à¤¦à¥à¤¦ à¤•à¤°à¥‡à¤‚</button>
+            <button class="btn btn-success" onclick="App.updateProduct()" style="flex:1;">✅ सेव करें</button>
+            <button class="btn btn-secondary" onclick="App.closeEditProductModal()" style="flex:1;">❌ रद्द करें</button>
         </div>
     </div>
 </div>
@@ -1473,23 +1473,23 @@
 <!-- Edit Customer Modal -->
 <div id="editCustomerModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.6); z-index:9998; align-items:center; justify-content:center;">
     <div style="background:white; padding:20px; border-radius:15px; max-width:400px; width:90%; box-shadow:0 10px 40px rgba(0,0,0,0.3);">
-        <h3 style="color:#FF6B35; margin-bottom:15px; border-bottom:2px solid #FF6B35; padding-bottom:10px;">âœï¸ à¤—à¥à¤°à¤¾à¤¹à¤• à¤•à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤¬à¤¦à¤²à¥‡à¤‚</h3>
+        <h3 style="color:#FF6B35; margin-bottom:15px; border-bottom:2px solid #FF6B35; padding-bottom:10px;">✏️ ग्राहक की जानकारी बदलें</h3>
         <input type="hidden" id="editCustId">
         <div class="form-group">
-            <label>à¤¨à¤¾à¤® *</label>
-            <input type="text" id="editCustName" placeholder="à¤ªà¥‚à¤°à¤¾ à¤¨à¤¾à¤®">
+            <label>नाम *</label>
+            <input type="text" id="editCustName" placeholder="पूरा नाम">
         </div>
         <div class="form-group">
-            <label>à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° *</label>
-            <input type="tel" id="editCustPhone" placeholder="10 à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ à¤¨à¤‚à¤¬à¤°" maxlength="10" inputmode="numeric" oninput="App.validatePhone(this)">
+            <label>मोबाइल नंबर *</label>
+            <input type="tel" id="editCustPhone" placeholder="10 अंकों का नंबर" maxlength="10" inputmode="numeric" oninput="App.validatePhone(this)">
         </div>
         <div class="form-group">
-            <label>à¤ªà¤¤à¤¾</label>
-            <textarea id="editCustAddress" rows="2" placeholder="à¤ªà¥‚à¤°à¤¾ à¤ªà¤¤à¤¾"></textarea>
+            <label>पता</label>
+            <textarea id="editCustAddress" rows="2" placeholder="पूरा पता"></textarea>
         </div>
         <div style="display:flex; gap:10px; margin-top:15px;">
-            <button class="btn btn-success" onclick="App.updateCustomer()" style="flex:1;">âœ… à¤¸à¥‡à¤µ à¤•à¤°à¥‡à¤‚</button>
-            <button class="btn btn-secondary" onclick="App.closeEditModal()" style="flex:1;">âŒ à¤°à¤¦à¥à¤¦ à¤•à¤°à¥‡à¤‚</button>
+            <button class="btn btn-success" onclick="App.updateCustomer()" style="flex:1;">✅ सेव करें</button>
+            <button class="btn btn-secondary" onclick="App.closeEditModal()" style="flex:1;">❌ रद्द करें</button>
         </div>
     </div>
 </div>
@@ -1497,36 +1497,36 @@
 <!-- Navigation -->
 <div class="nav">
     <button onclick="App.showSection('dashboard')" id="btn-dashboard" class="active">
-        <span>ðŸ“Š</span>
-        <span>à¤¡à¥ˆà¤¶</span>
+        <span>📊</span>
+        <span>डैश</span>
     </button>
     <button onclick="App.showSection('customers')" id="btn-customers">
-        <span>ðŸ‘¤</span>
-        <span>à¤—à¥à¤°à¤¾à¤¹à¤•</span>
+        <span>👤</span>
+        <span>ग्राहक</span>
     </button>
     <button onclick="App.showSection('products')" id="btn-products">
-        <span>ðŸ“¦</span>
-        <span>à¤¸à¤¾à¤®à¤¾à¤¨</span>
+        <span>📦</span>
+        <span>सामान</span>
     </button>
     <button onclick="App.showSection('invoice')" id="btn-invoice">
-        <span>ðŸ“</span>
-        <span>à¤¬à¤¿à¤²</span>
+        <span>📝</span>
+        <span>बिल</span>
     </button>
     <button onclick="App.showSection('payments')" id="btn-payments">
-        <span>ðŸ’µ</span>
-        <span>à¤•à¤¿à¤¸à¥à¤¤</span>
+        <span>💵</span>
+        <span>किस्त</span>
     </button>
     <button onclick="App.showSection('reports')" id="btn-reports">
-        <span>ðŸ“Š</span>
-        <span>à¤°à¤¿à¤ªà¥‹à¤°à¥à¤Ÿ</span>
+        <span>📊</span>
+        <span>रिपोर्ट</span>
     </button>
     <button onclick="App.showSection('settings')" id="btn-settings">
-        <span>âš™ï¸</span>
-        <span>à¤¸à¥‡à¤Ÿà¤¿à¤‚à¤—</span>
+        <span>⚙️</span>
+        <span>सेटिंग</span>
     </button>
     <button onclick="App.showSection('pending')" id="btn-pending">
-        <span>â³</span>
-        <span>à¤¬à¤¾à¤•à¥€</span>
+        <span>⏳</span>
+        <span>बाकी</span>
     </button>
 </div>
 
@@ -1567,7 +1567,7 @@ var App = {
             thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
             document.getElementById('reportFromDate').value = thirtyDaysAgo.toISOString().split('T')[0];
             
-            console.log('âœ… COSMIC AUTO BILL PRO v5.0 initialized');
+            console.log('✅ COSMIC AUTO BILL PRO v5.0 initialized');
         } catch(e) {
             console.error('Init error:', e);
         }
@@ -1607,7 +1607,7 @@ var App = {
         var savedPin = localStorage.getItem('appPin');
         
         if(!savedPin) {
-            alert('à¤•à¥ƒà¤ªà¤¯à¤¾ à¤ªà¤¹à¤²à¥‡ PIN à¤¸à¥‡à¤Ÿ à¤•à¤°à¥‡à¤‚!');
+            alert('कृपया पहले PIN सेट करें!');
             this.showSetPin();
             return;
         }
@@ -1625,7 +1625,7 @@ var App = {
     biometricLogin: function() {
         // Check if browser supports WebAuthn
         if(window.PublicKeyCredential) {
-            alert('ðŸ‘† à¤•à¥ƒà¤ªà¤¯à¤¾ à¤…à¤ªà¤¨à¤¾ à¤«à¤¿à¤‚à¤—à¤°à¤ªà¥à¤°à¤¿à¤‚à¤Ÿ/à¤«à¥‡à¤¸ à¤¸à¥à¤•à¥ˆà¤¨ à¤•à¤°à¥‡à¤‚');
+            alert('👆 कृपया अपना फिंगरप्रिंट/फेस स्कैन करें');
             
             // Simulate biometric success (in real app, this would use WebAuthn API)
             setTimeout(() => {
@@ -1634,14 +1634,14 @@ var App = {
                 this.initAfterLogin();
             }, 2000);
         } else {
-            alert('à¤†à¤ªà¤•à¤¾ à¤¬à¥à¤°à¤¾à¤‰à¤œà¤¼à¤° à¤¬à¤¾à¤¯à¥‹à¤®à¥‡à¤Ÿà¥à¤°à¤¿à¤• à¤²à¥‰à¤—à¤¿à¤¨ à¤¸à¤ªà¥‹à¤°à¥à¤Ÿ à¤¨à¤¹à¥€à¤‚ à¤•à¤°à¤¤à¤¾');
+            alert('आपका ब्राउज़र बायोमेट्रिक लॉगिन सपोर्ट नहीं करता');
         }
     },
 
     toggleBiometric: function() {
         var enabled = document.getElementById('enableBiometric').checked;
         localStorage.setItem('biometricEnabled', enabled);
-        alert(enabled ? 'âœ… à¤¬à¤¾à¤¯à¥‹à¤®à¥‡à¤Ÿà¥à¤°à¤¿à¤• à¤²à¥‰à¤—à¤¿à¤¨ à¤‡à¤¨à¥‡à¤¬à¤² à¤¹à¥‹ à¤—à¤¯à¤¾' : 'âŒ à¤¬à¤¾à¤¯à¥‹à¤®à¥‡à¤Ÿà¥à¤°à¤¿à¤• à¤²à¥‰à¤—à¤¿à¤¨ à¤¡à¤¿à¤¸à¥‡à¤¬à¤² à¤¹à¥‹ à¤—à¤¯à¤¾');
+        alert(enabled ? '✅ बायोमेट्रिक लॉगिन इनेबल हो गया' : '❌ बायोमेट्रिक लॉगिन डिसेबल हो गया');
     },
 
     savePin: function() {
@@ -1649,35 +1649,35 @@ var App = {
         var pin2 = document.getElementById('newPin2').value;
         
         if(pin1.length !== 4 || pin2.length !== 4) {
-            alert('PIN 4 à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ à¤¹à¥‹à¤¨à¤¾ à¤šà¤¾à¤¹à¤¿à¤!');
+            alert('PIN 4 अंकों का होना चाहिए!');
             return;
         }
         
         if(pin1 !== pin2) {
-            alert('à¤¦à¥‹à¤¨à¥‹à¤‚ PIN à¤®à¥‡à¤² à¤¨à¤¹à¥€à¤‚ à¤–à¤¾ à¤°à¤¹à¥‡!');
+            alert('दोनों PIN मेल नहीं खा रहे!');
             return;
         }
         
         localStorage.setItem('appPin', pin1);
-        alert('âœ… PIN à¤¸à¤«à¤²à¤¤à¤¾à¤ªà¥‚à¤°à¥à¤µà¤• à¤¸à¥‡à¤Ÿ à¤¹à¥‹ à¤—à¤¯à¤¾!');
+        alert('✅ PIN सफलतापूर्वक सेट हो गया!');
         this.showLogin();
     },
 
     changePin: function() {
         var newPin = document.getElementById('newSecurityPin').value;
         if(newPin.length !== 4) { 
-            alert('PIN 4 à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ à¤¹à¥‹à¤¨à¤¾ à¤šà¤¾à¤¹à¤¿à¤!'); 
+            alert('PIN 4 अंकों का होना चाहिए!'); 
             return; 
         }
         localStorage.setItem('appPin', newPin);
         document.getElementById('newSecurityPin').value = '';
-        alert('âœ… PIN à¤¬à¤¦à¤² à¤¦à¤¿à¤¯à¤¾ à¤—à¤¯à¤¾!');
+        alert('✅ PIN बदल दिया गया!');
     },
 
     disablePin: function() {
-        if(confirm('à¤•à¥à¤¯à¤¾ à¤†à¤ª PIN à¤¸à¥à¤°à¤•à¥à¤·à¤¾ à¤¹à¤Ÿà¤¾à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚?')) {
+        if(confirm('क्या आप PIN सुरक्षा हटाना चाहते हैं?')) {
             localStorage.removeItem('appPin');
-            alert('âœ… PIN à¤¹à¤Ÿà¤¾ à¤¦à¤¿à¤¯à¤¾ à¤—à¤¯à¤¾!');
+            alert('✅ PIN हटा दिया गया!');
         }
     },
 
@@ -1698,14 +1698,14 @@ var App = {
 
         // Check if already installed
         if(window.matchMedia('(display-mode: standalone)').matches) {
-            document.getElementById('installStatus').textContent = 'âœ… à¤à¤ª à¤‡à¤‚à¤¸à¥à¤Ÿà¥‰à¤² à¤¹à¥ˆ';
+            document.getElementById('installStatus').textContent = '✅ ऐप इंस्टॉल है';
             document.getElementById('installButton').disabled = true;
         }
     },
 
     installPWA: function() {
         if(!this.deferredPrompt) {
-            alert('à¤†à¤ª à¤ªà¤¹à¤²à¥‡ à¤¸à¥‡ à¤¹à¥€ à¤à¤ª à¤‡à¤‚à¤¸à¥à¤Ÿà¥‰à¤² à¤•à¤° à¤šà¥à¤•à¥‡ à¤¹à¥ˆà¤‚ à¤¯à¤¾ à¤†à¤ªà¤•à¤¾ à¤¬à¥à¤°à¤¾à¤‰à¤œà¤¼à¤° à¤¸à¤ªà¥‹à¤°à¥à¤Ÿ à¤¨à¤¹à¥€à¤‚ à¤•à¤°à¤¤à¤¾');
+            alert('आप पहले से ही ऐप इंस्टॉल कर चुके हैं या आपका ब्राउज़र सपोर्ट नहीं करता');
             return;
         }
 
@@ -1734,7 +1734,7 @@ var App = {
                     data: {
                         labels: dailyData.labels,
                         datasets: [{
-                            label: 'à¤¬à¤¿à¤•à¥à¤°à¥€ (â‚¹)',
+                            label: 'बिक्री (₹)',
                             data: dailyData.values,
                             borderColor: '#FF6B35',
                             backgroundColor: 'rgba(255,107,53,0.1)',
@@ -1762,7 +1762,7 @@ var App = {
                 this.profitChart = new Chart(profitCtx, {
                     type: 'doughnut',
                     data: {
-                        labels: ['à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ', 'à¤²à¤¾à¤—à¤¤'],
+                        labels: ['प्रॉफिट', 'लागत'],
                         datasets: [{
                             data: [profitData.profit, profitData.cost],
                             backgroundColor: ['#11998e', '#FF6B35'],
@@ -1843,8 +1843,8 @@ var App = {
         
         document.getElementById('headerShopName').textContent = shopName;
         var shopInfo = [];
-        if(shopPhone) shopInfo.push('ðŸ“± ' + shopPhone);
-        if(shopAddress) shopInfo.push('ðŸ“ ' + shopAddress);
+        if(shopPhone) shopInfo.push('📱 ' + shopPhone);
+        if(shopAddress) shopInfo.push('📍 ' + shopAddress);
         if(shopGst) shopInfo.push('GST: ' + shopGst);
         document.getElementById('headerShopInfo').textContent = shopInfo.join(' | ');
         
@@ -1863,18 +1863,18 @@ var App = {
         };
         localStorage.setItem('shopProfile', JSON.stringify(profile));
         this.loadShopProfile();
-        alert('âœ… à¤¦à¥à¤•à¤¾à¤¨ à¤•à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤¸à¥‡à¤µ à¤¹à¥‹ à¤—à¤ˆ!');
+        alert('✅ दुकान की जानकारी सेव हो गई!');
     },
 
     loadSettings: function() {
         // WhatsApp Message
         var waMsg = localStorage.getItem('whatsappMessage') || 
-            'à¤¨à¤®à¤¸à¥à¤¤à¥‡ {name} à¤œà¥€, à¤†à¤ªà¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ â‚¹{amount} à¤¬à¤•à¤¾à¤¯à¤¾ à¤¹à¥ˆà¥¤ à¤•à¥ƒà¤ªà¤¯à¤¾ à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚à¥¤ à¤§à¤¨à¥à¤¯à¤µà¤¾à¤¦!';
+            'नमस्ते {name} जी, आपकी किस्त ₹{amount} बकाया है। कृपया जमा करें। धन्यवाद!';
         document.getElementById('whatsappMessage').value = waMsg;
         
         // SMS Message
         var smsMsg = localStorage.getItem('smsMessage') || 
-            'à¤¨à¤®à¤¸à¥à¤¤à¥‡ {name} à¤œà¥€, à¤†à¤ªà¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ â‚¹{amount} à¤¬à¤•à¤¾à¤¯à¤¾ à¤¹à¥ˆà¥¤ à¤•à¥ƒà¤ªà¤¯à¤¾ à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚à¥¤ à¤§à¤¨à¥à¤¯à¤µà¤¾à¤¦!';
+            'नमस्ते {name} जी, आपकी किस्त ₹{amount} बकाया है। कृपया जमा करें। धन्यवाद!';
         document.getElementById('smsMessage').value = smsMsg;
         
         // Country Code
@@ -1914,13 +1914,13 @@ var App = {
     saveWhatsAppSettings: function() {
         var msg = document.getElementById('whatsappMessage').value.trim();
         localStorage.setItem('whatsappMessage', msg);
-        alert('âœ… WhatsApp message à¤¸à¥‡à¤µ à¤¹à¥‹ à¤—à¤¯à¤¾!');
+        alert('✅ WhatsApp message सेव हो गया!');
     },
 
     saveSMSSettings: function() {
         var msg = document.getElementById('smsMessage').value.trim();
         localStorage.setItem('smsMessage', msg);
-        alert('âœ… SMS message à¤¸à¥‡à¤µ à¤¹à¥‹ à¤—à¤¯à¤¾!');
+        alert('✅ SMS message सेव हो गया!');
     },
 
     saveReminderSettings: function() {
@@ -1928,14 +1928,14 @@ var App = {
         var days = document.getElementById('reminderDays').value;
         localStorage.setItem('reminderTime', time);
         localStorage.setItem('reminderDays', days);
-        alert('âœ… à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤¸à¥‡à¤Ÿà¤¿à¤‚à¤—à¥à¤¸ à¤¸à¥‡à¤µ à¤¹à¥‹ à¤—à¤ˆà¤‚!');
+        alert('✅ रिमाइंडर सेटिंग्स सेव हो गईं!');
     },
 
     toggleDarkMode: function() {
         var isDark = document.body.classList.toggle('dark-mode');
         localStorage.setItem('darkMode', isDark);
         document.getElementById('darkModeToggle').checked = isDark;
-        document.getElementById('darkModeBtn').textContent = isDark ? 'â˜€ï¸' : 'ðŸŒ™';
+        document.getElementById('darkModeBtn').textContent = isDark ? '☀️' : '🌙';
     },
 
     toggleAutoDarkMode: function() {
@@ -1954,13 +1954,13 @@ var App = {
                 if(!document.body.classList.contains('dark-mode')) {
                     document.body.classList.add('dark-mode');
                     document.getElementById('darkModeToggle').checked = true;
-                    document.getElementById('darkModeBtn').textContent = 'â˜€ï¸';
+                    document.getElementById('darkModeBtn').textContent = '☀️';
                 }
             } else {
                 if(document.body.classList.contains('dark-mode')) {
                     document.body.classList.remove('dark-mode');
                     document.getElementById('darkModeToggle').checked = false;
-                    document.getElementById('darkModeBtn').textContent = 'ðŸŒ™';
+                    document.getElementById('darkModeBtn').textContent = '🌙';
                 }
             }
         }
@@ -2069,11 +2069,11 @@ var App = {
                 badge.style.display = 'flex';
                 
                 if(dueToday > 0) {
-                    reminderText.innerHTML = `ðŸ“¢ à¤†à¤œ ${dueToday} à¤—à¥à¤°à¤¾à¤¹à¤•à¥‹à¤‚ à¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ à¤•à¥€ à¤¤à¤¾à¤°à¥€à¤– à¤¹à¥ˆ!`;
+                    reminderText.innerHTML = `📢 आज ${dueToday} ग्राहकों की किस्त की तारीख है!`;
                 } else if(dueTomorrow > 0) {
-                    reminderText.innerHTML = `ðŸ“¢ à¤•à¤² ${dueTomorrow} à¤—à¥à¤°à¤¾à¤¹à¤•à¥‹à¤‚ à¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ à¤•à¥€ à¤¤à¤¾à¤°à¥€à¤– à¤¹à¥ˆ!`;
+                    reminderText.innerHTML = `📢 कल ${dueTomorrow} ग्राहकों की किस्त की तारीख है!`;
                 } else {
-                    reminderText.innerHTML = `âš ï¸ ${overdue} à¤—à¥à¤°à¤¾à¤¹à¤•à¥‹à¤‚ à¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ à¤²à¥‡à¤Ÿ à¤¹à¥ˆ!`;
+                    reminderText.innerHTML = `⚠️ ${overdue} ग्राहकों की किस्त लेट है!`;
                 }
                 reminderBar.style.display = 'flex';
             } else {
@@ -2118,7 +2118,7 @@ var App = {
                 }
             });
             
-            console.log('âœ… Auto reminders sent for date: ' + this.formatDate(targetDate));
+            console.log('✅ Auto reminders sent for date: ' + this.formatDate(targetDate));
         } catch(e) {
             console.error('Send auto reminders error:', e);
         }
@@ -2154,12 +2154,12 @@ var App = {
         newRow.className = 'product-row';
         newRow.innerHTML = `
             <div class="relative">
-                <input type="text" class="invProdSearch" onkeyup="App.searchProductMulti(this)" placeholder="à¤¸à¤¾à¤®à¤¾à¤¨ à¤•à¤¾ à¤¨à¤¾à¤®" autocomplete="off">
+                <input type="text" class="invProdSearch" onkeyup="App.searchProductMulti(this)" placeholder="सामान का नाम" autocomplete="off">
                 <div class="search-results prodResults"></div>
             </div>
             <input type="number" class="invProdQty" placeholder="Qty" value="1" min="1" onchange="App.calculateTotal()">
-            <input type="number" class="invProdPrice" placeholder="â‚¹" readonly>
-            <button class="remove-btn" onclick="App.removeProductRow(this)">âŒ</button>
+            <input type="number" class="invProdPrice" placeholder="₹" readonly>
+            <button class="remove-btn" onclick="App.removeProductRow(this)">❌</button>
         `;
         container.appendChild(newRow);
         
@@ -2194,14 +2194,14 @@ var App = {
             });
             
             if(filtered.length === 0) { 
-                resultsDiv.innerHTML = '<div class="search-item">à¤•à¥‹à¤ˆ à¤¸à¤¾à¤®à¤¾à¤¨ à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾</div>'; 
+                resultsDiv.innerHTML = '<div class="search-item">कोई सामान नहीं मिला</div>'; 
             } else {
                 resultsDiv.innerHTML = '';
                 var self = this;
                 filtered.forEach(function(p) {
                     var div = document.createElement('div');
                     div.className = 'search-item';
-                    div.innerHTML = '<strong>' + self.escapeHtml(p.name) + '</strong><br><small>â‚¹' + p.price + ' (à¤²à¤¾à¤—à¤¤: â‚¹' + p.cost + ')</small>';
+                    div.innerHTML = '<strong>' + self.escapeHtml(p.name) + '</strong><br><small>₹' + p.price + ' (लागत: ₹' + p.cost + ')</small>';
                     div.onclick = function() {
                         input.value = p.name;
                         var row = input.closest('.product-row');
@@ -2253,14 +2253,14 @@ var App = {
             var fullPhone = countryCode + phone;
             
             if(!name || !phone) { 
-                alert('à¤•à¥ƒà¤ªà¤¯à¤¾ à¤¨à¤¾à¤® à¤”à¤° à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¦à¥‹à¤¨à¥‹à¤‚ à¤­à¤°à¥‡à¤‚!'); 
+                alert('कृपया नाम और मोबाइल नंबर दोनों भरें!'); 
                 this.isSaving = false; 
                 if(btn) btn.disabled = false; 
                 return; 
             }
             
             if(phone.length < 7) { 
-                alert('à¤•à¥ƒà¤ªà¤¯à¤¾ à¤¸à¤¹à¥€ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚!'); 
+                alert('कृपया सही मोबाइल नंबर दर्ज करें!'); 
                 document.getElementById('custPhone').classList.add('error');
                 this.isSaving = false; 
                 if(btn) btn.disabled = false; 
@@ -2271,7 +2271,7 @@ var App = {
             
             var existing = customers.find(function(c) { return c.phone === phone; });
             if(existing) {
-                if(!confirm('à¤¯à¤¹ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤ªà¤¹à¤²à¥‡ à¤¸à¥‡ à¤¹à¥ˆ (' + existing.name + ')à¥¤ à¤«à¤¿à¤° à¤­à¥€ à¤œà¥‹à¤¡à¤¼à¥‡à¤‚?')) {
+                if(!confirm('यह मोबाइल नंबर पहले से है (' + existing.name + ')। फिर भी जोड़ें?')) {
                     this.isSaving = false;
                     if(btn) btn.disabled = false;
                     return;
@@ -2298,12 +2298,12 @@ var App = {
             if(document.getElementById('custCompany')) document.getElementById('custCompany').value = '';
             document.getElementById('custPhone').classList.remove('error');
             
-            this.showAlert('custAlert', 'âœ… à¤—à¥à¤°à¤¾à¤¹à¤• à¤¸à¤«à¤²à¤¤à¤¾à¤ªà¥‚à¤°à¥à¤µà¤• à¤¸à¥‡à¤µ à¤¹à¥‹ à¤—à¤¯à¤¾!');
+            this.showAlert('custAlert', '✅ ग्राहक सफलतापूर्वक सेव हो गया!');
             this.displayCustomers();
             this.updateDashboard();
         } catch(e) { 
             console.error('Save customer error:', e); 
-            alert('à¤•à¥à¤› à¤—à¤²à¤¤ à¤¹à¥‹ à¤—à¤¯à¤¾!'); 
+            alert('कुछ गलत हो गया!'); 
         }
         finally { 
             this.isSaving = false; 
@@ -2328,7 +2328,7 @@ var App = {
             });
             
             if(filtered.length === 0) { 
-                tbody.innerHTML = '<tr><td colspan="4" class="no-data">à¤•à¥‹à¤ˆ à¤—à¥à¤°à¤¾à¤¹à¤• à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾</td></tr>'; 
+                tbody.innerHTML = '<tr><td colspan="4" class="no-data">कोई ग्राहक नहीं मिला</td></tr>'; 
                 return; 
             }
             
@@ -2348,16 +2348,16 @@ var App = {
                 var badgeClass = pending > 0 ? 'badge-danger' : 'badge-success';
                 
                 var row = tbody.insertRow();
-                var companyStr = c.company ? '<br><small style="color:#764ba2;">ðŸ¢ ' + self.escapeHtml(c.company) + '</small>' : '';
+                var companyStr = c.company ? '<br><small style="color:#764ba2;">🏢 ' + self.escapeHtml(c.company) + '</small>' : '';
                 var phoneStr = (c.countryCode || '') + c.phone;
                 row.innerHTML = '<td>' + self.escapeHtml(c.name) + companyStr + '</td>' +
                     '<td>' + (c.countryCode ? '<small style="color:#11998e;">' + c.countryCode + '</small> ' : '') + self.escapeHtml(c.phone) + '</td>' +
-                    '<td><span class="badge ' + badgeClass + '">â‚¹' + pending.toFixed(2) + '</span></td>' +
+                    '<td><span class="badge ' + badgeClass + '">₹' + pending.toFixed(2) + '</span></td>' +
                     '<td>' +
-                    '<button class="btn btn-info" style="padding:5px 10px;font-size:11px;" onclick="App.viewCustomerDetail(' + c.id + ')">ðŸ“‹</button> ' +
-                    '<button class="btn btn-warning" style="padding:5px 10px;font-size:11px;" onclick="App.openEditModal(' + c.id + ')">âœï¸</button> ' +
-                    '<button class="btn btn-whatsapp" style="padding:5px 10px;font-size:11px;" onclick="App.quickWhatsApp(\'' + self.escapeHtml(c.name) + '\', \'' + c.phone + '\', \'' + pending.toFixed(2) + '\')">ðŸ“±</button> ' +
-                    '<button class="btn btn-danger" style="padding:5px 10px;font-size:11px;" onclick="App.deleteCustomer(' + c.id + ')">ðŸ—‘ï¸</button>' +
+                    '<button class="btn btn-info" style="padding:5px 10px;font-size:11px;" onclick="App.viewCustomerDetail(' + c.id + ')">📋</button> ' +
+                    '<button class="btn btn-warning" style="padding:5px 10px;font-size:11px;" onclick="App.openEditModal(' + c.id + ')">✏️</button> ' +
+                    '<button class="btn btn-whatsapp" style="padding:5px 10px;font-size:11px;" onclick="App.quickWhatsApp(\'' + self.escapeHtml(c.name) + '\', \'' + c.phone + '\', \'' + pending.toFixed(2) + '\')">📱</button> ' +
+                    '<button class="btn btn-danger" style="padding:5px 10px;font-size:11px;" onclick="App.deleteCustomer(' + c.id + ')">🗑️</button>' +
                     '</td>';
             });
         } catch(e) { console.error('Display customers error:', e); }
@@ -2370,7 +2370,7 @@ var App = {
             var invoices = this.getData('invoices');
             var customer = customers.find(function(c) { return c.id == customerId; });
             
-            if(!customer) { alert('à¤—à¥à¤°à¤¾à¤¹à¤• à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾!'); return; }
+            if(!customer) { alert('ग्राहक नहीं मिला!'); return; }
             
             var totalBilled = 0, totalPaid = 0, paymentHistory = [], lastDueDate = null;
             var productList = [];
@@ -2397,21 +2397,21 @@ var App = {
             var paymentRows = '';
             
             if(paymentHistory.length === 0) {
-                paymentRows = '<p class="no-data">à¤•à¥‹à¤ˆ à¤•à¤¿à¤¸à¥à¤¤ à¤¨à¤¹à¥€à¤‚ à¤œà¤®à¤¾ à¤¹à¥à¤ˆ</p>';
+                paymentRows = '<p class="no-data">कोई किस्त नहीं जमा हुई</p>';
             } else {
-                paymentRows = '<div style="overflow-x: auto; max-height: 300px; overflow-y: auto;"><table style="width:100%;"><thead><tr><th>à¤¤à¤¾à¤°à¥€à¤–</th><th>à¤µà¤¿à¤µà¤°à¤£</th><th>à¤°à¤¾à¤¶à¤¿</th><th>à¤®à¥‹à¤¡</th><th></th></tr></thead><tbody>';
+                paymentRows = '<div style="overflow-x: auto; max-height: 300px; overflow-y: auto;"><table style="width:100%;"><thead><tr><th>तारीख</th><th>विवरण</th><th>राशि</th><th>मोड</th><th></th></tr></thead><tbody>';
                 paymentHistory.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
                 paymentHistory.forEach(function(p) {
                     var dateDisplay = p.date || '-';
                     var description = p.product || '-';
-                    if(p.isAdvance) description = '<span style="color:#FF6B35;font-weight:bold;">ðŸ·ï¸ ' + description + ' (à¤…à¤—à¥à¤°à¤¿à¤®)</span>';
-                    else description = '<span style="color:#11998e;">ðŸ’µ ' + description + '</span>';
+                    if(p.isAdvance) description = '<span style="color:#FF6B35;font-weight:bold;">🏷️ ' + description + ' (अग्रिम)</span>';
+                    else description = '<span style="color:#11998e;">💵 ' + description + '</span>';
                     paymentRows += '<tr>' +
                         '<td style="white-space:nowrap;font-size:12px;">' + dateDisplay + '</td>' +
                         '<td style="font-size:12px;">' + description + '</td>' +
-                        '<td style="color:green;font-weight:bold;">â‚¹' + parseFloat(p.amount || 0).toFixed(2) + '</td>' +
+                        '<td style="color:green;font-weight:bold;">₹' + parseFloat(p.amount || 0).toFixed(2) + '</td>' +
                         '<td style="font-size:12px;">' + (p.paymentMode || '-') + '</td>' +
-                        '<td><button style="background:#FF6B35;color:white;border:none;padding:4px 8px;border-radius:6px;cursor:pointer;font-size:12px;" onclick="App.openEditPaymentModal(' + p.id + ')">âœï¸</button></td>' +
+                        '<td><button style="background:#FF6B35;color:white;border:none;padding:4px 8px;border-radius:6px;cursor:pointer;font-size:12px;" onclick="App.openEditPaymentModal(' + p.id + ')">✏️</button></td>' +
                         '</tr>';
                 });
                 paymentRows += '</tbody></table></div>';
@@ -2419,29 +2419,29 @@ var App = {
             
             var productsHtml = '';
             if(productList.length > 0) {
-                productsHtml = '<div class="detail-row"><span class="detail-label">à¤–à¤°à¥€à¤¦à¥‡ à¤—à¤ à¤¸à¤¾à¤®à¤¾à¤¨:</span><span class="detail-value">' + productList.length + '</span></div>';
+                productsHtml = '<div class="detail-row"><span class="detail-label">खरीदे गए सामान:</span><span class="detail-value">' + productList.length + '</span></div>';
             }
             
             var progressPercent = totalBilled > 0 ? (totalPaid / totalBilled * 100).toFixed(0) : 0;
             
-            content.innerHTML = '<div class="customer-detail"><h3>ðŸ‘¤ à¤—à¥à¤°à¤¾à¤¹à¤• à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€</h3>' +
-                '<div class="detail-row"><span class="detail-label">à¤¨à¤¾à¤®:</span><span class="detail-value">' + this.escapeHtml(customer.name) + '</span></div>' +
-                '<div class="detail-row"><span class="detail-label">à¤®à¥‹à¤¬à¤¾à¤‡à¤²:</span><span class="detail-value">' + this.escapeHtml(customer.phone) + '</span></div>' +
-                '<div class="detail-row"><span class="detail-label">à¤ªà¤¤à¤¾:</span><span class="detail-value">' + this.escapeHtml(customer.address || '-') + '</span></div>' +
-                '<div class="detail-row"><span class="detail-label">à¤œà¥‹à¤¡à¤¼à¤¨à¥‡ à¤•à¥€ à¤¤à¤¾à¤°à¥€à¤–:</span><span class="detail-value">' + this.formatDate(new Date(customer.createdAt)) + '</span></div></div>' +
-                '<div class="customer-detail"><h3>ðŸ’° à¤¹à¤¿à¤¸à¤¾à¤¬ à¤¸à¤¾à¤°à¤¾à¤‚à¤¶</h3>' +
-                '<div class="detail-row"><span class="detail-label">à¤•à¥à¤² à¤¬à¤¿à¤•à¥à¤°à¥€:</span><span class="detail-value">â‚¹' + totalBilled.toFixed(2) + '</span></div>' +
-                '<div class="detail-row"><span class="detail-label">à¤•à¥à¤² à¤œà¤®à¤¾:</span><span class="detail-value" style="color: green;">â‚¹' + totalPaid.toFixed(2) + '</span></div>' +
-                '<div class="detail-row"><span class="detail-label">à¤¬à¤¾à¤•à¥€ à¤°à¤¾à¤¶à¤¿:</span><span class="detail-value" style="color: ' + (pending > 0 ? 'red' : 'green') + ';">â‚¹' + pending.toFixed(2) + '</span></div>' +
+            content.innerHTML = '<div class="customer-detail"><h3>👤 ग्राहक जानकारी</h3>' +
+                '<div class="detail-row"><span class="detail-label">नाम:</span><span class="detail-value">' + this.escapeHtml(customer.name) + '</span></div>' +
+                '<div class="detail-row"><span class="detail-label">मोबाइल:</span><span class="detail-value">' + this.escapeHtml(customer.phone) + '</span></div>' +
+                '<div class="detail-row"><span class="detail-label">पता:</span><span class="detail-value">' + this.escapeHtml(customer.address || '-') + '</span></div>' +
+                '<div class="detail-row"><span class="detail-label">जोड़ने की तारीख:</span><span class="detail-value">' + this.formatDate(new Date(customer.createdAt)) + '</span></div></div>' +
+                '<div class="customer-detail"><h3>💰 हिसाब सारांश</h3>' +
+                '<div class="detail-row"><span class="detail-label">कुल बिक्री:</span><span class="detail-value">₹' + totalBilled.toFixed(2) + '</span></div>' +
+                '<div class="detail-row"><span class="detail-label">कुल जमा:</span><span class="detail-value" style="color: green;">₹' + totalPaid.toFixed(2) + '</span></div>' +
+                '<div class="detail-row"><span class="detail-label">बाकी राशि:</span><span class="detail-value" style="color: ' + (pending > 0 ? 'red' : 'green') + ';">₹' + pending.toFixed(2) + '</span></div>' +
                 productsHtml +
-                '<div class="detail-row"><span class="detail-label">à¤•à¥à¤² à¤•à¤¿à¤¸à¥à¤¤à¥‡à¤‚:</span><span class="detail-value">' + paymentHistory.length + '</span></div>' +
-                '<div class="detail-row"><span class="detail-label">à¤…à¤—à¤²à¥€ à¤¤à¤¾à¤°à¥€à¤–:</span><span class="detail-value">' + (lastDueDate ? this.formatDate(new Date(lastDueDate)) : '-') + '</span></div></div>' +
+                '<div class="detail-row"><span class="detail-label">कुल किस्तें:</span><span class="detail-value">' + paymentHistory.length + '</span></div>' +
+                '<div class="detail-row"><span class="detail-label">अगली तारीख:</span><span class="detail-value">' + (lastDueDate ? this.formatDate(new Date(lastDueDate)) : '-') + '</span></div></div>' +
                 '<div class="progress-bar"><div class="progress-fill" style="width: ' + progressPercent + '%;"></div></div>' +
-                '<p style="text-align: center; font-size: 12px;">à¤ªà¥‡à¤®à¥‡à¤‚à¤Ÿ à¤ªà¥à¤°à¥‹à¤—à¥à¤°à¥‡à¤¸: ' + progressPercent + '%</p>' +
-                '<div class="customer-detail"><h3>ðŸ“‹ à¤•à¤¿à¤¸à¥à¤¤ à¤‡à¤¤à¤¿à¤¹à¤¾à¤¸ (' + paymentHistory.length + ')</h3>' + paymentRows + '</div>';
+                '<p style="text-align: center; font-size: 12px;">पेमेंट प्रोग्रेस: ' + progressPercent + '%</p>' +
+                '<div class="customer-detail"><h3>📋 किस्त इतिहास (' + paymentHistory.length + ')</h3>' + paymentRows + '</div>';
             
             document.getElementById('paymentProgress').style.width = progressPercent + '%';
-            document.getElementById('progressText').textContent = 'à¤ªà¥‡à¤®à¥‡à¤‚à¤Ÿ à¤ªà¥à¤°à¥‹à¤—à¥à¤°à¥‡à¤¸: ' + progressPercent + '% (â‚¹' + totalPaid.toFixed(2) + ' / â‚¹' + totalBilled.toFixed(2) + ')';
+            document.getElementById('progressText').textContent = 'पेमेंट प्रोग्रेस: ' + progressPercent + '% (₹' + totalPaid.toFixed(2) + ' / ₹' + totalBilled.toFixed(2) + ')';
             
             this.currentCustomerData = { 
                 customer: customer, 
@@ -2455,7 +2455,7 @@ var App = {
             this.showSection('customerDetail');
         } catch(e) { 
             console.error('View customer detail error:', e); 
-            alert('à¤µà¤¿à¤µà¤°à¤£ à¤²à¥‹à¤¡ à¤•à¤°à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿!'); 
+            alert('विवरण लोड करने में त्रुटि!'); 
         }
     },
 
@@ -2465,21 +2465,21 @@ var App = {
         if(idx >= 0) {
             customers[idx].autoReminder = !customers[idx].autoReminder;
             this.saveData('customers', customers);
-            alert(customers[idx].autoReminder ? 'âœ… à¤‘à¤Ÿà¥‹ à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤‘à¤¨ à¤¹à¥‹ à¤—à¤¯à¤¾' : 'âŒ à¤‘à¤Ÿà¥‹ à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤‘à¤« à¤¹à¥‹ à¤—à¤¯à¤¾');
+            alert(customers[idx].autoReminder ? '✅ ऑटो रिमाइंडर ऑन हो गया' : '❌ ऑटो रिमाइंडर ऑफ हो गया');
         }
     },
 
     printCustomerPDF: function() {
         try {
-            if(!this.currentCustomerData) { alert('à¤•à¥‹à¤ˆ à¤¡à¥‡à¤Ÿà¤¾ à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾!'); return; }
+            if(!this.currentCustomerData) { alert('कोई डेटा नहीं मिला!'); return; }
             var data = this.currentCustomerData;
             var customer = data.customer;
             var profile = JSON.parse(localStorage.getItem('shopProfile') || '{}');
             
-            document.getElementById('printShopName').textContent = profile.name || 'ðŸŒŸ COSMIC AUTO BILL PRO v5.0';
+            document.getElementById('printShopName').textContent = profile.name || '🌟 COSMIC AUTO BILL PRO v5.0';
             var shopDetails = [];
-            if(profile.phone) shopDetails.push('ðŸ“± ' + profile.phone);
-            if(profile.address) shopDetails.push('ðŸ“ ' + profile.address);
+            if(profile.phone) shopDetails.push('📱 ' + profile.phone);
+            if(profile.address) shopDetails.push('📍 ' + profile.address);
             if(profile.gst) shopDetails.push('GST: ' + profile.gst);
             document.getElementById('printShopDetails').textContent = shopDetails.join(' | ');
             
@@ -2511,15 +2511,15 @@ var App = {
                         var products = inv.products ? inv.products.map(function(p) { return p.name; }).join(', ') : inv.product;
                         allTransactions.push({
                             date: inv.date || '-',
-                            description: 'ðŸ“ à¤¬à¤¿à¤²: ' + products,
+                            description: '📝 बिल: ' + products,
                             amount: parseFloat(inv.totalPrice || 0),
                             mode: inv.paymentMode || '-',
                             type: 'invoice'
                         });
                     } else {
                         var description = inv.product || '-';
-                        if(inv.isAdvance) description = 'ðŸ·ï¸ ' + description;
-                        else description = 'ðŸ’µ ' + description;
+                        if(inv.isAdvance) description = '🏷️ ' + description;
+                        else description = '💵 ' + description;
                         allTransactions.push({
                             date: inv.date || '-',
                             description: description,
@@ -2544,13 +2544,13 @@ var App = {
                 row.innerHTML = 
                     '<td style="padding:4px 5px;border:1px solid #ddd;font-size:10px;white-space:nowrap;">' + t.date + '</td>' +
                     '<td style="padding:4px 5px;border:1px solid #ddd;font-size:10px;">' + t.description + '</td>' +
-                    '<td style="padding:4px 5px;border:1px solid #ddd;font-size:10px;text-align:right;font-weight:bold;' + amountClass + '">â‚¹' + t.amount.toFixed(2) + '</td>' +
+                    '<td style="padding:4px 5px;border:1px solid #ddd;font-size:10px;text-align:right;font-weight:bold;' + amountClass + '">₹' + t.amount.toFixed(2) + '</td>' +
                     '<td style="padding:4px 5px;border:1px solid #ddd;font-size:10px;">' + t.mode + '</td>';
             });
             
             if(allTransactions.length > 30) {
                 var noteRow = tbody.insertRow();
-                noteRow.innerHTML = '<td colspan="4" style="padding:4px;text-align:center;color:#FF6B35;font-size:9px;">... à¤”à¤° ' + (allTransactions.length - 30) + ' à¤Ÿà¥à¤°à¤¾à¤‚à¤œà¥ˆà¤•à¥à¤¶à¤¨ à¤¹à¥ˆà¤‚</td>';
+                noteRow.innerHTML = '<td colspan="4" style="padding:4px;text-align:center;color:#FF6B35;font-size:9px;">... और ' + (allTransactions.length - 30) + ' ट्रांजैक्शन हैं</td>';
             }
             
             document.getElementById('stmtTotalBilled').textContent = data.totalBilled.toFixed(2);
@@ -2564,23 +2564,23 @@ var App = {
             
         } catch(e) { 
             console.error('Print PDF error:', e); 
-            alert('PDF à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + e.message); 
+            alert('PDF त्रुटि: ' + e.message); 
         }
     },
 
     sendWhatsAppReminder: function() {
         try {
-            if(!this.currentCustomerData) { alert('à¤•à¥‹à¤ˆ à¤¡à¥‡à¤Ÿà¤¾ à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾!'); return; }
+            if(!this.currentCustomerData) { alert('कोई डेटा नहीं मिला!'); return; }
             var data = this.currentCustomerData;
             var customer = data.customer;
             
             if(!customer.phone || customer.phone.length !== 10) { 
-                alert('à¤—à¥à¤°à¤¾à¤¹à¤• à¤•à¤¾ à¤¸à¤¹à¥€ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆ!'); 
+                alert('ग्राहक का सही मोबाइल नंबर नहीं है!'); 
                 return; 
             }
             
             var message = localStorage.getItem('whatsappMessage') || 
-                'à¤¨à¤®à¤¸à¥à¤¤à¥‡ {name} à¤œà¥€, à¤†à¤ªà¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ â‚¹{amount} à¤¬à¤•à¤¾à¤¯à¤¾ à¤¹à¥ˆà¥¤ à¤•à¥ƒà¤ªà¤¯à¤¾ à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚à¥¤ à¤§à¤¨à¥à¤¯à¤µà¤¾à¤¦!';
+                'नमस्ते {name} जी, आपकी किस्त ₹{amount} बकाया है। कृपया जमा करें। धन्यवाद!';
             message = message.replace('{name}', customer.name);
             message = message.replace('{amount}', data.pending.toFixed(2));
             message = message.replace('{date}', data.lastDueDate || '-');
@@ -2594,23 +2594,23 @@ var App = {
             window.open(url, '_blank');
         } catch(e) { 
             console.error('WhatsApp error:', e); 
-            alert('WhatsApp à¤­à¥‡à¤œà¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿!'); 
+            alert('WhatsApp भेजने में त्रुटि!'); 
         }
     },
 
     sendSMSReminder: function() {
         try {
-            if(!this.currentCustomerData) { alert('à¤•à¥‹à¤ˆ à¤¡à¥‡à¤Ÿà¤¾ à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾!'); return; }
+            if(!this.currentCustomerData) { alert('कोई डेटा नहीं मिला!'); return; }
             var data = this.currentCustomerData;
             var customer = data.customer;
             
             if(!customer.phone || customer.phone.length !== 10) { 
-                alert('à¤—à¥à¤°à¤¾à¤¹à¤• à¤•à¤¾ à¤¸à¤¹à¥€ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆ!'); 
+                alert('ग्राहक का सही मोबाइल नंबर नहीं है!'); 
                 return; 
             }
             
             var message = localStorage.getItem('smsMessage') || 
-                'à¤¨à¤®à¤¸à¥à¤¤à¥‡ {name} à¤œà¥€, à¤†à¤ªà¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ â‚¹{amount} à¤¬à¤•à¤¾à¤¯à¤¾ à¤¹à¥ˆà¥¤ à¤•à¥ƒà¤ªà¤¯à¤¾ à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚à¥¤ à¤§à¤¨à¥à¤¯à¤µà¤¾à¤¦!';
+                'नमस्ते {name} जी, आपकी किस्त ₹{amount} बकाया है। कृपया जमा करें। धन्यवाद!';
             message = message.replace('{name}', customer.name);
             message = message.replace('{amount}', data.pending.toFixed(2));
             message = message.replace('{date}', data.lastDueDate || '-');
@@ -2619,7 +2619,7 @@ var App = {
             window.open(smsUrl, '_blank');
         } catch(e) { 
             console.error('SMS error:', e); 
-            alert('SMS à¤­à¥‡à¤œà¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿!'); 
+            alert('SMS भेजने में त्रुटि!'); 
         }
     },
 
@@ -2627,7 +2627,7 @@ var App = {
         var custId = document.getElementById('payCustId').value;
         var custName = document.getElementById('payCustSearch').value.trim();
         
-        if(!custId) { alert('à¤ªà¤¹à¤²à¥‡ à¤—à¥à¤°à¤¾à¤¹à¤• à¤šà¥à¤¨à¥‡à¤‚!'); return; }
+        if(!custId) { alert('पहले ग्राहक चुनें!'); return; }
         
         var customers = this.getData('customers');
         var customer = customers.find(function(c) { return c.id == custId; });
@@ -2673,15 +2673,15 @@ var App = {
             a.click();
             window.URL.revokeObjectURL(url);
             
-            alert('âœ… Backup à¤«à¤¾à¤‡à¤² download à¤¹à¥‹ à¤—à¤ˆ!\n\nà¤…à¤¬ à¤‡à¤¸à¥‡ à¤…à¤ªà¤¨à¥‡ Google Drive à¤®à¥‡à¤‚ upload à¤•à¤° à¤²à¥‡à¤‚à¥¤');
+            alert('✅ Backup फाइल download हो गई!\n\nअब इसे अपने Google Drive में upload कर लें।');
         } catch(e) { 
             console.error('Backup error:', e); 
-            alert('Backup à¤²à¥‡à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿!'); 
+            alert('Backup लेने में त्रुटि!'); 
         }
     },
 
     scheduleAutoBackup: function() {
-        alert('â° à¤‘à¤Ÿà¥‹ à¤¬à¥ˆà¤•à¤…à¤ª à¤¸à¥‡à¤Ÿ à¤¹à¥‹ à¤—à¤¯à¤¾!\n\nà¤¹à¤° à¤°à¤µà¤¿à¤µà¤¾à¤° à¤°à¤¾à¤¤ 11 à¤¬à¤œà¥‡ à¤…à¤ªà¤¨à¥‡ à¤†à¤ª à¤¬à¥ˆà¤•à¤…à¤ª à¤²à¥‡à¤—à¤¾à¥¤');
+        alert('⏰ ऑटो बैकअप सेट हो गया!\n\nहर रविवार रात 11 बजे अपने आप बैकअप लेगा।');
         localStorage.setItem('autoBackup', 'true');
     },
 
@@ -2698,7 +2698,7 @@ var App = {
                 reader.onload = function(event) {
                     try {
                         var data = JSON.parse(event.target.result);
-                        if(confirm('à¤¯à¤¹ Backup restore à¤•à¤°à¥‡à¤‚à¤—à¥‡? à¤®à¥Œà¤œà¥‚à¤¦à¤¾ à¤¡à¤¾à¤Ÿà¤¾ delete à¤¹à¥‹ à¤œà¤¾à¤à¤—à¤¾!')) {
+                        if(confirm('यह Backup restore करेंगे? मौजूदा डाटा delete हो जाएगा!')) {
                             if(data.customers) localStorage.setItem('customers', typeof data.customers === 'string' ? data.customers : JSON.stringify(data.customers));
                             if(data.products) localStorage.setItem('products', typeof data.products === 'string' ? data.products : JSON.stringify(data.products));
                             if(data.invoices) localStorage.setItem('invoices', typeof data.invoices === 'string' ? data.invoices : JSON.stringify(data.invoices));
@@ -2710,11 +2710,11 @@ var App = {
                                 localStorage.setItem('reminderDays', data.reminderSettings.days);
                             }
                             
-                            alert('âœ… à¤¡à¤¾à¤Ÿà¤¾ à¤¸à¤«à¤²à¤¤à¤¾à¤ªà¥‚à¤°à¥à¤µà¤• restore à¤¹à¥‹ à¤—à¤¯à¤¾!\n\nà¤ªà¥‡à¤œ à¤°à¤¿à¤«à¥à¤°à¥‡à¤¶ à¤¹à¥‹à¤—à¤¾à¥¤');
+                            alert('✅ डाटा सफलतापूर्वक restore हो गया!\n\nपेज रिफ्रेश होगा।');
                             location.reload();
                         }
                     } catch(err) { 
-                        alert('âŒ à¤—à¤²à¤¤ à¤«à¤¾à¤‡à¤²! à¤•à¥ƒà¤ªà¤¯à¤¾ à¤¸à¤¹à¥€ backup à¤«à¤¾à¤‡à¤² select à¤•à¤°à¥‡à¤‚à¥¤'); 
+                        alert('❌ गलत फाइल! कृपया सही backup फाइल select करें।'); 
                     }
                 };
                 reader.readAsText(file);
@@ -2722,7 +2722,7 @@ var App = {
             input.click();
         } catch(e) { 
             console.error('Restore error:', e); 
-            alert('Restore à¤•à¤°à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿!'); 
+            alert('Restore करने में त्रुटि!'); 
         }
     },
 
@@ -2730,7 +2730,7 @@ var App = {
         try {
             var customers = this.getData('customers');
             var customer = customers.find(function(c) { return c.id == id; });
-            if(!customer) { alert('à¤—à¥à¤°à¤¾à¤¹à¤• à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾!'); return; }
+            if(!customer) { alert('ग्राहक नहीं मिला!'); return; }
             
             document.getElementById('editCustId').value = customer.id;
             document.getElementById('editCustName').value = customer.name;
@@ -2755,12 +2755,12 @@ var App = {
             var phone = document.getElementById('editCustPhone').value.trim();
             var address = document.getElementById('editCustAddress').value.trim();
             
-            if(!name || !phone) { alert('à¤•à¥ƒà¤ªà¤¯à¤¾ à¤¨à¤¾à¤® à¤”à¤° à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¦à¥‹à¤¨à¥‹à¤‚ à¤­à¤°à¥‡à¤‚!'); return; }
-            if(phone.length !== 10) { alert('à¤•à¥ƒà¤ªà¤¯à¤¾ à¤¸à¤¹à¥€ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚ (10 à¤…à¤‚à¤•)!'); return; }
+            if(!name || !phone) { alert('कृपया नाम और मोबाइल नंबर दोनों भरें!'); return; }
+            if(phone.length !== 10) { alert('कृपया सही मोबाइल नंबर दर्ज करें (10 अंक)!'); return; }
             
             var customers = this.getData('customers');
             var index = customers.findIndex(function(c) { return c.id == id; });
-            if(index === -1) { alert('à¤—à¥à¤°à¤¾à¤¹à¤• à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾!'); return; }
+            if(index === -1) { alert('ग्राहक नहीं मिला!'); return; }
             
             customers[index].name = name;
             customers[index].phone = phone;
@@ -2779,35 +2779,35 @@ var App = {
             this.closeEditModal();
             this.displayCustomers();
             this.updateDashboard();
-            this.showAlert('custAlert', 'âœ… à¤—à¥à¤°à¤¾à¤¹à¤• à¤•à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤…à¤ªà¤¡à¥‡à¤Ÿ à¤¹à¥‹ à¤—à¤ˆ!', 'success');
+            this.showAlert('custAlert', '✅ ग्राहक की जानकारी अपडेट हो गई!', 'success');
         } catch(e) { 
             console.error('Update customer error:', e); 
-            alert('à¤…à¤ªà¤¡à¥‡à¤Ÿ à¤•à¤°à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿!'); 
+            alert('अपडेट करने में त्रुटि!'); 
         }
     },
 
     clearAllInvoices: function() {
         try {
             var invoices = this.getData('invoices');
-            if(invoices.length === 0) { alert('à¤•à¥‹à¤ˆ à¤¬à¤¿à¤²/à¤•à¤¿à¤¸à¥à¤¤ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆ!'); return; }
-            if(!confirm('âš ï¸ à¤¸à¤­à¥€ ' + invoices.length + ' à¤¬à¤¿à¤² à¤”à¤° à¤•à¤¿à¤¸à¥à¤¤à¥‡à¤‚ à¤¹à¤®à¥‡à¤¶à¤¾ à¤•à¥‡ à¤²à¤¿à¤ delete à¤¹à¥‹à¤‚à¤—à¥€!\n\nà¤—à¥à¤°à¤¾à¤¹à¤• à¤”à¤° à¤¸à¤¾à¤®à¤¾à¤¨ à¤•à¥€ list à¤¬à¤¨à¥€ à¤°à¤¹à¥‡à¤—à¥€à¥¤\n\nà¤•à¥à¤¯à¤¾ à¤†à¤ª sure à¤¹à¥ˆà¤‚?')) return;
-            if(!confirm('ðŸ”´ à¤†à¤–à¤¿à¤°à¥€ à¤¬à¤¾à¤° confirm à¤•à¤°à¥‡à¤‚!\n\nà¤¸à¤­à¥€ à¤¬à¤¿à¤²-à¤•à¤¿à¤¸à¥à¤¤ delete à¤¹à¥‹à¤‚à¤—à¥€ - à¤µà¤¾à¤ªà¤¸ à¤¨à¤¹à¥€à¤‚ à¤†à¤à¤‚à¤—à¥€!')) return;
+            if(invoices.length === 0) { alert('कोई बिल/किस्त नहीं है!'); return; }
+            if(!confirm('⚠️ सभी ' + invoices.length + ' बिल और किस्तें हमेशा के लिए delete होंगी!\n\nग्राहक और सामान की list बनी रहेगी।\n\nक्या आप sure हैं?')) return;
+            if(!confirm('🔴 आखिरी बार confirm करें!\n\nसभी बिल-किस्त delete होंगी - वापस नहीं आएंगी!')) return;
             
             this.saveData('invoices', []);
             this.updateDashboard();
             this.displayCustomers();
             this.displayReports();
             this.initCharts();
-            alert('âœ… à¤¸à¤­à¥€ à¤¬à¤¿à¤² à¤”à¤° à¤•à¤¿à¤¸à¥à¤¤à¥‡à¤‚ à¤¸à¤¾à¤« à¤¹à¥‹ à¤—à¤ˆà¤‚!');
+            alert('✅ सभी बिल और किस्तें साफ हो गईं!');
         } catch(e) {
-            alert('à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + e.message);
+            alert('त्रुटि: ' + e.message);
         }
     },
 
     clearAllData: function() {
         try {
-            if(!confirm('âš ï¸ WARNING!\n\nà¤¸à¤­à¥€ à¤—à¥à¤°à¤¾à¤¹à¤•, à¤¸à¤¾à¤®à¤¾à¤¨, à¤¬à¤¿à¤² à¤”à¤° à¤•à¤¿à¤¸à¥à¤¤à¥‡à¤‚ à¤¹à¤®à¥‡à¤¶à¤¾ à¤•à¥‡ à¤²à¤¿à¤ delete à¤¹à¥‹à¤‚à¤—à¥€!\n\nà¤•à¥à¤¯à¤¾ à¤†à¤ª sure à¤¹à¥ˆà¤‚?')) return;
-            if(!confirm('ðŸ”´ à¤†à¤–à¤¿à¤°à¥€ à¤¬à¤¾à¤° confirm à¤•à¤°à¥‡à¤‚!\n\nà¤¸à¤¬ à¤•à¥à¤› delete à¤¹à¥‹à¤—à¤¾ - à¤•à¥à¤› à¤­à¥€ à¤µà¤¾à¤ªà¤¸ à¤¨à¤¹à¥€à¤‚ à¤†à¤à¤—à¤¾!')) return;
+            if(!confirm('⚠️ WARNING!\n\nसभी ग्राहक, सामान, बिल और किस्तें हमेशा के लिए delete होंगी!\n\nक्या आप sure हैं?')) return;
+            if(!confirm('🔴 आखिरी बार confirm करें!\n\nसब कुछ delete होगा - कुछ भी वापस नहीं आएगा!')) return;
             
             this.saveData('invoices', []);
             this.saveData('customers', []);
@@ -2820,9 +2820,9 @@ var App = {
             this.displayProducts();
             this.displayReports();
             this.initCharts();
-            alert('âœ… à¤¸à¤­à¥€ data à¤¸à¤¾à¤« à¤¹à¥‹ à¤—à¤¯à¤¾!');
+            alert('✅ सभी data साफ हो गया!');
         } catch(e) {
-            alert('à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + e.message);
+            alert('त्रुटि: ' + e.message);
         }
     },
 
@@ -2830,11 +2830,11 @@ var App = {
         try {
             var customers = this.getData('customers');
             var cust = customers.find(function(c) { return c.id == id; });
-            var custName = cust ? cust.name : 'à¤¯à¤¹ à¤—à¥à¤°à¤¾à¤¹à¤•';
+            var custName = cust ? cust.name : 'यह ग्राहक';
             
-            if(!confirm('âš ï¸ à¤•à¥à¤¯à¤¾ à¤†à¤ª "' + custName + '" à¤•à¥‹ à¤¡à¤¿à¤²à¥€à¤Ÿ à¤•à¤°à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚?\n\nà¤‡à¤¨à¤•à¥‡ à¤¸à¤­à¥€ à¤¬à¤¿à¤² à¤”à¤° à¤•à¤¿à¤¸à¥à¤¤à¥‡à¤‚ à¤­à¥€ à¤¹à¤®à¥‡à¤¶à¤¾ à¤•à¥‡ à¤²à¤¿à¤ delete à¤¹à¥‹à¤‚à¤—à¥€!')) return;
+            if(!confirm('⚠️ क्या आप "' + custName + '" को डिलीट करना चाहते हैं?\n\nइनके सभी बिल और किस्तें भी हमेशा के लिए delete होंगी!')) return;
             
-            // == use à¤•à¤°à¥‹ - string/number à¤¦à¥‹à¤¨à¥‹à¤‚ match à¤¹à¥‹à¤‚à¤—à¥‡
+            // == use करो - string/number दोनों match होंगे
             var newCustomers = customers.filter(function(c) { return c.id != id; });
             var invoices = this.getData('invoices');
             var newInvoices = invoices.filter(function(inv) { return inv.customerId != id; });
@@ -2852,10 +2852,10 @@ var App = {
             this.displayCustomers();
             this.updateDashboard();
             this.displayReports();
-            this.showAlert('custAlert', 'âœ… à¤—à¥à¤°à¤¾à¤¹à¤• à¤”à¤° à¤‰à¤¨à¤•à¤¾ à¤¸à¤¾à¤°à¤¾ à¤¡à¥‡à¤Ÿà¤¾ à¤¡à¤¿à¤²à¥€à¤Ÿ à¤¹à¥‹ à¤—à¤¯à¤¾!', 'success');
+            this.showAlert('custAlert', '✅ ग्राहक और उनका सारा डेटा डिलीट हो गया!', 'success');
         } catch(e) { 
             console.error('Delete customer error:', e);
-            alert('à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + e.message);
+            alert('त्रुटि: ' + e.message);
         }
     },
 
@@ -2872,14 +2872,14 @@ var App = {
             var profit = document.getElementById('prodProfit').value || '0';
             
             if(!name || !cost || !price) { 
-                alert('à¤•à¥ƒà¤ªà¤¯à¤¾ à¤¸à¤¾à¤®à¤¾à¤¨ à¤•à¤¾ à¤¨à¤¾à¤®, à¤²à¤¾à¤—à¤¤ à¤”à¤° à¤¬à¤¿à¤•à¥à¤°à¥€ à¤•à¥€à¤®à¤¤ à¤­à¤°à¥‡à¤‚!'); 
+                alert('कृपया सामान का नाम, लागत और बिक्री कीमत भरें!'); 
                 this.isSaving = false; 
                 if(btn) btn.disabled = false; 
                 return; 
             }
             
             if(parseFloat(price) <= 0 || parseFloat(cost) <= 0) { 
-                alert('à¤•à¥€à¤®à¤¤ 0 à¤¸à¥‡ à¤…à¤§à¤¿à¤• à¤¹à¥‹à¤¨à¥€ à¤šà¤¾à¤¹à¤¿à¤!'); 
+                alert('कीमत 0 से अधिक होनी चाहिए!'); 
                 this.isSaving = false; 
                 if(btn) btn.disabled = false; 
                 return; 
@@ -2902,11 +2902,11 @@ var App = {
             document.getElementById('prodPrice').value = '';
             document.getElementById('prodProfit').value = '0';
             
-            this.showAlert('prodAlert', 'âœ… à¤¸à¤¾à¤®à¤¾à¤¨ à¤¸à¤«à¤²à¤¤à¤¾à¤ªà¥‚à¤°à¥à¤µà¤• à¤¸à¥‡à¤µ à¤¹à¥‹ à¤—à¤¯à¤¾!');
+            this.showAlert('prodAlert', '✅ सामान सफलतापूर्वक सेव हो गया!');
             this.displayProducts();
         } catch(e) { 
             console.error('Save product error:', e); 
-            alert('à¤•à¥à¤› à¤—à¤²à¤¤ à¤¹à¥‹ à¤—à¤¯à¤¾!'); 
+            alert('कुछ गलत हो गया!'); 
         }
         finally { 
             this.isSaving = false; 
@@ -2929,7 +2929,7 @@ var App = {
             });
             
             if(filtered.length === 0) { 
-                tbody.innerHTML = '<tr><td colspan="5" class="no-data">à¤•à¥‹à¤ˆ à¤¸à¤¾à¤®à¤¾à¤¨ à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾</td></tr>'; 
+                tbody.innerHTML = '<tr><td colspan="5" class="no-data">कोई सामान नहीं मिला</td></tr>'; 
                 return; 
             }
             
@@ -2940,12 +2940,12 @@ var App = {
                 
                 var row = tbody.insertRow();
                 row.innerHTML = '<td>' + self.escapeHtml(p.name) + '</td>' +
-                    '<td>â‚¹' + parseFloat(p.cost || p.price * 0.7).toFixed(2) + '</td>' +
-                    '<td>â‚¹' + parseFloat(p.price).toFixed(2) + '</td>' +
-                    '<td><span style="color:green;">â‚¹' + profitAmt.toFixed(2) + ' (' + profitPercent + '%)</span></td>' +
+                    '<td>₹' + parseFloat(p.cost || p.price * 0.7).toFixed(2) + '</td>' +
+                    '<td>₹' + parseFloat(p.price).toFixed(2) + '</td>' +
+                    '<td><span style="color:green;">₹' + profitAmt.toFixed(2) + ' (' + profitPercent + '%)</span></td>' +
                     '<td>' +
-                    '<button class="btn btn-warning" style="padding:5px 10px;font-size:11px;" onclick="App.openEditProductModal(' + p.id + ')">âœï¸</button> ' +
-                    '<button class="btn btn-danger" style="padding:5px 10px;font-size:11px;" onclick="App.deleteProduct(' + p.id + ')">ðŸ—‘ï¸</button>' +
+                    '<button class="btn btn-warning" style="padding:5px 10px;font-size:11px;" onclick="App.openEditProductModal(' + p.id + ')">✏️</button> ' +
+                    '<button class="btn btn-danger" style="padding:5px 10px;font-size:11px;" onclick="App.deleteProduct(' + p.id + ')">🗑️</button>' +
                     '</td>';
             });
         } catch(e) { 
@@ -2957,7 +2957,7 @@ var App = {
         try {
             var invoices = this.getData('invoices');
             var payment = invoices.find(function(inv) { return inv.id == id && inv.type === 'payment'; });
-            if(!payment) { alert('à¤•à¤¿à¤¸à¥à¤¤ à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¥€!'); return; }
+            if(!payment) { alert('किस्त नहीं मिली!'); return; }
 
             document.getElementById('editPayId').value = payment.id;
             document.getElementById('editPayAmount').value = parseFloat(payment.amount || 0);
@@ -2980,7 +2980,7 @@ var App = {
             modal.style.display = 'flex';
         } catch(e) {
             console.error('Open edit payment error:', e);
-            alert('à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + e.message);
+            alert('त्रुटि: ' + e.message);
         }
     },
 
@@ -2996,12 +2996,12 @@ var App = {
             var mode = document.getElementById('editPayMode').value;
             var product = document.getElementById('editPayProduct').value.trim();
 
-            if(!amount || amount <= 0) { alert('à¤°à¤¾à¤¶à¤¿ à¤¸à¤¹à¥€ à¤­à¤°à¥‡à¤‚!'); return; }
-            if(!dateVal) { alert('à¤¤à¤¾à¤°à¥€à¤– à¤šà¥à¤¨à¥‡à¤‚!'); return; }
+            if(!amount || amount <= 0) { alert('राशि सही भरें!'); return; }
+            if(!dateVal) { alert('तारीख चुनें!'); return; }
 
             var invoices = this.getData('invoices');
             var idx = invoices.findIndex(function(inv) { return inv.id == id; });
-            if(idx === -1) { alert('à¤•à¤¿à¤¸à¥à¤¤ à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¥€!'); return; }
+            if(idx === -1) { alert('किस्त नहीं मिली!'); return; }
 
             var originalTime = (invoices[idx].date || '').split(' ').slice(1).join(' ') || '';
             var newDate = this.formatDate(new Date(dateVal));
@@ -3019,16 +3019,16 @@ var App = {
                 this.viewCustomerDetail(this.currentCustomerId);
             }
             this.updateDashboard();
-            alert('âœ… à¤•à¤¿à¤¸à¥à¤¤ à¤…à¤ªà¤¡à¥‡à¤Ÿ à¤¹à¥‹ à¤—à¤ˆ!');
+            alert('✅ किस्त अपडेट हो गई!');
         } catch(e) {
             console.error('Update payment error:', e);
-            alert('à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + e.message);
+            alert('त्रुटि: ' + e.message);
         }
     },
 
     deletePaymentConfirm: function() {
         var id = parseInt(document.getElementById('editPayId').value);
-        if(confirm('âš ï¸ à¤•à¥à¤¯à¤¾ à¤†à¤ª à¤¯à¤¹ à¤•à¤¿à¤¸à¥à¤¤ à¤¹à¤Ÿà¤¾à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚?\n\nà¤¯à¤¹ à¤µà¤¾à¤ªà¤¸ à¤¨à¤¹à¥€à¤‚ à¤†à¤à¤—à¥€!')) {
+        if(confirm('⚠️ क्या आप यह किस्त हटाना चाहते हैं?\n\nयह वापस नहीं आएगी!')) {
             try {
                 var invoices = this.getData('invoices');
                 invoices = invoices.filter(function(inv) { return inv.id != id; });
@@ -3038,9 +3038,9 @@ var App = {
                     this.viewCustomerDetail(this.currentCustomerId);
                 }
                 this.updateDashboard();
-                alert('âœ… à¤•à¤¿à¤¸à¥à¤¤ à¤¹à¤Ÿà¤¾ à¤¦à¥€ à¤—à¤ˆ!');
+                alert('✅ किस्त हटा दी गई!');
             } catch(e) {
-                alert('à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + e.message);
+                alert('त्रुटि: ' + e.message);
             }
         }
     },
@@ -3049,7 +3049,7 @@ var App = {
         try {
             var products = this.getData('products');
             var product = products.find(function(p) { return p.id == id; });
-            if(!product) { alert('à¤¸à¤¾à¤®à¤¾à¤¨ à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾!'); return; }
+            if(!product) { alert('सामान नहीं मिला!'); return; }
             
             document.getElementById('editProdId').value = product.id;
             document.getElementById('editProdName').value = product.name;
@@ -3076,12 +3076,12 @@ var App = {
             var price = document.getElementById('editProdPrice').value;
             var profit = document.getElementById('editProdProfit').value || '0';
 
-            if(!name || !cost || !price) { alert('à¤•à¥ƒà¤ªà¤¯à¤¾ à¤¸à¤­à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤­à¤°à¥‡à¤‚!'); return; }
-            if(parseFloat(price) <= 0 || parseFloat(cost) <= 0) { alert('à¤•à¥€à¤®à¤¤ 0 à¤¸à¥‡ à¤…à¤§à¤¿à¤• à¤¹à¥‹à¤¨à¥€ à¤šà¤¾à¤¹à¤¿à¤!'); return; }
+            if(!name || !cost || !price) { alert('कृपया सभी जानकारी भरें!'); return; }
+            if(parseFloat(price) <= 0 || parseFloat(cost) <= 0) { alert('कीमत 0 से अधिक होनी चाहिए!'); return; }
 
             var products = this.getData('products');
             var index = products.findIndex(function(p) { return p.id == id; });
-            if(index === -1) { alert('à¤¸à¤¾à¤®à¤¾à¤¨ à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾!'); return; }
+            if(index === -1) { alert('सामान नहीं मिला!'); return; }
 
             products[index].name = name;
             products[index].cost = parseFloat(cost).toFixed(2);
@@ -3091,10 +3091,10 @@ var App = {
             this.saveData('products', products);
             this.closeEditProductModal();
             this.displayProducts();
-            this.showAlert('prodAlert', 'âœ… à¤¸à¤¾à¤®à¤¾à¤¨ à¤•à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤…à¤ªà¤¡à¥‡à¤Ÿ à¤¹à¥‹ à¤—à¤ˆ!', 'success');
+            this.showAlert('prodAlert', '✅ सामान की जानकारी अपडेट हो गई!', 'success');
         } catch(e) {
             console.error('Update product error:', e);
-            alert('à¤…à¤ªà¤¡à¥‡à¤Ÿ à¤•à¤°à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿!');
+            alert('अपडेट करने में त्रुटि!');
         }
     },
 
@@ -3102,18 +3102,18 @@ var App = {
         try {
             var products = this.getData('products');
             var prod = products.find(function(p) { return p.id === id; });
-            var prodName = prod ? prod.name : 'à¤¯à¤¹ à¤¸à¤¾à¤®à¤¾à¤¨';
+            var prodName = prod ? prod.name : 'यह सामान';
             
-            if(!confirm('âš ï¸ à¤•à¥à¤¯à¤¾ à¤†à¤ª "' + prodName + '" à¤•à¥‹ à¤¡à¤¿à¤²à¥€à¤Ÿ à¤•à¤°à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚?\n\nNote: à¤ªà¥à¤°à¤¾à¤¨à¥‡ à¤¬à¤¿à¤²à¥‹à¤‚ à¤®à¥‡à¤‚ à¤¯à¤¹ à¤¸à¤¾à¤®à¤¾à¤¨ à¤¦à¤¿à¤–à¤¤à¤¾ à¤°à¤¹à¥‡à¤—à¤¾à¥¤')) return;
+            if(!confirm('⚠️ क्या आप "' + prodName + '" को डिलीट करना चाहते हैं?\n\nNote: पुराने बिलों में यह सामान दिखता रहेगा।')) return;
             
             var newProducts = products.filter(function(p) { return p.id !== id; });
             this.saveData('products', newProducts);
             this.displayProducts();
             this.updateDashboard();
-            this.showAlert('prodAlert', 'âœ… à¤¸à¤¾à¤®à¤¾à¤¨ à¤¡à¤¿à¤²à¥€à¤Ÿ à¤¹à¥‹ à¤—à¤¯à¤¾!', 'success');
+            this.showAlert('prodAlert', '✅ सामान डिलीट हो गया!', 'success');
         } catch(e) { 
             console.error('Delete product error:', e);
-            alert('à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + e.message);
+            alert('त्रुटि: ' + e.message);
         }
     },
 
@@ -3131,14 +3131,14 @@ var App = {
             });
             
             if(filtered.length === 0) { 
-                resultsDiv.innerHTML = '<div class="search-item">à¤•à¥‹à¤ˆ à¤—à¥à¤°à¤¾à¤¹à¤• à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾</div>'; 
+                resultsDiv.innerHTML = '<div class="search-item">कोई ग्राहक नहीं मिला</div>'; 
             } else {
                 resultsDiv.innerHTML = '';
                 var self = this;
                 filtered.forEach(function(c) {
                     var div = document.createElement('div');
                     div.className = 'search-item';
-                    div.innerHTML = '<strong>' + self.escapeHtml(c.name) + '</strong><br><small>ðŸ“± ' + self.escapeHtml(c.phone) + '</small>';
+                    div.innerHTML = '<strong>' + self.escapeHtml(c.name) + '</strong><br><small>📱 ' + self.escapeHtml(c.phone) + '</small>';
                     div.onclick = function() { 
                         searchInput.value = c.name; 
                         document.getElementById('invCustId').value = c.id; 
@@ -3175,14 +3175,14 @@ var App = {
             var d = new Date(startDate);
             d.setMonth(d.getMonth() + i);
             var amt = (i === months - 1) ? parseFloat(lastMonth) : perMonth;
-            schedule.push(this.formatDate(d) + ' â†’ â‚¹' + amt.toLocaleString('en-IN'));
+            schedule.push(this.formatDate(d) + ' → ₹' + amt.toLocaleString('en-IN'));
         }
 
         planText.innerHTML = 
-            '<b>à¤¹à¤° à¤®à¤¹à¥€à¤¨à¥‡: â‚¹' + perMonth.toLocaleString('en-IN') + '</b> Ã— ' + months + ' à¤®à¤¹à¥€à¤¨à¥‡<br>' +
-            '<small style="color:#666;">à¤†à¤–à¤¿à¤°à¥€ à¤•à¤¿à¤¸à¥à¤¤: â‚¹' + parseFloat(lastMonth).toLocaleString('en-IN') + '</small><br><br>' +
+            '<b>हर महीने: ₹' + perMonth.toLocaleString('en-IN') + '</b> × ' + months + ' महीने<br>' +
+            '<small style="color:#666;">आखिरी किस्त: ₹' + parseFloat(lastMonth).toLocaleString('en-IN') + '</small><br><br>' +
             '<div style="max-height:120px;overflow-y:auto;">' +
-            schedule.map(function(s, i) { return '<div style="padding:2px 0;border-bottom:1px dashed #ccc;">à¤•à¤¿à¤¸à¥à¤¤ ' + (i+1) + ': ' + s + '</div>'; }).join('') +
+            schedule.map(function(s, i) { return '<div style="padding:2px 0;border-bottom:1px dashed #ccc;">किस्त ' + (i+1) + ': ' + s + '</div>'; }).join('') +
             '</div>';
 
         planBox.style.display = 'block';
@@ -3220,14 +3220,14 @@ var App = {
             var autoReminder = document.getElementById('invAutoReminder').checked;
             
             if(!custId || !totalPrice || !advance || !dueDate) { 
-                alert('à¤•à¥ƒà¤ªà¤¯à¤¾ à¤¸à¤­à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤­à¤°à¥‡à¤‚!'); 
+                alert('कृपया सभी जानकारी भरें!'); 
                 this.isSaving = false; 
                 if(btn) btn.disabled = false; 
                 return; 
             }
             
             if(parseFloat(advance) > parseFloat(totalPrice)) { 
-                alert('à¤…à¤—à¥à¤°à¤¿à¤® à¤°à¤¾à¤¶à¤¿ à¤•à¥à¤² à¤•à¥€à¤®à¤¤ à¤¸à¥‡ à¤…à¤§à¤¿à¤• à¤¨à¤¹à¥€à¤‚ à¤¹à¥‹ à¤¸à¤•à¤¤à¥€!'); 
+                alert('अग्रिम राशि कुल कीमत से अधिक नहीं हो सकती!'); 
                 this.isSaving = false; 
                 if(btn) btn.disabled = false; 
                 return; 
@@ -3283,7 +3283,7 @@ var App = {
                     date: dateTime, 
                     customerId: custId, 
                     customer: custName, 
-                    product: products.map(function(p) { return p.name; }).join(', ') + ' (à¤…à¤—à¥à¤°à¤¿à¤®)',
+                    product: products.map(function(p) { return p.name; }).join(', ') + ' (अग्रिम)',
                     amount: parseFloat(advance).toFixed(2), 
                     paymentMode: paymentMode, 
                     type: 'payment', 
@@ -3326,27 +3326,27 @@ var App = {
             document.getElementById('productRows').innerHTML = `
                 <div class="product-row">
                     <div class="relative">
-                        <input type="text" class="invProdSearch" onkeyup="App.searchProductMulti(this)" placeholder="à¤¸à¤¾à¤®à¤¾à¤¨ à¤•à¤¾ à¤¨à¤¾à¤®" autocomplete="off">
+                        <input type="text" class="invProdSearch" onkeyup="App.searchProductMulti(this)" placeholder="सामान का नाम" autocomplete="off">
                         <div class="search-results prodResults"></div>
                     </div>
                     <input type="number" class="invProdQty" placeholder="Qty" value="1" min="1" onchange="App.calculateTotal()">
-                    <input type="number" class="invProdPrice" placeholder="â‚¹" readonly>
-                    <button class="remove-btn" onclick="App.removeProductRow(this)" style="display:none;">âŒ</button>
+                    <input type="number" class="invProdPrice" placeholder="₹" readonly>
+                    <button class="remove-btn" onclick="App.removeProductRow(this)" style="display:none;">❌</button>
                 </div>
             `;
             this.productRowCount = 1;
             
             this.closeAllDropdowns();
-            this.showAlert('invAlert', 'âœ… à¤¬à¤¿à¤² à¤¸à¤«à¤²à¤¤à¤¾à¤ªà¥‚à¤°à¥à¤µà¤• à¤¸à¥‡à¤µ à¤¹à¥‹ à¤—à¤¯à¤¾!');
+            this.showAlert('invAlert', '✅ बिल सफलतापूर्वक सेव हो गया!');
             this.updateDashboard();
             this.initCharts();
             
             setTimeout(function() {
-                var choice = confirm('âœ… à¤¬à¤¿à¤² à¤¸à¥‡à¤µ à¤¹à¥‹ à¤—à¤¯à¤¾!\n\nOK = Invoice PDF Print à¤•à¤°à¥‡à¤‚\nCancel = Thermal Receipt Print à¤•à¤°à¥‡à¤‚');
+                var choice = confirm('✅ बिल सेव हो गया!\n\nOK = Invoice PDF Print करें\nCancel = Thermal Receipt Print करें');
                 if(choice) {
                     App.printLastInvoice();
                 } else {
-                    if(confirm('Thermal Receipt Print à¤•à¤°à¥‡à¤‚?')) {
+                    if(confirm('Thermal Receipt Print करें?')) {
                         App.printThermalReceipt(custName, products, totalPrice, advance, pending, paymentMode, profit);
                     }
                 }
@@ -3354,7 +3354,7 @@ var App = {
             
         } catch(e) { 
             console.error('Save invoice error:', e); 
-            alert('à¤¬à¤¿à¤² à¤¸à¥‡à¤µ à¤•à¤°à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿!'); 
+            alert('बिल सेव करने में त्रुटि!'); 
         }
         finally { 
             this.isSaving = false; 
@@ -3369,14 +3369,14 @@ var App = {
         if(this.lastInvoiceData) {
             this.printInvoicePDF(this.lastInvoiceData);
         } else {
-            alert('à¤•à¥‹à¤ˆ invoice à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾!');
+            alert('कोई invoice नहीं मिला!');
         }
     },
 
     printInvoiceById: function(id) {
         var invoices = this.getData('invoices');
         var inv = invoices.find(function(i) { return i.id == id; });
-        if(!inv) { alert('Invoice à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾!'); return; }
+        if(!inv) { alert('Invoice नहीं मिला!'); return; }
         
         var customers = this.getData('customers');
         var customer = customers.find(function(c) { return c.id == inv.customerId; });
@@ -3404,10 +3404,10 @@ var App = {
         try {
             var profile = JSON.parse(localStorage.getItem('shopProfile') || '{}');
             
-            document.getElementById('invPrintShopName').textContent = profile.name || 'ðŸŒŸ COSMIC AUTO BILL PRO v5.0';
+            document.getElementById('invPrintShopName').textContent = profile.name || '🌟 COSMIC AUTO BILL PRO v5.0';
             var shopDetails = [];
-            if(profile.phone) shopDetails.push('ðŸ“± ' + profile.phone);
-            if(profile.address) shopDetails.push('ðŸ“ ' + profile.address);
+            if(profile.phone) shopDetails.push('📱 ' + profile.phone);
+            if(profile.address) shopDetails.push('📍 ' + profile.address);
             document.getElementById('invPrintShopDetails').textContent = shopDetails.join(' | ');
             
             document.getElementById('invPrintNo').textContent = 'INV-' + String(data.invoiceId).slice(-6);
@@ -3442,8 +3442,8 @@ var App = {
                     '<td style="padding:6px 7px;border:1px solid #e0e0e0;text-align:center;font-size:12px;">' + (idx+1) + '</td>' +
                     '<td style="padding:6px 7px;border:1px solid #e0e0e0;font-size:12px;">' + p.name + '</td>' +
                     '<td style="padding:6px 7px;border:1px solid #e0e0e0;text-align:center;font-size:12px;">' + (p.qty || 1) + '</td>' +
-                    '<td style="padding:6px 7px;border:1px solid #e0e0e0;text-align:right;font-size:12px;">â‚¹' + parseFloat(p.price).toFixed(2) + '</td>' +
-                    '<td style="padding:6px 7px;border:1px solid #e0e0e0;text-align:right;font-size:12px;font-weight:bold;">â‚¹' + lineTotal + '</td>';
+                    '<td style="padding:6px 7px;border:1px solid #e0e0e0;text-align:right;font-size:12px;">₹' + parseFloat(p.price).toFixed(2) + '</td>' +
+                    '<td style="padding:6px 7px;border:1px solid #e0e0e0;text-align:right;font-size:12px;font-weight:bold;">₹' + lineTotal + '</td>';
             });
             
             var total = parseFloat(data.totalPrice || 0).toFixed(2);
@@ -3481,8 +3481,8 @@ var App = {
                     row.innerHTML = 
                         '<td style="padding:5px 7px;border:1px solid #eee;text-align:center;background:' + rowBg + ';">' + (k+1) + '</td>' +
                         '<td style="padding:5px 7px;border:1px solid #eee;background:' + rowBg + ';">' + this.formatDate(kd) + '</td>' +
-                        '<td style="padding:5px 7px;border:1px solid #eee;text-align:right;font-weight:bold;background:' + rowBg + ';">â‚¹' + kAmt.toLocaleString('en-IN') + '</td>' +
-                        '<td style="padding:5px 7px;border:1px solid #eee;text-align:center;background:' + rowBg + ';font-size:14px;">â–¡</td>';
+                        '<td style="padding:5px 7px;border:1px solid #eee;text-align:right;font-weight:bold;background:' + rowBg + ';">₹' + kAmt.toLocaleString('en-IN') + '</td>' +
+                        '<td style="padding:5px 7px;border:1px solid #eee;text-align:center;background:' + rowBg + ';font-size:14px;">□</td>';
                 }
                 scheduleBox.style.display = 'block';
             } else {
@@ -3493,7 +3493,7 @@ var App = {
             
         } catch(e) {
             console.error('Print invoice error:', e);
-            alert('Invoice print à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + e.message);
+            alert('Invoice print त्रुटि: ' + e.message);
         }
     },
 
@@ -3527,14 +3527,14 @@ var App = {
 
         var closeBtn = document.createElement('button');
         closeBtn.id = '_printCloseBtn';
-        closeBtn.innerHTML = 'âŒ à¤¬à¤‚à¤¦ à¤•à¤°à¥‡à¤‚';
+        closeBtn.innerHTML = '❌ बंद करें';
         closeBtn.style.cssText = 'position:fixed;top:10px;right:10px;z-index:99999;background:#f45c43;color:white;border:none;padding:12px 20px;border-radius:8px;font-size:15px;cursor:pointer;font-weight:bold;box-shadow:0 3px 10px rgba(0,0,0,0.3);';
         closeBtn.onclick = function() { App.closePrintArea(); };
         document.body.appendChild(closeBtn);
 
         var printBtn = document.createElement('button');
         printBtn.id = '_printPrintBtn';
-        printBtn.innerHTML = 'ðŸ–¨ï¸ Print / PDF';
+        printBtn.innerHTML = '🖨️ Print / PDF';
         printBtn.style.cssText = 'position:fixed;top:10px;left:10px;z-index:99999;background:#11998e;color:white;border:none;padding:12px 20px;border-radius:8px;font-size:15px;cursor:pointer;font-weight:bold;box-shadow:0 3px 10px rgba(0,0,0,0.3);';
         printBtn.onclick = function() { window.print(); };
         document.body.appendChild(printBtn);
@@ -3542,7 +3542,7 @@ var App = {
         area.style.transform = 'scale(1)';
         area.style.transformOrigin = 'top center';
         area.style.touchAction = 'pan-x pan-y';
-        area._pinchReady = false; // à¤¹à¤° à¤¬à¤¾à¤° fresh setup
+        area._pinchReady = false; // हर बार fresh setup
         this.currentZoom = 1;
         this._pinchSetup(area);
 
@@ -3551,7 +3551,7 @@ var App = {
             hint = document.createElement('div');
             hint.id = '_zoomHint';
             hint.style.cssText = 'position:fixed;bottom:70px;left:50%;transform:translateX(-50%);z-index:99999;background:rgba(0,0,0,0.75);color:white;padding:8px 18px;border-radius:20px;font-size:13px;pointer-events:none;';
-            hint.textContent = 'ðŸ‘† 2 à¤‰à¤‚à¤—à¤²à¥€ à¤¸à¥‡ à¤œà¤¼à¥‚à¤® à¤•à¤°à¥‡à¤‚';
+            hint.textContent = '👆 2 उंगली से ज़ूम करें';
             document.body.appendChild(hint);
         }
         hint.style.display = 'block';
@@ -3644,7 +3644,7 @@ var App = {
                 var row = tbody.insertRow();
                 row.innerHTML = '<td style="padding: 5px;">' + p.name + '</td>' +
                     '<td style="text-align: center;">' + p.qty + '</td>' +
-                    '<td style="text-align: right;">â‚¹' + (p.price * p.qty).toFixed(2) + '</td>';
+                    '<td style="text-align: right;">₹' + (p.price * p.qty).toFixed(2) + '</td>';
             });
             
             document.getElementById('thermTotal').textContent = parseFloat(total).toFixed(2);
@@ -3673,14 +3673,14 @@ var App = {
             });
             
             if(filtered.length === 0) { 
-                resultsDiv.innerHTML = '<div class="search-item">à¤•à¥‹à¤ˆ à¤—à¥à¤°à¤¾à¤¹à¤• à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾</div>'; 
+                resultsDiv.innerHTML = '<div class="search-item">कोई ग्राहक नहीं मिला</div>'; 
             } else {
                 resultsDiv.innerHTML = '';
                 var self = this;
                 filtered.forEach(function(c) {
                     var div = document.createElement('div');
                     div.className = 'search-item';
-                    div.innerHTML = '<strong>' + self.escapeHtml(c.name) + '</strong><br><small>ðŸ“± ' + self.escapeHtml(c.phone) + '</small>';
+                    div.innerHTML = '<strong>' + self.escapeHtml(c.name) + '</strong><br><small>📱 ' + self.escapeHtml(c.phone) + '</small>';
                     div.onclick = function() { 
                         searchInput.value = c.name; 
                         document.getElementById('payCustId').value = c.id; 
@@ -3711,10 +3711,10 @@ var App = {
         var infoDiv = document.getElementById('payCustInfo');
         
         if(pending > 0) {
-            infoDiv.innerHTML = '<strong>à¤¬à¤¾à¤•à¥€ à¤°à¤¾à¤¶à¤¿: â‚¹' + pending.toFixed(2) + '</strong>';
+            infoDiv.innerHTML = '<strong>बाकी राशि: ₹' + pending.toFixed(2) + '</strong>';
             infoDiv.style.display = 'block';
         } else {
-            infoDiv.innerHTML = '<span style="color: green;">âœ… à¤¸à¤­à¥€ à¤•à¤¿à¤¸à¥à¤¤à¥‡à¤‚ à¤œà¤®à¤¾ à¤¹à¥ˆà¤‚</span>';
+            infoDiv.innerHTML = '<span style="color: green;">✅ सभी किस्तें जमा हैं</span>';
             infoDiv.style.display = 'block';
         }
     },
@@ -3733,14 +3733,14 @@ var App = {
             var nextDueDate = document.getElementById('payNextDueDate').value;
             
             if(!custId || !amount) { 
-                alert('à¤•à¥ƒà¤ªà¤¯à¤¾ à¤—à¥à¤°à¤¾à¤¹à¤• à¤”à¤° à¤°à¤¾à¤¶à¤¿ à¤­à¤°à¥‡à¤‚!'); 
+                alert('कृपया ग्राहक और राशि भरें!'); 
                 this.isSaving = false; 
                 if(btn) btn.disabled = false; 
                 return; 
             }
             
             if(parseFloat(amount) <= 0) { 
-                alert('à¤°à¤¾à¤¶à¤¿ 0 à¤¸à¥‡ à¤…à¤§à¤¿à¤• à¤¹à¥‹à¤¨à¥€ à¤šà¤¾à¤¹à¤¿à¤!'); 
+                alert('राशि 0 से अधिक होनी चाहिए!'); 
                 this.isSaving = false; 
                 if(btn) btn.disabled = false; 
                 return; 
@@ -3755,7 +3755,7 @@ var App = {
                 date: dateTime, 
                 customerId: custId, 
                 customer: custName, 
-                product: 'à¤•à¤¿à¤¸à¥à¤¤ à¤­à¥à¤—à¤¤à¤¾à¤¨', 
+                product: 'किस्त भुगतान', 
                 amount: parseFloat(amount).toFixed(2), 
                 nextDueDate: nextDueDate, 
                 paymentMode: paymentMode, 
@@ -3770,19 +3770,19 @@ var App = {
             document.getElementById('payCustInfo').style.display = 'none';
             
             this.closeAllDropdowns();
-            this.showAlert('payAlert', 'âœ… à¤•à¤¿à¤¸à¥à¤¤ à¤¸à¤«à¤²à¤¤à¤¾à¤ªà¥‚à¤°à¥à¤µà¤• à¤œà¤®à¤¾ à¤¹à¥‹ à¤—à¤ˆ!');
+            this.showAlert('payAlert', '✅ किस्त सफलतापूर्वक जमा हो गई!');
             this.updateDashboard();
             
             setTimeout(function() {
-                if(confirm('à¤•à¥à¤¯à¤¾ à¤†à¤ª à¤°à¤¸à¥€à¤¦ à¤ªà¥à¤°à¤¿à¤‚à¤Ÿ à¤•à¤°à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚?')) { 
-                    var products = [{ name: 'à¤•à¤¿à¤¸à¥à¤¤ à¤­à¥à¤—à¤¤à¤¾à¤¨', qty: 1, price: parseFloat(amount) }];
+                if(confirm('क्या आप रसीद प्रिंट करना चाहते हैं?')) { 
+                    var products = [{ name: 'किस्त भुगतान', qty: 1, price: parseFloat(amount) }];
                     App.printThermalReceipt(custName, products, amount, amount, '0', paymentMode, '0');
                 }
             }, 500);
             
         } catch(e) { 
             console.error('Save payment error:', e); 
-            alert('à¤•à¤¿à¤¸à¥à¤¤ à¤œà¤®à¤¾ à¤•à¤°à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿!'); 
+            alert('किस्त जमा करने में त्रुटि!'); 
         }
         finally { 
             this.isSaving = false; 
@@ -3835,7 +3835,7 @@ var App = {
             filtered.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
             
             if(filtered.length === 0) { 
-                tbody.innerHTML = '<tr><td colspan="8" class="no-data">à¤•à¥‹à¤ˆ à¤°à¤¿à¤•à¥‰à¤°à¥à¤¡ à¤¨à¤¹à¥€à¤‚ à¤®à¤¿à¤²à¤¾</td></tr>'; 
+                tbody.innerHTML = '<tr><td colspan="8" class="no-data">कोई रिकॉर्ड नहीं मिला</td></tr>'; 
                 document.getElementById('totalBox').style.display = 'none'; 
                 return; 
             }
@@ -3853,41 +3853,41 @@ var App = {
                     
                     row.innerHTML = '<td>' + inv.date + '</td>' +
                         '<td>' + self.escapeHtml(inv.customer) + '</td>' +
-                        '<td><span style="color:#764ba2;font-weight:bold;">ðŸ“ à¤¬à¤¿à¤²: </span>' + products + '</td>' +
-                        '<td style="color:#764ba2;font-weight:bold;">â‚¹' + parseFloat(inv.totalPrice || 0).toFixed(2) + '</td>' +
-                        '<td>â‚¹' + parseFloat(inv.totalCost || inv.totalPrice * 0.7).toFixed(2) + '</td>' +
-                        '<td style="color:green;">â‚¹' + profitAmt.toFixed(2) + '</td>' +
+                        '<td><span style="color:#764ba2;font-weight:bold;">📝 बिल: </span>' + products + '</td>' +
+                        '<td style="color:#764ba2;font-weight:bold;">₹' + parseFloat(inv.totalPrice || 0).toFixed(2) + '</td>' +
+                        '<td>₹' + parseFloat(inv.totalCost || inv.totalPrice * 0.7).toFixed(2) + '</td>' +
+                        '<td style="color:green;">₹' + profitAmt.toFixed(2) + '</td>' +
                         '<td>' + (inv.paymentMode || '-') + '</td>' +
                         '<td>' +
-                        '<button class="btn btn-info" style="padding:4px 7px;font-size:10px;margin:1px;" onclick="App.printInvoiceById(' + inv.id + ')">ðŸ–¨ï¸</button>' +
-                        '<button class="btn btn-danger" style="padding:4px 7px;font-size:10px;margin:1px;" onclick="App.deleteInvoice(' + inv.id + ')">ðŸ—‘ï¸</button>' +
+                        '<button class="btn btn-info" style="padding:4px 7px;font-size:10px;margin:1px;" onclick="App.printInvoiceById(' + inv.id + ')">🖨️</button>' +
+                        '<button class="btn btn-danger" style="padding:4px 7px;font-size:10px;margin:1px;" onclick="App.deleteInvoice(' + inv.id + ')">🗑️</button>' +
                         '</td>';
                     totalSales += parseFloat(inv.totalPrice || 0);
                 } else if(inv.type === 'payment') {
                     var productDisplay = self.escapeHtml(inv.product || '-');
                     if(inv.isAdvance) {
-                        productDisplay = '<span style="color:#FF6B35;font-weight:bold;">ðŸ·ï¸ à¤…à¤—à¥à¤°à¤¿à¤®: </span>' + productDisplay;
+                        productDisplay = '<span style="color:#FF6B35;font-weight:bold;">🏷️ अग्रिम: </span>' + productDisplay;
                     } else {
-                        productDisplay = '<span style="color:#11998e;font-weight:bold;">ðŸ’µ à¤•à¤¿à¤¸à¥à¤¤: </span>' + productDisplay;
+                        productDisplay = '<span style="color:#11998e;font-weight:bold;">💵 किस्त: </span>' + productDisplay;
                     }
                     var amount = parseFloat(inv.amount || 0);
                     row.innerHTML = '<td>' + inv.date + '</td>' +
                         '<td>' + self.escapeHtml(inv.customer) + '</td>' +
                         '<td>' + productDisplay + '</td>' +
-                        '<td style="color:green;font-weight:bold;">â‚¹' + amount.toFixed(2) + '</td>' +
+                        '<td style="color:green;font-weight:bold;">₹' + amount.toFixed(2) + '</td>' +
                         '<td>-</td><td>-</td>' +
                         '<td>' + (inv.paymentMode || '-') + '</td>' +
-                        '<td><button class="btn btn-danger" style="padding:5px 10px;font-size:11px;" onclick="App.deleteInvoice(' + inv.id + ')">ðŸ—‘ï¸</button></td>';
+                        '<td><button class="btn btn-danger" style="padding:5px 10px;font-size:11px;" onclick="App.deleteInvoice(' + inv.id + ')">🗑️</button></td>';
                     totalCollection += amount;
                 }
             });
             
             var totalBox = document.getElementById('totalBox');
             if(totalBox) { 
-                totalBox.innerHTML = 'ðŸ“¦ à¤•à¥à¤² à¤¬à¤¿à¤•à¥à¤°à¥€: â‚¹' + totalSales.toFixed(2) + 
-                    ' | ðŸ’° à¤•à¥à¤² à¤•à¤²à¥‡à¤•à¥à¤¶à¤¨: â‚¹' + totalCollection.toFixed(2) + 
-                    ' | ðŸ’¹ à¤•à¥à¤² à¤ªà¥à¤°à¥‰à¤«à¤¿à¤Ÿ: â‚¹' + totalProfit.toFixed(2) + 
-                    ' | â³ à¤¬à¤¾à¤•à¥€: â‚¹' + Math.max(0, totalSales - totalCollection).toFixed(2); 
+                totalBox.innerHTML = '📦 कुल बिक्री: ₹' + totalSales.toFixed(2) + 
+                    ' | 💰 कुल कलेक्शन: ₹' + totalCollection.toFixed(2) + 
+                    ' | 💹 कुल प्रॉफिट: ₹' + totalProfit.toFixed(2) + 
+                    ' | ⏳ बाकी: ₹' + Math.max(0, totalSales - totalCollection).toFixed(2); 
                 totalBox.style.display = 'block'; 
             }
         } catch(e) { 
@@ -3947,7 +3947,7 @@ var App = {
 
     deleteInvoice: function(id) {
         try {
-            if(!confirm('à¤•à¥à¤¯à¤¾ à¤†à¤ª à¤‡à¤¸ à¤¬à¤¿à¤² à¤•à¥‹ à¤¡à¤¿à¤²à¥€à¤Ÿ à¤•à¤°à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚?')) return;
+            if(!confirm('क्या आप इस बिल को डिलीट करना चाहते हैं?')) return;
             
             var invoices = this.getData('invoices').filter(function(inv) { return inv.id != id; });
             this.saveData('invoices', invoices);
@@ -4035,7 +4035,7 @@ var App = {
             });
             
             if(filtered.length === 0) { 
-                container.innerHTML = '<div class="no-data">âœ… à¤•à¥‹à¤ˆ à¤¬à¤¾à¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ à¤¨à¤¹à¥€à¤‚</div>'; 
+                container.innerHTML = '<div class="no-data">✅ कोई बाकी किस्त नहीं</div>'; 
                 return; 
             }
             
@@ -4049,16 +4049,16 @@ var App = {
             var self = this;
             filtered.forEach(function(p) {
                 var alertClass = p.isOverdue ? 'overdue-alert' : 'pending-alert';
-                var badge = p.isOverdue ? 'âš ï¸ à¤²à¥‡à¤Ÿ' : (p.isToday ? 'ðŸ”´ à¤†à¤œ' : 'â³ à¤¬à¤¾à¤•à¥€');
-                var daysText = p.isToday ? 'à¤†à¤œ' : (p.diffDays > 0 ? p.diffDays + ' à¤¦à¤¿à¤¨ à¤¬à¤¾à¤•à¥€' : Math.abs(p.diffDays) + ' à¤¦à¤¿à¤¨ à¤²à¥‡à¤Ÿ');
+                var badge = p.isOverdue ? '⚠️ लेट' : (p.isToday ? '🔴 आज' : '⏳ बाकी');
+                var daysText = p.isToday ? 'आज' : (p.diffDays > 0 ? p.diffDays + ' दिन बाकी' : Math.abs(p.diffDays) + ' दिन लेट');
                 
                 var div = document.createElement('div');
                 div.className = alertClass;
                 div.innerHTML = '<strong>' + self.escapeHtml(p.customer) + '</strong> (' + self.escapeHtml(p.phone) + ')<br>' +
-                    'à¤¬à¤¾à¤•à¥€: â‚¹' + p.pending.toFixed(2) + ' | à¤…à¤‚à¤¤à¤¿à¤® à¤¤à¤¾à¤°à¥€à¤–: ' + (p.dueDate ? App.formatDate(new Date(p.dueDate)) : '-') + 
+                    'बाकी: ₹' + p.pending.toFixed(2) + ' | अंतिम तारीख: ' + (p.dueDate ? App.formatDate(new Date(p.dueDate)) : '-') + 
                     ' | ' + badge + ' (' + daysText + ') ' +
-                    '<button class="whatsapp-btn" onclick="App.quickWhatsApp(\'' + self.escapeHtml(p.customer) + '\', \'' + p.phone + '\', \'' + p.pending.toFixed(2) + '\')">ðŸ“±</button>' +
-                    '<button class="sms-btn" onclick="App.quickSMS(\'' + self.escapeHtml(p.customer) + '\', \'' + p.phone + '\', \'' + p.pending.toFixed(2) + '\')">ðŸ’¬</button>';
+                    '<button class="whatsapp-btn" onclick="App.quickWhatsApp(\'' + self.escapeHtml(p.customer) + '\', \'' + p.phone + '\', \'' + p.pending.toFixed(2) + '\')">📱</button>' +
+                    '<button class="sms-btn" onclick="App.quickSMS(\'' + self.escapeHtml(p.customer) + '\', \'' + p.phone + '\', \'' + p.pending.toFixed(2) + '\')">💬</button>';
                 container.appendChild(div);
             });
         } catch(e) { 
@@ -4090,9 +4090,9 @@ var App = {
         });
         
         if(count === 0) {
-            alert('âœ… à¤•à¥‹à¤ˆ à¤¬à¤¾à¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆ!');
+            alert('✅ कोई बाकी किस्त नहीं है!');
         } else {
-            alert('ðŸ“± ' + count + ' à¤—à¥à¤°à¤¾à¤¹à¤•à¥‹à¤‚ à¤•à¥‹ WhatsApp à¤­à¥‡à¤œà¤¾ à¤œà¤¾à¤à¤—à¤¾à¥¤\n\nà¤¹à¤° 1.5 à¤¸à¥‡à¤•à¤‚à¤¡ à¤®à¥‡à¤‚ à¤à¤• à¤–à¥à¤²à¥‡à¤—à¤¾à¥¤');
+            alert('📱 ' + count + ' ग्राहकों को WhatsApp भेजा जाएगा।\n\nहर 1.5 सेकंड में एक खुलेगा।');
         }
     },
 
@@ -4114,9 +4114,9 @@ var App = {
         });
         
         if(count === 0) {
-            alert('âœ… à¤†à¤œ à¤•à¤¿à¤¸à¥€ à¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆ!');
+            alert('✅ आज किसी की किस्त नहीं है!');
         } else {
-            alert('ðŸ“± ' + count + ' à¤—à¥à¤°à¤¾à¤¹à¤•à¥‹à¤‚ à¤•à¥‹ à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤­à¥‡à¤œà¤¾ à¤œà¤¾à¤à¤—à¤¾à¥¤');
+            alert('📱 ' + count + ' ग्राहकों को रिमाइंडर भेजा जाएगा।');
         }
     },
 
@@ -4161,13 +4161,13 @@ var App = {
 
     quickWhatsApp: function(name, phone, amount) {
         var cc = this.getCountryCode();
-        var message = 'à¤¨à¤®à¤¸à¥à¤¤à¥‡ ' + name + ' à¤œà¥€, à¤†à¤ªà¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ â‚¹' + amount + ' à¤¬à¤•à¤¾à¤¯à¤¾ à¤¹à¥ˆà¥¤ à¤•à¥ƒà¤ªà¤¯à¤¾ à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚à¥¤ à¤§à¤¨à¥à¤¯à¤µà¤¾à¤¦!';
+        var message = 'नमस्ते ' + name + ' जी, आपकी किस्त ₹' + amount + ' बकाया है। कृपया जमा करें। धन्यवाद!';
         var url = 'https://wa.me/' + cc + phone.replace(/[^0-9]/g, '') + '?text=' + encodeURIComponent(message);
         window.open(url, '_blank');
     },
 
     quickSMS: function(name, phone, amount) {
-        var message = 'à¤¨à¤®à¤¸à¥à¤¤à¥‡ ' + name + ' à¤œà¥€, à¤†à¤ªà¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ â‚¹' + amount + ' à¤¬à¤•à¤¾à¤¯à¤¾ à¤¹à¥ˆà¥¤ à¤•à¥ƒà¤ªà¤¯à¤¾ à¤œà¤®à¤¾ à¤•à¤°à¥‡à¤‚à¥¤ à¤§à¤¨à¥à¤¯à¤µà¤¾à¤¦!';
+        var message = 'नमस्ते ' + name + ' जी, आपकी किस्त ₹' + amount + ' बकाया है। कृपया जमा करें। धन्यवाद!';
         var smsUrl = 'sms:' + phone + '?body=' + encodeURIComponent(message);
         window.open(smsUrl, '_blank');
     },
@@ -4193,9 +4193,9 @@ var App = {
             var totalPending = Math.max(0, totalSales - totalCollection);
             
             document.getElementById('totalCustomers').textContent = totalCustomers;
-            document.getElementById('totalSales').textContent = 'â‚¹' + totalSales.toFixed(2);
-            document.getElementById('totalCollection').textContent = 'â‚¹' + totalCollection.toFixed(2);
-            document.getElementById('totalPending').textContent = 'â‚¹' + totalPending.toFixed(2);
+            document.getElementById('totalSales').textContent = '₹' + totalSales.toFixed(2);
+            document.getElementById('totalCollection').textContent = '₹' + totalCollection.toFixed(2);
+            document.getElementById('totalPending').textContent = '₹' + totalPending.toFixed(2);
             
             // Monthly and Yearly Profit
             var now = new Date();
@@ -4217,8 +4217,8 @@ var App = {
                 }
             });
             
-            document.getElementById('monthlyProfit').textContent = 'â‚¹' + monthlyProfit.toFixed(2);
-            document.getElementById('yearlyProfit').textContent = 'â‚¹' + yearlyProfit.toFixed(2);
+            document.getElementById('monthlyProfit').textContent = '₹' + monthlyProfit.toFixed(2);
+            document.getElementById('yearlyProfit').textContent = '₹' + yearlyProfit.toFixed(2);
             
             this.updateAlerts();
             this.initCharts();
@@ -4265,10 +4265,10 @@ var App = {
                             overdueCount++;
                             var alert = document.createElement('div');
                             alert.className = 'overdue-alert';
-                            alert.innerHTML = '<strong>' + self.escapeHtml(c.name) + '</strong> à¤•à¥€ à¤•à¤¿à¤¸à¥à¤¤ à¤²à¥‡à¤Ÿ à¤¹à¥ˆ!<br>' +
-                                'à¤¬à¤¾à¤•à¥€: â‚¹' + remaining.toFixed(2) + ' (Due: ' + (inv.dueDate ? App.formatDate(new Date(inv.dueDate)) : '-') + ') ' +
-                                '<button class="whatsapp-btn" onclick="App.quickWhatsApp(\'' + self.escapeHtml(c.name) + '\', \'' + c.phone + '\', \'' + remaining.toFixed(2) + '\')">ðŸ“±</button>' +
-                                '<button class="sms-btn" onclick="App.quickSMS(\'' + self.escapeHtml(c.name) + '\', \'' + c.phone + '\', \'' + remaining.toFixed(2) + '\')">ðŸ’¬</button>';
+                            alert.innerHTML = '<strong>' + self.escapeHtml(c.name) + '</strong> की किस्त लेट है!<br>' +
+                                'बाकी: ₹' + remaining.toFixed(2) + ' (Due: ' + (inv.dueDate ? App.formatDate(new Date(inv.dueDate)) : '-') + ') ' +
+                                '<button class="whatsapp-btn" onclick="App.quickWhatsApp(\'' + self.escapeHtml(c.name) + '\', \'' + c.phone + '\', \'' + remaining.toFixed(2) + '\')">📱</button>' +
+                                '<button class="sms-btn" onclick="App.quickSMS(\'' + self.escapeHtml(c.name) + '\', \'' + c.phone + '\', \'' + remaining.toFixed(2) + '\')">💬</button>';
                             alertsContainer.appendChild(alert);
                         }
                     }
@@ -4277,7 +4277,7 @@ var App = {
         });
         
         if(overdueCount === 0) {
-            alertsContainer.innerHTML = '<div style="color: green; text-align: center; padding: 10px;">âœ… à¤•à¥‹à¤ˆ à¤²à¥‡à¤Ÿ à¤ªà¥‡à¤®à¥‡à¤‚à¤Ÿ à¤¨à¤¹à¥€à¤‚</div>';
+            alertsContainer.innerHTML = '<div style="color: green; text-align: center; padding: 10px;">✅ कोई लेट पेमेंट नहीं</div>';
         }
     },
 
@@ -4293,7 +4293,7 @@ var App = {
             doc.setFontSize(16);
             doc.text(shopName, 14, 20);
             doc.setFontSize(10);
-            doc.text('à¤°à¤¿à¤ªà¥‹à¤°à¥à¤Ÿ - ' + this.formatDate(new Date()), 14, 30);
+            doc.text('रिपोर्ट - ' + this.formatDate(new Date()), 14, 30);
             
             var invoices = this.getData('invoices');
             var tableData = [];
@@ -4303,14 +4303,14 @@ var App = {
                     inv.date || '-',
                     inv.customer || '-',
                     inv.product || '-',
-                    'â‚¹' + (inv.amount || inv.totalPrice || '0'),
+                    '₹' + (inv.amount || inv.totalPrice || '0'),
                     inv.paymentMode || '-',
                     inv.type || '-'
                 ]);
             });
             
             doc.autoTable({
-                head: [['à¤¤à¤¾à¤°à¥€à¤–', 'à¤—à¥à¤°à¤¾à¤¹à¤•', 'à¤µà¤¿à¤µà¤°à¤£', 'à¤°à¤¾à¤¶à¤¿', 'à¤®à¥‹à¤¡', 'à¤ªà¥à¤°à¤•à¤¾à¤°']],
+                head: [['तारीख', 'ग्राहक', 'विवरण', 'राशि', 'मोड', 'प्रकार']],
                 body: tableData,
                 startY: 40,
                 styles: { fontSize: 8 },
@@ -4321,7 +4321,7 @@ var App = {
             
         } catch(e) {
             console.error('PDF export error:', e);
-            alert('PDF à¤¬à¤¨à¤¾à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + e.message);
+            alert('PDF बनाने में त्रुटि: ' + e.message);
         }
     },
 
@@ -4365,7 +4365,7 @@ var App = {
             reader.onload = function(e) {
                 try {
                     var data = JSON.parse(e.target.result);
-                    if(confirm('à¤¯à¤¹ Backup restore à¤•à¤°à¥‡à¤‚à¤—à¥‡? à¤®à¥Œà¤œà¥‚à¤¦à¤¾ à¤¡à¤¾à¤Ÿà¤¾ delete à¤¹à¥‹ à¤œà¤¾à¤à¤—à¤¾!')) {
+                    if(confirm('यह Backup restore करेंगे? मौजूदा डाटा delete हो जाएगा!')) {
                         if(data.customers) localStorage.setItem('customers', typeof data.customers === 'string' ? data.customers : JSON.stringify(data.customers));
                         if(data.products) localStorage.setItem('products', typeof data.products === 'string' ? data.products : JSON.stringify(data.products));
                         if(data.invoices) localStorage.setItem('invoices', typeof data.invoices === 'string' ? data.invoices : JSON.stringify(data.invoices));
@@ -4373,11 +4373,11 @@ var App = {
                         if(data.whatsappMessage) localStorage.setItem('whatsappMessage', data.whatsappMessage);
                         if(data.smsMessage) localStorage.setItem('smsMessage', data.smsMessage);
                         
-                        alert('âœ… à¤¡à¤¾à¤Ÿà¤¾ à¤¸à¤«à¤²à¤¤à¤¾à¤ªà¥‚à¤°à¥à¤µà¤• à¤°à¤¿à¤¸à¥à¤Ÿà¥‹à¤° à¤¹à¥‹ à¤—à¤¯à¤¾!');
+                        alert('✅ डाटा सफलतापूर्वक रिस्टोर हो गया!');
                         location.reload();
                     }
                 } catch(err) { 
-                    alert('âŒ à¤—à¤²à¤¤ à¤«à¤¾à¤‡à¤²!'); 
+                    alert('❌ गलत फाइल!'); 
                 }
             };
             reader.readAsText(file);
@@ -4425,7 +4425,7 @@ var App = {
             localStorage.setItem(key, JSON.stringify(data)); 
         } catch(e) { 
             console.error('Save data error:', e); 
-            alert('à¤¡à¤¾à¤Ÿà¤¾ à¤¸à¥‡à¤µ à¤•à¤°à¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿!'); 
+            alert('डाटा सेव करने में त्रुटि!'); 
         } 
     },
     
@@ -4452,12 +4452,12 @@ document.addEventListener('keypress', function(e) {
 
 // Online/Offline detection
 window.addEventListener('online', function() {
-    document.getElementById('onlineStatus').textContent = 'à¤‘à¤¨à¤²à¤¾à¤‡à¤¨';
+    document.getElementById('onlineStatus').textContent = 'ऑनलाइन';
     document.getElementById('onlineStatus').style.background = '#11998e';
 });
 
 window.addEventListener('offline', function() {
-    document.getElementById('onlineStatus').textContent = 'à¤‘à¤«à¤²à¤¾à¤‡à¤¨';
+    document.getElementById('onlineStatus').textContent = 'ऑफलाइन';
     document.getElementById('onlineStatus').style.background = '#f45c43';
 });
 
@@ -4513,12 +4513,12 @@ const FirebaseAuth = {
         var phone = document.getElementById('loginPhone').value.trim();
         
         if(!phone || phone.length < 7) {
-            FirebaseAuth.showError('à¤¸à¤¹à¥€ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤¡à¤¾à¤²à¥‡à¤‚!');
+            FirebaseAuth.showError('सही मोबाइल नंबर डालें!');
             return;
         }
 
         var fullPhone = cc + phone;
-        FirebaseAuth.showLoading('OTP à¤­à¥‡à¤œ à¤°à¤¹à¥‡ à¤¹à¥ˆà¤‚...');
+        FirebaseAuth.showLoading('OTP भेज रहे हैं...');
 
         auth.signInWithPhoneNumber(fullPhone, FirebaseAuth.recaptchaVerifier)
             .then(function(confirmationResult) {
@@ -4528,7 +4528,7 @@ const FirebaseAuth = {
             })
             .catch(function(error) {
                 FirebaseAuth.hideLoading();
-                FirebaseAuth.showError('OTP à¤­à¥‡à¤œà¤¨à¥‡ à¤®à¥‡à¤‚ à¤¤à¥à¤°à¥à¤Ÿà¤¿: ' + error.message);
+                FirebaseAuth.showError('OTP भेजने में त्रुटि: ' + error.message);
                 FirebaseAuth.setupRecaptcha();
             });
     },
@@ -4537,17 +4537,17 @@ const FirebaseAuth = {
         FirebaseAuth.hideLoading();
         document.getElementById('phoneStep').style.display = 'none';
         document.getElementById('otpStep').style.display = 'block';
-        document.getElementById('otpSentTo').textContent = 'OTP à¤­à¥‡à¤œà¤¾ à¤—à¤¯à¤¾: ' + phone;
+        document.getElementById('otpSentTo').textContent = 'OTP भेजा गया: ' + phone;
     },
 
     verifyOTP: function() {
         var otp = document.getElementById('otpInput').value.trim();
         if(!otp || otp.length !== 6) {
-            FirebaseAuth.showError('6 à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ OTP à¤¡à¤¾à¤²à¥‡à¤‚!');
+            FirebaseAuth.showError('6 अंकों का OTP डालें!');
             return;
         }
 
-        FirebaseAuth.showLoading('Verify à¤•à¤° à¤°à¤¹à¥‡ à¤¹à¥ˆà¤‚...');
+        FirebaseAuth.showLoading('Verify कर रहे हैं...');
 
         FirebaseAuth.confirmationResult.confirm(otp)
             .then(function(result) {
@@ -4557,12 +4557,12 @@ const FirebaseAuth = {
             })
             .catch(function(error) {
                 FirebaseAuth.hideLoading();
-                FirebaseAuth.showError('à¤—à¤²à¤¤ OTP! à¤¦à¥‹à¤¬à¤¾à¤°à¤¾ à¤•à¥‹à¤¶à¤¿à¤¶ à¤•à¤°à¥‡à¤‚à¥¤');
+                FirebaseAuth.showError('गलत OTP! दोबारा कोशिश करें।');
             });
     },
 
     checkActivation: function(phone) {
-        FirebaseAuth.showLoading('Account check à¤•à¤° à¤°à¤¹à¥‡ à¤¹à¥ˆà¤‚...');
+        FirebaseAuth.showLoading('Account check कर रहे हैं...');
         
         // Clean phone number for use as document ID
         var phoneKey = phone.replace(/[^0-9]/g, '');
@@ -4577,7 +4577,7 @@ const FirebaseAuth = {
                         if(userData.expiry) {
                             var expiry = new Date(userData.expiry);
                             if(expiry < new Date()) {
-                                FirebaseAuth.showActivationPending(phone, 'Expired - Renew à¤•à¤°à¥‡à¤‚');
+                                FirebaseAuth.showActivationPending(phone, 'Expired - Renew करें');
                                 return;
                             }
                         }
@@ -4676,26 +4676,26 @@ const FirebaseAuth = {
 
     showError: function(msg) {
         var err = document.getElementById('loginError');
-        err.textContent = 'âŒ ' + msg;
+        err.textContent = '❌ ' + msg;
         err.style.display = 'block';
         setTimeout(function() { err.style.display = 'none'; }, 4000);
     }
 };
 
 // ============================================
-// ADMIN PANEL - Owner à¤•à¥‡ à¤²à¤¿à¤
+// ADMIN PANEL - Owner के लिए
 // ============================================
 const AdminPanel = {
     show: function() {
         var adminKey = prompt('Admin Password:');
-        if(adminKey !== 'COSMIC2024ADMIN') { alert('à¤—à¤²à¤¤ password!'); return; }
+        if(adminKey !== 'COSMIC2024ADMIN') { alert('गलत password!'); return; }
         
         var panel = document.createElement('div');
         panel.id = 'adminPanel';
         panel.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:#1a1a2e;color:white;z-index:999999;overflow-y:auto;padding:20px;';
-        panel.innerHTML = '<h2 style="color:#FF6B35;margin-bottom:20px;">ðŸ‘‘ COSMIC ADMIN PANEL</h2>' +
-            '<button onclick="AdminPanel.loadUsers()" style="background:#FF6B35;color:white;border:none;padding:10px 20px;border-radius:8px;margin:5px;cursor:pointer;">ðŸ‘¥ à¤¸à¤­à¥€ Users à¤¦à¥‡à¤–à¥‡à¤‚</button>' +
-            '<button onclick="AdminPanel.close()" style="background:#f45c43;color:white;border:none;padding:10px 20px;border-radius:8px;margin:5px;cursor:pointer;">âŒ à¤¬à¤‚à¤¦ à¤•à¤°à¥‡à¤‚</button>' +
+        panel.innerHTML = '<h2 style="color:#FF6B35;margin-bottom:20px;">👑 COSMIC ADMIN PANEL</h2>' +
+            '<button onclick="AdminPanel.loadUsers()" style="background:#FF6B35;color:white;border:none;padding:10px 20px;border-radius:8px;margin:5px;cursor:pointer;">👥 सभी Users देखें</button>' +
+            '<button onclick="AdminPanel.close()" style="background:#f45c43;color:white;border:none;padding:10px 20px;border-radius:8px;margin:5px;cursor:pointer;">❌ बंद करें</button>' +
             '<div id="adminUserList" style="margin-top:20px;"></div>';
         document.body.appendChild(panel);
         AdminPanel.loadUsers();
@@ -4712,7 +4712,7 @@ const AdminPanel = {
             
             snapshot.forEach(function(doc) {
                 var u = doc.data();
-                var status = u.activated ? 'âœ… Active' : 'â³ Pending';
+                var status = u.activated ? '✅ Active' : '⏳ Pending';
                 var color = u.activated ? '#11998e' : '#f45c43';
                 html += '<tr style="border-bottom:1px solid #333;">' +
                     '<td style="padding:8px;">' + (u.phone || doc.id) + '</td>' +
@@ -4741,7 +4741,7 @@ const AdminPanel = {
             activatedAt: new Date().toISOString(),
             expiry: expiry.toISOString()
         }).then(function() {
-            alert('âœ… User activate à¤¹à¥‹ à¤—à¤¯à¤¾! 1 à¤¸à¤¾à¤² à¤•à¥‡ à¤²à¤¿à¤à¥¤');
+            alert('✅ User activate हो गया! 1 साल के लिए।');
             AdminPanel.loadUsers();
         }).catch(function(e) {
             alert('Error: ' + e.message);
@@ -4749,12 +4749,12 @@ const AdminPanel = {
     },
 
     deactivate: function(phoneKey) {
-        if(!confirm('à¤•à¥à¤¯à¤¾ à¤†à¤ª à¤‡à¤¸ user à¤•à¥‹ block à¤•à¤°à¤¨à¤¾ à¤šà¤¾à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚?')) return;
+        if(!confirm('क्या आप इस user को block करना चाहते हैं?')) return;
         db.collection('users').doc(phoneKey).update({
             activated: false,
             plan: 'blocked'
         }).then(function() {
-            alert('âŒ User block à¤¹à¥‹ à¤—à¤¯à¤¾!');
+            alert('❌ User block हो गया!');
             AdminPanel.loadUsers();
         });
     },
@@ -4777,7 +4777,7 @@ window.onload = function() {
         
         // Start Firebase Auth
         FirebaseAuth.init();
-        console.log('âœ… COSMIC AUTO BILL PRO v5.0 with Firebase loaded!'); 
+        console.log('✅ COSMIC AUTO BILL PRO v5.0 with Firebase loaded!'); 
     } catch(e) { 
         console.error('App load error:', e);
         // Fallback to direct load
